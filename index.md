@@ -22,10 +22,11 @@ permalink: /
 .course-card {
   border: 1px solid var(--border-color, #e0e0e0);
   border-radius: 8px;
+  padding: 1.5rem;
   background: var(--bg-color, #ffffff);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
-  overflow: hidden;
+  position: relative;
 }
 
 .course-card:hover {
@@ -34,30 +35,29 @@ permalink: /
 }
 
 .course-card a {
-  display: block;
-  padding: 1.5rem !important;
-  text-decoration: none !important;
-  color: inherit !important;
-  line-height: normal;
-}
-
-.course-card a:hover {
-  text-decoration: none !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-decoration: none;
+  color: inherit;
+  z-index: 1;
 }
 
 .course-card h3 {
-  margin: 0 0 0.75rem 0 !important;
-  font-size: 1.25rem !important;
-  padding: 0 !important;
-  line-height: 1.4;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  position: relative;
+  z-index: 2;
 }
 
 .course-card p {
-  margin: 0.75rem 0 0 0 !important;
+  margin: 0.5rem 0 1rem 0;
   color: var(--text-muted, #666);
-  font-size: 0.95rem !important;
-  padding: 0 !important;
-  line-height: 1.5;
+  font-size: 0.95rem;
+  position: relative;
+  z-index: 2;
 }
 
 .course-tag {
@@ -66,6 +66,8 @@ permalink: /
   border-radius: 12px;
   font-size: 0.8rem;
   font-weight: 500;
+  position: relative;
+  z-index: 2;
 }
 
 .tag-math {

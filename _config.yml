@@ -1,0 +1,16 @@
+title: "AP Tutorial" # 你的网站标题
+description: "一个分享 AP 课程备考指南和教程的网站。"
+remote_theme: just-the-docs/just-the-docs
+
+# 基础 URL 配置（因为是 username.github.io，这里留空即可）
+baseurl: ""
+url: "https://Farengon.github.io" # 记得把 your-username 改成你的 GitHub 用户名
+
+# 启用内置搜索
+search_enabled: true
+search:
+  tokenizer: 'any' # 更好地支持中英文混合搜索
+
+# 主题相关设置
+aux_links:
+  "我的 GitHub": "https://github.com/Farengon/Farengon.github.io"

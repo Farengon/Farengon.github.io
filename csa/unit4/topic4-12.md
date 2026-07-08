@@ -22,6 +22,7 @@ for (int row = 0; row < arr.length; row++) {
 ## 代码示例
 
 ### 示例 1: 遍历 2D 数组
+{% raw %}
 ```java
 public class TwoDTraversal {
     public static void main(String[] args) {
@@ -37,6 +38,7 @@ public class TwoDTraversal {
     }
 }
 ```
+{% endraw %}
 
 ## 例题
 
@@ -44,6 +46,7 @@ public class TwoDTraversal {
 输出 2D 数组的所有元素。
 
 **参考答案:**
+{% raw %}
 ```java
 public class Print2D {
     public static void main(String[] args) {
@@ -57,3 +60,4 @@ public class Print2D {
     }
 }
 ```
+{% endraw %}

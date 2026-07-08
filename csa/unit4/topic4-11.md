@@ -10,6 +10,7 @@ nav_order: 11
 ## 基础知识
 
 ### 创建 2D 数组
+{% raw %}
 ```java
 // 方式 1: 初始化
 int[][] matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
@@ -17,6 +18,7 @@ int[][] matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
 // 方式 2: 指定大小
 int[][] arr = new int[3][4];  // 3 行 4 列
 ```
+{% endraw %}
 
 ### 访问元素
 ```java
@@ -26,6 +28,7 @@ arr[row][col]
 ## 代码示例
 
 ### 示例 1: 2D 数组
+{% raw %}
 ```java
 public class TwoDArray {
     public static void main(String[] args) {
@@ -38,6 +41,7 @@ public class TwoDArray {
     }
 }
 ```
+{% endraw %}
 
 ## 例题
 

@@ -17,6 +17,7 @@ nav_order: 13
 ## 代码示例
 
 ### 示例 1: 求和
+{% raw %}
 ```java
 public class TwoDSum {
     public static void main(String[] args) {
@@ -33,8 +34,10 @@ public class TwoDSum {
     }
 }
 ```
+{% endraw %}
 
 ### 示例 2: 求每行的和
+{% raw %}
 ```java
 public class RowSums {
     public static void main(String[] args) {
@@ -50,6 +53,7 @@ public class RowSums {
     }
 }
 ```
+{% endraw %}
 
 ## 例题
 
@@ -57,6 +61,7 @@ public class RowSums {
 求 2D 数组中所有元素的最大值。
 
 **参考答案:**
+{% raw %}
 ```java
 public class TwoDMax {
     public static void main(String[] args) {
@@ -75,3 +80,4 @@ public class TwoDMax {
     }
 }
 ```
+{% endraw %}

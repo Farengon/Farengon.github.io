@@ -22,7 +22,6 @@ permalink: /
 .course-card {
   border: 1px solid var(--border-color, #e0e0e0);
   border-radius: 8px;
-  padding: 1.5rem;
   background: var(--bg-color, #ffffff);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
@@ -33,14 +32,16 @@ permalink: /
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
 }
 
+.course-card a {
+  display: block;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+
 .course-card h3 {
   margin: 0 0 0.5rem 0;
   font-size: 1.25rem;
-}
-
-.course-card a {
-  text-decoration: none;
-  color: inherit;
 }
 
 .course-card p {

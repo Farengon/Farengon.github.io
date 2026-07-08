@@ -25,6 +25,7 @@ permalink: /
   background: var(--bg-color, #ffffff);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
+  overflow: hidden;
 }
 
 .course-card:hover {
@@ -34,20 +35,29 @@ permalink: /
 
 .course-card a {
   display: block;
-  padding: 1.5rem;
-  text-decoration: none;
-  color: inherit;
+  padding: 1.5rem !important;
+  text-decoration: none !important;
+  color: inherit !important;
+  line-height: normal;
+}
+
+.course-card a:hover {
+  text-decoration: none !important;
 }
 
 .course-card h3 {
-  margin: 0 0 0.5rem 0;
-  font-size: 1.25rem;
+  margin: 0 0 0.75rem 0 !important;
+  font-size: 1.25rem !important;
+  padding: 0 !important;
+  line-height: 1.4;
 }
 
 .course-card p {
-  margin: 0.5rem 0 1rem 0;
+  margin: 0.75rem 0 0 0 !important;
   color: var(--text-muted, #666);
-  font-size: 0.95rem;
+  font-size: 0.95rem !important;
+  padding: 0 !important;
+  line-height: 1.5;
 }
 
 .course-tag {

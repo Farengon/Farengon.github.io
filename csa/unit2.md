@@ -21,3 +21,4 @@ nav_order: 2
 String greeting = new String("Hello World");
 // 或者简写
 String greeting2 = "Hello World";
+```

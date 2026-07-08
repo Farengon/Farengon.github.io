@@ -22,3 +22,4 @@ nav_order: 1
 int a = 5;
 int b = 2;
 System.out.println(a / b); // 输出 2，而不是 2.5！因为整数相除会截断小数部分。
+```

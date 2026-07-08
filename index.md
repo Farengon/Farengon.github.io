@@ -3,6 +3,8 @@ layout: default
 title: 首页
 nav_order: 1
 permalink: /
+has_toc: false
+nav_exclude: true
 ---
 
 # 欢迎来到 AP 教程网 👋

@@ -11,6 +11,12 @@ search_enabled: true
 search:
   tokenizer: 'any' # 更好地支持中英文混合搜索
 
+# 可折叠导航
+nav_enabled: true
+nav_heading: "课程导航"
+nav_foldable: true
+nav_level: 2
+
 # 主题相关设置
 aux_links:
   "我的 GitHub": "https://github.com/Farengon/Farengon.github.io"

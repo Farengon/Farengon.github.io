@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 4.2 Introduction to Using Data Sets
-parent: Unit 4: Data Collections
+parent: Unit 4
 nav_order: 2
 ---
 

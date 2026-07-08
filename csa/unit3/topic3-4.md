@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 3.4 Constructors
-parent: Unit 3: Class Creation
+parent: Unit 3
 nav_order: 4
 ---
 

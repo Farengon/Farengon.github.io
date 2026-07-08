@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 3.7 Class Variables and Methods
-parent: Unit 3: Class Creation
+parent: Unit 3
 nav_order: 7
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 4.1 Ethical and Social Issues Around Data Collection
-parent: Unit 4: Data Collections
+parent: Unit 4
 nav_order: 1
 ---
 

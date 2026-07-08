@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Unit 4: Data Collections
+title: Unit 4
 parent: AP CSA
 nav_order: 4
 has_children: true

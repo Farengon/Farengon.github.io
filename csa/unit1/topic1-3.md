@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 1.3 Expressions and Output
-parent: Unit 1: Using Objects and Methods
+parent: Unit 1
 nav_order: 3
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 1.2 Variables and Data Types
-parent: Unit 1: Using Objects and Methods
+parent: Unit 1
 nav_order: 2
 ---
 

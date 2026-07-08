@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 4.8 ArrayList Methods
-parent: Unit 4: Data Collections
+parent: Unit 4
 nav_order: 8
 ---
 

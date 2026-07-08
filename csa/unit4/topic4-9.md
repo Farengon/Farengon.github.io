@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 4.9 ArrayList Traversals
-parent: Unit 4: Data Collections
+parent: Unit 4
 nav_order: 9
 ---
 

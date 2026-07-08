@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 4.5 Implementing Array Algorithms
-parent: Unit 4: Data Collections
+parent: Unit 4
 nav_order: 5
 ---
 

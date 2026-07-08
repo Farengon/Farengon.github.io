@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 4.11 2D Array Creation and Access
-parent: Unit 4: Data Collections
+parent: Unit 4
 nav_order: 11
 ---
 

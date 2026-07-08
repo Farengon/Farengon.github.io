@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 3.8 Scope and Access
-parent: Unit 3: Class Creation
+parent: Unit 3
 nav_order: 8
 ---
 

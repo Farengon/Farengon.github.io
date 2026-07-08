@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Unit 3: Class Creation
+title: Unit 3
 parent: AP CSA
 nav_order: 3
 has_children: true

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 4.10 Implementing ArrayList Algorithms
-parent: Unit 4: Data Collections
+parent: Unit 4
 nav_order: 10
 ---
 

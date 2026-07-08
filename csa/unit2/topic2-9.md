@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 2.9 Implementing Selection and Iteration Algorithms
-parent: Unit 2: Selection and Iteration
+parent: Unit 2
 nav_order: 9
 ---
 

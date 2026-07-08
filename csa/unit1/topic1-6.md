@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 1.6 Compound Assignment Operators
-parent: Unit 1: Using Objects and Methods
+parent: Unit 1
 nav_order: 6
 ---
 

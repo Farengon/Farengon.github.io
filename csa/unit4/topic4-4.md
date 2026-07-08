@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 4.4 Array Traversals
-parent: Unit 4: Data Collections
+parent: Unit 4
 nav_order: 4
 ---
 

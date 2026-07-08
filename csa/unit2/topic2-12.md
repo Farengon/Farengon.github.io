@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 2.12 Informal Run-Time Analysis
-parent: Unit 2: Selection and Iteration
+parent: Unit 2
 nav_order: 12
 ---
 

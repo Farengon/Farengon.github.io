@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 2.4 Nested if Statements
-parent: Unit 2: Selection and Iteration
+parent: Unit 2
 nav_order: 4
 ---
 

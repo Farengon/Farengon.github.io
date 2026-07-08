@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 4.7 Wrapper Classes
-parent: Unit 4: Data Collections
+parent: Unit 4
 nav_order: 7
 ---
 

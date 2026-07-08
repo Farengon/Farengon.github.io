@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Unit 1: Using Objects and Methods
+title: Unit 1
 parent: AP CSA
 nav_order: 1
 has_children: true

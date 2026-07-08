@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Unit 2: Selection and Iteration
+title: Unit 2
 parent: AP CSA
 nav_order: 2
 has_children: true

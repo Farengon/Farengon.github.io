@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 4.17 Recursive Searching and Sorting
-parent: Unit 4: Data Collections
+parent: Unit 4
 nav_order: 17
 ---
 

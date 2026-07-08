@@ -11,6 +11,9 @@ search_enabled: true
 search:
   tokenizer: 'any' # 更好地支持中英文混合搜索
 
+# 导航排序 - 使用 nav_order，不按标题字母序
+nav_sort: case_sensitive
+
 # 主题相关设置
 aux_links:
   "我的 GitHub": "https://github.com/Farengon/Farengon.github.io"

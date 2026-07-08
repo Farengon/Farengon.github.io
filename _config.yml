@@ -1,6 +1,6 @@
 title: "AP Tutorial" # 你的网站标题
 description: "一个分享 AP 课程备考指南和教程的网站。"
-remote_theme: just-the-docs/just-the-docs
+remote_theme: just-the-docs/just-the-docs@v0.12.0
 
 # 基础 URL 配置（因为是 username.github.io，这里留空即可）
 baseurl: ""
@@ -11,11 +11,11 @@ search_enabled: true
 search:
   tokenizer: 'any' # 更好地支持中英文混合搜索
 
-# 可折叠导航
+# 可折叠导航 - 无限层级支持
 nav_enabled: true
 nav_heading: "课程导航"
 nav_foldable: true
-nav_level: 2
+nav_level: 3
 
 # 主题相关设置
 aux_links:

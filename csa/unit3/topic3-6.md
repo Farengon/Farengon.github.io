@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 3.6 Methods: Passing and Returning References of an Object
+title: "3.6 Methods: Passing and Returning References of an Object"
 parent: Unit 3
 nav_order: 6
 ---

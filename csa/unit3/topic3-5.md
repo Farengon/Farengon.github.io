@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 3.5 Methods: How to Write Them
+title: "3.5 Methods: How to Write Them"
 parent: Unit 3
 nav_order: 5
 ---

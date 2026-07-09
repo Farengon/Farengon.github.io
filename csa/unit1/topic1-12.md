@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 1.12 Objects: Instances of Classes
+title: "1.12 Objects: Instances of Classes"
 parent: Unit 1
 nav_order: 12
 ---

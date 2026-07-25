@@ -33,3 +33,9 @@ callouts:
   warning:
     title: Warning
     color: red
+  tips:
+    title: Tips
+    color: orange
+  extra:
+    title: Extra
+    color: gray

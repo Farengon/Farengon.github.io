@@ -19,19 +19,27 @@ permalink: /csa/
 
 ## 准备
 
-- 下载JDK
-
-  JDK（Java Developing Kit）是Java开发工具
+- [下载JDK](https://www.oracle.com/java/technologies/downloads/)
 
 - 下载IDE
 
-  IDE（Integrated Develop Environment）
-
-  我个人喜欢VSCode。官网和安装教程
+  我个人喜欢[VSCode](https://code.visualstudio.com/)
 
 {: .note}
 > **JDK & IDE**
+>
+> JDK 是Java开发工具和运行环境，而 IDE 是代码编辑器（主流的Java IDE包括IDEA、Eclipse、NetBeans等）。
+>
+> 也就是说只需要JDK就可以运行Java程序了，IDE只是让写代码的过程更方便（自动补全/自动纠错/运行代码...）
 
-> JDK 是Java的运行环境，而 IDE 是代码编辑器。
+现在你可以新建一个文件夹，在 IDE 中打开这个文件夹，并在里面新建一个叫做“Helloworld.java”的文件。复制粘贴下面这段代码：
 
-> 也就是说只需要JDK就可以运行Java程序了，IDE只是让写代码的过程更方便（自动补全/自动纠错...）
+```java
+public class Helloworld {
+	public static void main(String[] args) {
+		System.out.println("Hello world!")
+	}
+}
+```
+
+点击“运行”，你就会看到计算机输出“Hello world！”

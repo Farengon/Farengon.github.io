@@ -7,11 +7,11 @@ has_toc: false
 nav_exclude: true
 ---
 
-# 欢迎来到 AP 教程网 👋
+# Welcome!
 
-在这里选择你想学习的 AP 课程，开始备考吧！
+在这里选择你想学习的 AP 课程！
 
-## 📚 课程列表
+## 课程列表
 
 <style>
 .course-cards {
@@ -91,9 +91,9 @@ nav_exclude: true
 <div class="course-cards">
   <div class="course-card">
     <a href="./csa/">
-      <h3>💻 AP 计算机科学 A</h3>
+      <h3>AP 计算机科学 A</h3>
       <span class="course-tag tag-cs">计算机科学</span>
-      <p>Java 编程基础、面向对象设计、数据结构与算法，完全基于 College Board 考纲。</p>
+      <p>Java 入门</p>
     </a>
   </div>
 
@@ -114,8 +114,7 @@ nav_exclude: true
   </div>
 </div>
 
-## 📝 说明
+## 说明
 
-- 每门课程都按照 College Board 官方大纲顺序组织
-- 使用左侧导航栏或课程卡片进入各单元的学习
-- 支持全文搜索功能，快速定位知识点
+- 以 College Board 课程大纲为脉络，尽可能覆盖所有考点。适合半自学的同学，作为在线教材 / 考前综合复习的资料。
+- 祝 5 分！

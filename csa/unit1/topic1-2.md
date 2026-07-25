@@ -7,84 +7,62 @@ nav_order: 2
 
 # 1.2 Variables and Data Types
 
-## 基础知识
+## 1.2.A
 
-### 变量声明
-在 Java 中，使用变量前必须先声明类型和名称：
-```java
-type variableName;
-variableName = value;
-```
+**Identify the most appropriate data type category for a particular specification.**
 
-或者同时声明和初始化：
-```java
-type variableName = value;
-```
+### 1.2.A.1 Data Type 数据类型
 
-### 基本数据类型
+在 Java 中，所有的数据都具有数据类型。当我们使用程序解决实际问题的时候，需要根据要求用不同类型的数据来进行表示。
+
+Java 中的数据类型分为 primitive data type 和 reference data type 两类。
+
+### 1.2.A.2 Primitive Data Type
+
+Java 共有 8 种 primitive type，了解即可，不需要记忆：
+
+{: .extra}
+> byte, short, int, long, float, double, boolean, char
+
+### 1.2.A.3 Reference Data Type
+
+除 primitive type 外的数据类型都是 reference type。
+
+reference type 用来定义对象。
+
+## 1.2.B
+
+**Develop code to declare variables to store numbers and Boolean values.**
+
+### 1.2.B.1 Primitive Type in CSA
+
+CSA 课程涉及到以下3种primitive type
+
 | 类型 | 描述 | 范围 |
 |------|------|------|
 | `int` | 整数 | -2,147,483,648 到 2,147,483,647 |
 | `double` | 双精度浮点数 | ±4.9e-324 到 ±1.7e+308 |
 | `boolean` | 布尔值 | `true` 或 `false` |
 
-## 代码示例
+### 1.2.B.2 Variable 变量
 
-### 示例 1: 变量声明和使用
+变量是用来**储存**数据的。每一个变量都有自己的**数据类型**和**变量名**，并会储存一个**值**。
+
+数据类型和变量名是变量的两个核心属性，使用以下语法定义变量：
+
+{: .syntax}
+> data_type variable_name
+
+例如
+
 ```java
-public class Variables {
-    public static void main(String[] args) {
-        int age = 16;
-        double gpa = 3.8;
-        boolean isStudent = true;
-        
-        System.out.println("Age: " + age);
-        System.out.println("GPA: " + gpa);
-        System.out.println("Is Student: " + isStudent);
-    }
-}
+int score;  // 一个叫做score的整数变量
+double temprature;  // 一个叫做temperature的浮点数变量
+boolean flag;  // 一个叫做flag的布尔变量
 ```
 
-### 示例 2: 变量命名规则
-```java
-// 正确的命名
-int myAge;
-double _price;
-boolean $isValid;
-String studentName;
+变量的数据类型和变量名在定义后，**永远不变**。
 
-// 错误的命名
-// int 123abc;    // 不能以数字开头
-// int class;     // class 是关键字
-```
+变量的值在程序运行的过程中通常会发生改变。
 
-## 例题
-
-### 例题 1: 选择题
-以下哪个变量声明是正确的？
-A. `int 123number;`
-B. `double price$;`
-C. `boolean True;`
-D. `String class;`
-
-**答案: B**
-
-### 例题 2: 编程题
-声明三个变量表示考试分数（整数），计算总分和平均分，输出结果。
-
-**参考答案:**
-```java
-public class Scores {
-    public static void main(String[] args) {
-        int score1 = 85;
-        int score2 = 90;
-        int score3 = 88;
-        
-        int total = score1 + score2 + score3;
-        double average = total / 3.0;
-        
-        System.out.println("Total: " + total);
-        System.out.println("Average: " + average);
-    }
-}
-```
+primitive 类型的变量储存值本身；reference 类型的变量储存对象的**引用/地址**。关于primitive type和reference type存储方式的讨论

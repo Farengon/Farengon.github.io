@@ -25,7 +25,7 @@ callouts:
     title: Important
     color: blue
   new:
-    title: New
+    title: Syntax
     color: green
   note:
     title: Note
@@ -33,3 +33,5 @@ callouts:
   warning:
     title: Warning
     color: red
+  extra:
+    color: grey-lt

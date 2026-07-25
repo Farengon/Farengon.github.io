@@ -29,5 +29,9 @@ permalink: /csa/
 
   我个人喜欢VSCode。官网和安装教程
 
-> [!NOTE]
-> JDK & IDE
+{: .note}
+> **JDK & IDE**
+
+> JDK 是Java的运行环境，而 IDE 是代码编辑器。
+
+> 也就是说只需要JDK就可以运行Java程序了，IDE只是让写代码的过程更方便（自动补全/自动纠错...）

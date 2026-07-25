@@ -17,3 +17,19 @@ nav_sort: case_sensitive
 # 主题相关设置
 aux_links:
   "我的 GitHub": "https://github.com/Farengon/Farengon.github.io"
+
+callouts:
+  highlight:
+    color: yellow
+  important:
+    title: Important
+    color: blue
+  new:
+    title: New
+    color: green
+  note:
+    title: Note
+    color: purple
+  warning:
+    title: Warning
+    color: red

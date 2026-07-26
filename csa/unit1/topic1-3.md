@@ -14,10 +14,8 @@ nav_order: 3
 ### 1.3.A.1 Output 输出
 
 {: .syntax}
-> `System.out.print()`
->
-> `System.out.println()`
->
+> `System.out.print()`  
+> `System.out.println()`  
 > 括号中写需要输出的内容
 
 `println` 中的 `ln` 可以看作 line 的缩写，使用`System.out.println()`输出后光标会自动移动到**下一行**，后续的输出将从下一行开始。使用`System.out.print()`输出后光标停留在原地，后续的输出将紧接此次输出。
@@ -92,7 +90,7 @@ nav_order: 3
 
 只要有一个 double 类型的操作数，得到的就是精确的商（**double 类型**）。
 
-{:. extra}
+{: .extra}
 > 实际上由于精度限制，如果商是无限小数，计算机也只能得到一个近似值。
 
 ### 1.3.C.4 Remainder 模运算
@@ -101,7 +99,7 @@ nav_order: 3
 
 `a % b` 得到 a 除以 b 的余数。
 
-{:. extra}
+{: .extra}
 > a < 0 和 b <= 0 的情况不在课程考察范围内。
 
 ### 1.3.C.5 Compound Arithmetic Expression 复合算术表达式

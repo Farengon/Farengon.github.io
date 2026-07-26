@@ -19,13 +19,13 @@ aux_links:
   "我的 GitHub": "https://github.com/Farengon/Farengon.github.io"
 
 callouts:
+  syntax:
+    color: green
   highlight:
     color: yellow
   important:
     title: Important
     color: blue
-  syntax:
-    color: green
   note:
     title: Note
     color: purple

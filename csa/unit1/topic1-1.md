@@ -78,3 +78,5 @@ Java 编译器还会做**静态检查**。Java 的语法非常严格，如果程
 异常是一种**运行时错误**，由编译器未能检测到的意外错误引发，并会中断程序的执行。
 
 后续章节中涉及到的 Exception：
+
+- [ArithmeticException](/csa/unit1/topic1-3#13c6-dividing-by-zero)

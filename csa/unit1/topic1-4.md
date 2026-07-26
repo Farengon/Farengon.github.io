@@ -7,85 +7,48 @@ nav_order: 4
 
 # 1.4 Assignment Statements and Input
 
-## 基础知识
+## 1.4.A 
 
-### 赋值语句
-赋值语句将值存储到变量中：
+**Develop code for assignment statements with expressions and determine the value that is stored in the variable as a result of these statements.**
+
+### 1.4.A.1 Variable Initialization 变量初始化
+
+变量在被使用前必须先赋值。变量被定义后的第一次赋值被称作变量的初始化。
+
+只能使用和变量的数据类型**兼容**的值来对变量赋值。
+
+对于 reference type，可以使用 [null] 进行初始化。
+
+### 1.4.A.2 Assignment 赋值
+
+使用等号（=）对变量赋值。
+
+{: .syntax}
+> variable = expression
+>
+> 将右侧表达式的值存到左侧的变量中。
+
+对变量赋值会**覆盖**变量原来的值。
+
 ```java
-variable = expression;
+int a;  // 定义变量 a
+a = 1;  // 初始化变量 a
+int b = 2;  // 定义 & 初始化变量 b
+b = 3;  // 修改变量 b 的值为 3
 ```
 
-## 代码示例
+### 1.4.A.3 
 
-### 示例 1: 多次赋值
-```java
-public class Assignment {
-    public static void main(String[] args) {
-        int x = 5;
-        System.out.println("x = " + x);  // 5
-        
-        x = 10;
-        System.out.println("x = " + x);  // 10
-        
-        x = x + 5;
-        System.out.println("x = " + x);  // 15
-    }
-}
-```
+程序执行过程中，表达式会被计算并生成一个值。在赋值语句中，先计算表达式的结果，再将结果赋值给变量。
 
-### 示例 2: 交换两个变量
-```java
-public class Swap {
-    public static void main(String[] args) {
-        int a = 5;
-        int b = 10;
-        
-        System.out.println("Before: a = " + a + ", b = " + b);
-        
-        int temp = a;
-        a = b;
-        b = temp;
-        
-        System.out.println("After: a = " + a + ", b = " + b);
-    }
-}
-```
+## 1.4.B
 
-## 例题
+**Develop code to read input.**
 
-### 例题 1: 选择题
-执行以下代码后，`y` 的值是？
-```java
-int x = 3;
-int y = x * 2;
-x = 5;
-```
-A. 3
-B. 6
-C. 10
-D. 5
+### 1.4.B.1 Input 输入
 
-**答案: B**
+本门课程中我们只需要掌握文本的输入，即使用键盘输入文字。
 
-### 例题 2: 编程题
-声明三个变量 a, b, c，分别赋值 1, 2, 3。然后交换它们的值，使 a=2, b=3, c=1。
+在 Java 中，通常使用 Scanner 类来处理键盘输入。
 
-**参考答案:**
-```java
-public class Rotate {
-    public static void main(String[] args) {
-        int a = 1;
-        int b = 2;
-        int c = 3;
-        
-        int temp = a;
-        a = b;
-        b = c;
-        c = temp;
-        
-        System.out.println("a = " + a);
-        System.out.println("b = " + b);
-        System.out.println("c = " + c);
-    }
-}
-```
+在后续的[文件（file）]章节中，我们将详细讨论 Scanner 的用法。

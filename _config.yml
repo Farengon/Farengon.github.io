@@ -24,8 +24,7 @@ callouts:
   important:
     title: Important
     color: blue
-  new:
-    title: Syntax
+  syntax:
     color: green
   note:
     title: Note

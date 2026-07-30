@@ -51,4 +51,4 @@ b = 3;  // 修改变量 b 的值为 3
 
 在 Java 中，通常使用 Scanner 类来处理键盘输入。
 
-在后续的[文件（file）]章节中，我们将详细讨论 Scanner 的用法。
+在后续的[文件（file）](/csa/unit4/topic4-6)章节中将详细讨论 Scanner 的用法。

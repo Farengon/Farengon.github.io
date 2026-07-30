@@ -14,9 +14,9 @@ nav_order: 5
 ### 1.5.A.1 Casting Operator 类型转换运算符
 
 {: .syntax}
-> (int)double_value 将 double 转换为 int
+> `(int)double_value` 将 double 转换为 int
 >
-> (double)int_value 将 int 转换为 double
+> `(double)int_value` 将 int 转换为 double
 
 注意类型转换的优先级比算术运算的优先级更高。
 
@@ -27,7 +27,7 @@ System.out.println((int)(3.5 * 4));  // 先算 3.5 * 4 = 17.0，再算 (int)17.0
 
 ### 1.5.A.2 double to int
 
-使用 (double) 将 double 类型的值被转换为 int 时，直接舍弃小数部分，**不是四舍五入**。
+使用 `(double)` 将 double 类型的值被转换为 int 时，直接舍弃小数部分，**不是四舍五入**。
 
 {: .note}
 > 本课程考试涉及到所有的小数转整数都是丢弃小数部分。**牢记**。
@@ -46,7 +46,7 @@ double b = a; // 使用 int 给 double 变量赋值，3 被自动转换为 3.0
 {: .extra}
 > 原因是 int 的表示长度比 double 更短，因此 int 可以“拓宽”到 double。
 >
-> 实际上，Java 中“更短”到“更长”的类型之间都可以自动类型转换。
+> 实际上，Java 中“更短”到“更长”的类型之间都可以自动类型转换。  
 > byte → short → int → long → float → double
 
 ### 1.5.A.4
@@ -77,7 +77,7 @@ double b = a; // 使用 int 给 double 变量赋值，3 被自动转换为 3.0
 
 ### 1.5.B.2 Integer Storage 整数的存储
 
-Java 中每个整数（int 类型）占用的内存时固定的 4 个字节，这是 int 存在最值的**原因**。
+Java 中每个整数（int 类型）占用的内存是固定的 4 个字节，这是 int 存在最值的**原因**。
 
 {: .extra}
 > 1 字节（byte）= 8 比特（bit）

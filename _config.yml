@@ -22,7 +22,8 @@ callouts:
   syntax:
     title: Syntax
     color: green
-  highlight:
+  tips:
+    title: Tips
     color: yellow
   important:
     title: Important

@@ -59,10 +59,10 @@ int roundedY = (int)(y + 0.5);  // (int)(8.1) = 8
 
     What is printed?
 
-    (A) 7.0 7.0
-    (B) 7.0 7.5
-    (C) 7.5 7.0
-    (D) 7.5 7.5
+    (A) 7.0 7.0  
+    (B) 7.0 7.5  
+    (C) 7.5 7.0  
+    (D) 7.5 7.5  
 
     **分析与解答：**  
     `q / r` → 15.0 / 2，int 的 `r` 自动扩宽为 2.0，结果为 7.5。`(int)(7.5)` 截断小数部分，得到 int 值 7。将 7 赋值给 `double x`，自动扩宽为 7.0。`y = q / r` = 15.0 / 2 = 7.5（自动扩宽）。输出为 7.0 7.5。正确答案是 (B)。
@@ -82,10 +82,10 @@ int roundedY = (int)(y + 0.5);  // (int)(8.1) = 8
 
     What is printed?
 
-    (A) 3 1.0
-    (B) 3 1.5
-    (C) 3.5 1.5
-    (D) 3.5 1.75
+    (A) 3 1.0  
+    (B) 3 1.5  
+    (C) 3.5 1.5  
+    (D) 3.5 1.75  
 
     分析与解答：
     `double a = 7;` → a = 7.0（int 7 自动扩宽为 double）。`a / 2` → 7.0 / 2 = 3.5。`(int)(3.5)` 截断小数，b = 3。`(double) b / 2` → (double) 3 / 2 → 3.0 / 2 = 1.5（注意：(double) 只作用于 b，2 自动扩宽）。输出为 3 1.5。正确答案是 (B)。
@@ -104,11 +104,11 @@ int roundedY = (int)(y + 0.5);  // (int)(8.1) = 8
 
     What is printed?
 
-    (A) 77
-    (B) 78
-    (C) 79
-    (D) 98
-    (E) 99
+    (A) 77  
+    (B) 78  
+    (C) 79  
+    (D) 98  
+    (E) 99  
 
     分析与解答：
     `(int) valOne` = (int) 5.75 = 5，`(int) valTwo` = (int) 2.75 = 2，x = 5 + 2 = 7。`valOne + valTwo` = 5.75 + 2.75 = 8.5，y = (int) 8.5 = 8。输出为 78。正确答案是 (B)。
@@ -119,10 +119,10 @@ int roundedY = (int)(y + 0.5);  // (int)(8.1) = 8
 
     Assume that `x` is a double variable with a **positive** value. Which of the following code segments can be used to round `x` to the nearest integer and store the rounded value in the variable `result`?
 
-    (A) `int result = (int) x;`
-    (B) `int result = (int) x + 0.5;`
-    (C) `int result = (int)(x + 0.5);`
-    (D) `int result = (int) x + (int) 0.5;`
+    (A) `int result = (int) x;`  
+    (B) `int result = (int) x + 0.5;`  
+    (C) `int result = (int)(x + 0.5);`  
+    (D) `int result = (int) x + (int) 0.5;`  
 
     **分析与解答：**  
     (A) 只截断，不四舍五入。(B) 编译错误：(int) x + 0.5 结果为 double，不能赋值给 int。(C) 正确：先加 0.5，再截断，实现四舍五入——若 x = 4.2，4.2 + 0.5 = 4.7，(int) 得 4；若 x = 7.6，7.6 + 0.5 = 8.1，(int) 得 8。(D) (int) x + (int) 0.5 = (int) x + 0 = (int) x，只截断，不四舍五入。正确答案是 (C)。
@@ -142,10 +142,10 @@ int roundedY = (int)(y + 0.5);  // (int)(8.1) = 8
 
     What is printed?
 
-    (A) 0.0 0.0
-    (B) 0.4 0.0
-    (C) 0.4 0.4
-    (D) 0.0 0.4
+    (A) 0.0 0.0  
+    (B) 0.4 0.0  
+    (C) 0.4 0.4  
+    (D) 0.0 0.4  
 
     分析与解答：
     `(int) w / x`：(int) 2.5 = 2，然后 2 / 5.0 → 2.0 / 5.0 = 0.4（自动扩宽）。`(int) (w / x)`：w / x = 2.5 / 5.0 = 0.4，(int) 0.4 = 0，赋值给 double z → 0.0。输出为 0.4 0.0。正确答案是 (B)。
@@ -180,9 +180,9 @@ int overflow = max + 1;       // 溢出，结果为 -2147483648
 
     Which of the following preconditions for the method is most appropriate to avoid an overflow error?
 
-    (A) `/** Precondition: num1 and num2 are both positive. */`
-    (B) `/** Precondition: num1 is not equal to num2 */`
-    (C) `/** Preconditions: num1 is between Integer.MIN_VALUE and Integer.MAX_VALUE, inclusive. num2 is between Integer.MIN_VALUE and Integer.MAX_VALUE, inclusive. */`
+    (A) `/** Precondition: num1 and num2 are both positive. */`  
+    (B) `/** Precondition: num1 is not equal to num2 */`  
+    (C) `/** Preconditions: num1 is between Integer.MIN_VALUE and Integer.MAX_VALUE, inclusive. num2 is between Integer.MIN_VALUE and Integer.MAX_VALUE, inclusive. */`  
     (D) `/** Precondition: (num1 + num2) is between Integer.MIN_VALUE and Integer.MAX_VALUE, inclusive. */`
 
     分析与解答：
@@ -202,10 +202,10 @@ int overflow = max + 1;       // 溢出，结果为 -2147483648
 
     What, if anything, is printed?
 
-    (A) 2.0 3.0
-    (B) 2.3 3.0
-    (C) 3.0 2.0
-    (D) 3.0 2.3
+    (A) 2.0 3.0  
+    (B) 2.3 3.0  
+    (C) 3.0 2.0  
+    (D) 3.0 2.3  
     (E) Nothing is printed. A compile-time error occurs because an int value cannot be assigned to a double.
 
     分析与解答：

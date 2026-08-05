@@ -5,7 +5,7 @@ parent: Unit 1
 nav_order: 1
 ---
 
-# 1.1 Introduction to Algorithms, Programming, and Compilers
+# 1.1 — Introduction to Algorithms, Programming, and Compilers
 
 ---
 
@@ -125,7 +125,7 @@ AP CSA 考试中，编程错误分为三大类：
 
 **Exception**是一种运行时错误。本课程后续涉及的异常有：
 
-- [ArithmeticException](/csa/unit1/topic1-3.md/除零错误)
+- [ArithmeticException](/csa/unit1/topic1-3.md#除零错误)
 
 - ### 例题 4 — 识别逻辑错误
 

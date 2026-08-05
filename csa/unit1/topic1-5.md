@@ -5,116 +5,208 @@ parent: Unit 1
 nav_order: 5
 ---
 
-# 1.5 Casting and Range of Variables
+# 1.5 — Casting and Range of Variables
 
-## 1.5.A
+## 1.5.A 类型转换（Casting）
 
-**Develop code to cast primitive values to different primitive types in arithmetic expressions and determine the value that is produced as a result.**
-
-### 1.5.A.1 Casting Operator 类型转换运算符
-
-{: .syntax}
-> `(int)double_value` 将 double 转换为 int
->
-> `(double)int_value` 将 int 转换为 double
-
-注意类型转换的优先级比算术运算的优先级更高。
+**类型转换（Casting）** 是将一种基本数据类型的值转换为另一种基本数据类型的过程。在 Java 中，`(int)` 和 `(double)` 可用于在 `double` 值和 `int` 值之间进行转换。
 
 ```java
-System.out.println((int)3.5 * 4);  // 先算 (int)3.5 = 3，再算3 * 4 输出 12
-System.out.println((int)(3.5 * 4));  // 先算 3.5 * 4 = 17.0，再算 (int)17.0 输出 17
+double d = 3.14;
+int i = (int) d;     // i = 3
+
+int x = 5;
+double y = (double) x;  // y = 5.0
 ```
 
-### 1.5.A.2 double to int
+**截断（Truncation）：** 将 `double` 值强制转换为 `int` 值时，小数部分被直接截断（舍弃），**不做四舍五入**。
 
-使用 `(double)` 将 double 类型的值被转换为 int 时，直接舍弃小数部分，**不是四舍五入**。
+```java
+double d = 7.999;
+int i = (int) d;     // i = 7，不是 8
+```
+
+**自动扩宽（Automatic Widening）：** 某些情况下，`int` 值会被自动扩宽为 `double` 值，不需要显式转换。常见场景包括：将 `int` 赋值给 `double` 变量；`int` 与 `double` 进行算术运算时，`int` 自动扩宽为 `double`。
+
+```java
+int x = 5;
+double y = x;          // 自动扩宽：y = 5.0
+
+double result = 3 + 2.0;   // 3 自动扩宽为 3.0，结果为 5.0
+```
+
+**四舍五入（Rounding）：** 对于非负数，使用 `(int)(x + 0.5)` 将 `double` 四舍五入到最接近的整数。对于负数，使用 `(int)(x - 0.5)`。
+
+```java
+double x = 4.2;
+int rounded = (int)(x + 0.5);   // (int)(4.7) = 4
+
+double y = 7.6;
+int roundedY = (int)(y + 0.5);  // (int)(8.1) = 8
+```
+
+- ### 例题 1 — 显式转换与自动扩宽
+
+    > Source: AP CSA Course and Exam Description (Sample Exam Questions)
+
+    ```java
+    double q = 15.0;
+    int r = 2;
+    double x = (int) (q / r);
+    double y = q / r;
+    System.out.println(x + " " + y);
+    ```
+
+    What is printed?
+
+    (A) 7.0 7.0
+    (B) 7.0 7.5
+    (C) 7.5 7.0
+    (D) 7.5 7.5
+
+    **分析与解答：**  
+    `q / r` → 15.0 / 2，int 的 `r` 自动扩宽为 2.0，结果为 7.5。`(int)(7.5)` 截断小数部分，得到 int 值 7。将 7 赋值给 `double x`，自动扩宽为 7.0。`y = q / r` = 15.0 / 2 = 7.5（自动扩宽）。输出为 7.0 7.5。正确答案是 (B)。
+
+- ### 例题 2 — 类型转换与截断
+
+    > Source: Unit 1 Progress Check MCQ Part B, Q1
+
+    ```java
+    double a = 7;
+    int b = (int) (a / 2);
+    double c = (double) b / 2;
+    System.out.print(b);
+    System.out.print(" ");
+    System.out.print(c);
+    ```
+
+    What is printed?
+
+    (A) 3 1.0
+    (B) 3 1.5
+    (C) 3.5 1.5
+    (D) 3.5 1.75
+
+    分析与解答：
+    `double a = 7;` → a = 7.0（int 7 自动扩宽为 double）。`a / 2` → 7.0 / 2 = 3.5。`(int)(3.5)` 截断小数，b = 3。`(double) b / 2` → (double) 3 / 2 → 3.0 / 2 = 1.5（注意：(double) 只作用于 b，2 自动扩宽）。输出为 3 1.5。正确答案是 (B)。
+
+- ### 例题 3 — 先截断后相加 vs 先相加后截断
+
+    > Source: APCSA 2024 MCQ, Q5
+
+    ```java
+    double valOne = 5.75;
+    double valTwo = 2.75;
+    int x = (int) valOne + (int) valTwo;
+    int y = (int) (valOne + valTwo);
+    System.out.println(x + "" + y);
+    ```
+
+    What is printed?
+
+    (A) 77
+    (B) 78
+    (C) 79
+    (D) 98
+    (E) 99
+
+    分析与解答：
+    `(int) valOne` = (int) 5.75 = 5，`(int) valTwo` = (int) 2.75 = 2，x = 5 + 2 = 7。`valOne + valTwo` = 5.75 + 2.75 = 8.5，y = (int) 8.5 = 8。输出为 78。正确答案是 (B)。
+
+- ### 例题 4 — 使用 (int)(x + 0.5) 四舍五入
+
+    > Source: Unit 1 Progress Check MCQ Part B, Q2
+
+    Assume that `x` is a double variable with a **positive** value. Which of the following code segments can be used to round `x` to the nearest integer and store the rounded value in the variable `result`?
+
+    (A) `int result = (int) x;`
+    (B) `int result = (int) x + 0.5;`
+    (C) `int result = (int)(x + 0.5);`
+    (D) `int result = (int) x + (int) 0.5;`
+
+    **分析与解答：**  
+    (A) 只截断，不四舍五入。(B) 编译错误：(int) x + 0.5 结果为 double，不能赋值给 int。(C) 正确：先加 0.5，再截断，实现四舍五入——若 x = 4.2，4.2 + 0.5 = 4.7，(int) 得 4；若 x = 7.6，7.6 + 0.5 = 8.1，(int) 得 8。(D) (int) x + (int) 0.5 = (int) x + 0 = (int) x，只截断，不四舍五入。正确答案是 (C)。
+
+- ### 例题 5 — 类型转换时机：先除后转 vs 先转后除
+
+    > Source: Practice Exam 1 MCQ, Q8
+
+    ```
+    double w = 2.5;
+    double x = 5.0;
+    double z = (int) w / x;
+    System.out.print(z + " ");
+    z = (int) (w / x);
+    System.out.println(z);
+    ```
+
+    What is printed?
+
+    (A) 0.0 0.0
+    (B) 0.4 0.0
+    (C) 0.4 0.4
+    (D) 0.0 0.4
+
+    分析与解答：
+    `(int) w / x`：(int) 2.5 = 2，然后 2 / 5.0 → 2.0 / 5.0 = 0.4（自动扩宽）。`(int) (w / x)`：w / x = 2.5 / 5.0 = 0.4，(int) 0.4 = 0，赋值给 double z → 0.0。输出为 0.4 0.0。正确答案是 (B)。
+
+---
+
+## 1.5.B 变量取值范围（Range of Variables）
+
+Java 提供了两个常量来表示 `int` 类型的取值范围：
+
+| 常量                | 含义                          |
+| ------------------- | ----------------------------- |
+| `Integer.MAX_VALUE` | int 能表示的最大值（2³¹ − 1） |
+| `Integer.MIN_VALUE` | int 能表示的最小值（−2³¹）    |
 
 {: .note}
-> 本课程考试涉及到所有的小数转整数都是丢弃小数部分。**牢记**。
-
-### 1.5.A.3 Auto Casting 自动类型转换
-
-在某些情况下类型转换的发生是**隐式**的，尽管代码中没有显式使用类型转换运算符，但数据类型确实发生了转换。例如：
+`int` 值在 Java 中用 **4 字节（32 位）** 内存存储，因此 `int` 值必须在 `Integer.MIN_VALUE` 到 `Integer.MAX_VALUE` 之间（含两端）。当表达式的结果超出此范围时，会发生**溢出（overflow）**。
 
 ```java
-int a = 3
-double b = a; // 使用 int 给 double 变量赋值，3 被自动转换为 3.0
+int max = Integer.MAX_VALUE;  // 2147483647
+int overflow = max + 1;       // 溢出，结果为 -2147483648
 ```
 
-本课程只需要掌握 int 到 double 存在自动类型转换。
+- ### 例题 6 — 溢出与 Integer.MAX_VALUE
 
-{: .extra}
-> 原因是 int 的表示长度比 double 更短，因此 int 可以“拓宽”到 double。
->
-> 实际上，Java 中“更短”到“更长”的类型之间都可以自动类型转换。  
-> byte → short → int → long → float → double
+    > Source: Unit 1 Progress Check MCQ Part B, Q10
 
-### 1.5.A.4
+    ```java
+    int result = num1 + num2;
+    System.out.println(result);
+    ```
 
-在 Java 中实现四舍五入的方法：
+    Which of the following preconditions for the method is most appropriate to avoid an overflow error?
 
-```java
-// assume x is a double variable, to get its nearest int, use:
-(int)(x + 0.5)  // if x > 0
-(int)(x - 0.5)  // if x < 0
-```
+    (A) `/** Precondition: num1 and num2 are both positive. */`
+    (B) `/** Precondition: num1 is not equal to num2 */`
+    (C) `/** Preconditions: num1 is between Integer.MIN_VALUE and Integer.MAX_VALUE, inclusive. num2 is between Integer.MIN_VALUE and Integer.MAX_VALUE, inclusive. */`
+    (D) `/** Precondition: (num1 + num2) is between Integer.MIN_VALUE and Integer.MAX_VALUE, inclusive. */`
 
-## 1.5.B
+    分析与解答：
+    溢出发生在表达式结果超出 `int` 的取值范围时。即使 `num1` 和 `num2` 各自在合法范围内，它们的和也可能超出范围。只有确保**和**在 `Integer.MIN_VALUE` 到 `Integer.MAX_VALUE` 之间，才能避免溢出。正确答案是 (D)。
 
-**Describe conditions when an integer expression evaluates to a value out of range.**
+- ### 例题 7 — 整数除法与自动扩宽
 
-### 1.5.B.1 Integer's Range 整数的范围
+    > Source: APCSA 2024 MCQ, Q30
 
-在 Java 中，int 的值并不能无限大，而是存在一个范围
+    ```java
+    int r = 23;
+    int t = 10;
+    double a = r % t;
+    double b = r / t;
+    System.out.println(a + " " + b);
+    ```
 
-{: .syntax}
-> Java 中最大的整数用 `Integer.MAX_VALUE` 表示
->
-> Java 中最小的整数用 `Integer.MIN_VALUE` 表示
+    What, if anything, is printed?
 
-{: .note}
-> Integer.MAX_VALUE 和 Integer.MIN_VALUE 本质上也是两个 int 类型的变量。
+    (A) 2.0 3.0
+    (B) 2.3 3.0
+    (C) 3.0 2.0
+    (D) 3.0 2.3
+    (E) Nothing is printed. A compile-time error occurs because an int value cannot be assigned to a double.
 
-### 1.5.B.2 Integer Storage 整数的存储
-
-Java 中每个整数（int 类型）占用的内存是固定的 4 个字节，这是 int 存在最值的**原因**。
-
-{: .extra}
-> 1 字节（byte）= 8 比特（bit）
-> 
-> 1 比特就是一个二进制位（0 或 1）。一个 int 本质就是一个 32 位的二进制数，其中最高位用于表示符号。
->
-> Integer.MAX_VALUE = 2^31-1  
-> Integer.MIN_VALUE = -2^31
-
-### 1.5.B.3 Integer Overflow 整数溢出
-
-如果一个表达式的结果是 int 类型，那么结果一定在 Integer.MAX_VALUE 和 Integer.MIN_VALUE 范围内。
-
-如果结果的数值在范围外，则会造成**溢出**，这个值会被“修改”成一个合法的范围内的整数，但在数学上不是正确的结果。例如：
-
-```java
-System.out.println(Integer.MAX_VALUE);  // 2147483647
-System.out.println(Integer.MAX_VALUE + 1);  // -2147483648, an integer overflow occurs
-```
-
-整数溢出会造成结果错误，但并不会中断程序运行，也不会有报错信息，是一种容易被忽略但时常出现的 bug。
-
-## 1.5.C
-
-**Describe conditions that limit accuracy of expressions.**
-
-### 1.5.C.1 Round-off Error 舍入误差
-
-不仅仅是 int，Java 中所有数据类型都有固定的内存分配。
-
-有时，有限的二进制位无法精确表示小数，这会带来微小的误差。例如
-
-```java
-System.out.println(0.1 * 3); // 0.30000000000000004
-```
-
-{: .extra}
-> 0.1 的二进制表示是 0.00011001100110011...，是一个无限小数，因此并不能被有限的二进制位来表示。
-
-为了减少舍入误差，尽量使用 int 类型来运算。
+    分析与解答：
+    `r % t` = 23 % 10 = 3，赋值给 double a → 自动扩宽为 3.0。`r / t` = 23 / 10 = 2（整数除法，结果截断），赋值给 double b → 自动扩宽为 2.0。输出为 3.0 2.0。int 值可以赋值给 double 变量（自动扩宽），不会编译错误，排除 (E)。正确答案是 (C)。

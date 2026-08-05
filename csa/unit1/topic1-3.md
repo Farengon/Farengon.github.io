@@ -5,112 +5,326 @@ parent: Unit 1
 nav_order: 3
 ---
 
-# 1.3 Expressions and Output
+# 1.3 — Expressions and Output
 
-## 1.3.A
+## 1.3.A 输出：System.out.print 和 System.out.println
 
-**Develop code to generate output and determine the result that would be displayed.**
+**System.out.print** 和 **System.out.println** 用于在计算机屏幕上显示信息。两者的区别在于：**System.out.println** 在显示信息后将光标移动到**新的一行**，而 **System.out.print** 不会。 
 
-### 1.3.A.1 Output 输出
+```java
+System.out.print("Hello ");   // 输出后不换行
+System.out.println("World");  // 输出后换行
+System.out.println("Done");   // 输出后换行
+```
 
-{: .syntax}
-> `System.out.print()`  
-> `System.out.println()`  
-> 括号中写需要输出的内容
+输出结果：
 
-`println` 中的 `ln` 可以看作 line 的缩写，使用`System.out.println()`输出后光标会自动移动到**下一行**，后续的输出将从下一行开始。使用`System.out.print()`输出后光标停留在原地，后续的输出将紧接此次输出。
+```
+Hello World
+Done
+```
 
-## 1.3.B
+- ### 例题 1 — 选择正确的输出语句
 
-**Develop code to utilize string literals and determine the result of using string literals.**
+    > Source: AP Classroom Unit 1 Progress Check: MCQ Part A, Q8
 
-### 1.3.B.1 Literal
+    Which of the following code segments will print the word Hello?
 
-值的代码表达。三种 primitive type 的表示：
+    (A) `System.out.print("Hello");`  
+    (B) `System.out.print(Hello);`  
+    (C) `"System.out.print(Hello)";`  
+    (D)
 
-- int 整数：32，199，8232，-11，0，666...
+    ```
+    System.out.print(He);
+    System.out.print(llo);
+    ```
 
-- double 小数：2.1，0.637，133.322...
+    **分析与解答：**  
+    在 Java 中，字符串字面量必须用双引号括起来。选项 (A) 正确地使用了 `System.out.print("Hello")`，将字符串字面量 `"Hello"` 作为参数传递给 print 方法。选项 (B) 缺少引号，编译器会将 `Hello` 当作变量名处理。选项 (C) 将整个语句放在引号中，变成了一段字符串。选项 (D) 会输出 `Hello`，但分成两次输出，中间没有空格。正确答案是 **(A)**。 [pdf_9]
 
-- boolean 布尔值：true，false
+---
 
-### 1.3.B.2 String Literal
+## 1.3.B 字符串字面量与转义序列
 
-使用双引号表示字符串：
+**字面量（Literal）** 是代码中对固定值的表示。
 
-"java", "Hello", "32", "2.1", "true", "&* ds8^$"...
+**字符串字面量（String Literal）** 是由双引号括起来的一串字符序列。
 
-{: .note}
-> 字符串是由字符连接而成，包括所有的可见和不可见字符。
->
-> 字符串是一种 reference 类型，字符串 "32" 和整数 32 不同，字符串 "True" 和布尔值 True 不同，不要搞混。
+```java
+System.out.println("Hello, World!");   // "Hello, World!" 是一个字符串字面量
+System.out.println("42");              // "42" 是字符串，不是整数 42
+```
 
-### 1.3.B.3 Escape Sequence 转义序列
+**转义序列（Escape Sequence）** 是以反斜杠 `\` 开头的特殊字符序列，在**字符串**中具有特殊含义。AP CSA 课程中涉及的转义序列包括： 
 
-在字符串中使用反斜杠（\）加特定的字符可以定义转义序列。本课程中会涉及的转义序列有三种：
+| 转义序列 | 含义            |
+| -------- | --------------- |
+| `\"`     | 双引号          |
+| `\\`     | 反斜杠          |
+| `\n`     | 换行（newline） |
 
-- `\"`: 表示这个位置是一个双引号字符，不参与字符串定义的引号匹配。
+```java
+System.out.println("She said, \"Hello!\"");  // 输出: She said, "Hello!"
+System.out.println("Line1\nLine2");           // 输出两行
+System.out.println("Path: C:\\Files");        // 输出: Path: C:\Files
+```
 
-    - "hi"java" 是错误的表达，因为双引号从前往后匹配，Java会将这个表达解释为字符串"hi"和一串不符合语法的乱码。
+- ### 例题 2 — 转义序列的行为
 
-    - "hi\"java" 是正确的表达，这个字符串的值是 hi"java。
+    > Source: AP Classroom Unit 1 Progress Check: MCQ Part A, Q9
 
-- `\\`: 表示这个位置是一个反斜杠字符。
+    Consider the following statement.
 
-- `\n`: 表示在这里换行。
+    ```java
+    System.out.print("AP \n Computer \n Science \n A \n rocks");
+    ```
 
-## 1.3.C
+    Which of the following best describes the behavior of this statement?
 
-**Develop code for arithmetic expressions and determine the result of these expressions.**
+    (A) It prints five lines of text, each separated by a line break indicated by the escape sequence `\n`.  
+    (B) It prints four lines of text because the escape sequence `\n` appears four times in the string literal.  
+    (C) It prints one line of text because the printed value is a single string literal.  
+    (D) It prints nothing due to a syntax error.
 
-### 1.3.C.1 Arithmetic Expression 算术表达式
+    **分析与解答：**  
+    字符串中的每个 `\n` 转义序列都会产生一个换行。字符串中共有四个 `\n`，因此将输出五行文本（"AP"、"Computer"、"Science"、"A"、"rocks" 各占一行）。注意 `System.out.print` 不会在末尾自动添加换行，但 `\n` 本身已经产生了换行效果。正确答案是 **(A)**。 [pdf_9]
 
-用于算术运算，包括**操作数**和**运算符**，操作数可以是 int 或 double 类型的值或变量。
+- ### 例题 3 — 字符串字面量的语法
 
-一个算术表达式可以得到一个数值结果。
+    > Source: AP Classroom New Unit 1 TopicQuestion MCQ, Q21
 
-### 1.3.C.2 Arithmetic Operator 算术运算符
+    Consider the following code segment.
 
-包括 +，-，*，/，% 五种运算符。
+    ```java
+    System.out.print(I do not fear computers. );   // Line 1
+    System.out.println(I fear the lack of them.);  // Line 2
+    System.out.println(--Isaac Asimov);            // Line 3
+    ```
+
+    The code segment is intended to produce the following output but may not work as intended.
+
+    ```
+    I do not fear computers. I fear the lack of them.
+    --Isaac Asimov
+    ```
+
+    Which change, if any, can be made so that the code segment produces the intended output?
+
+    (A) In line 1, print should be changed to println.  
+    (B) The statement `System.out.println()` should be inserted between lines 2 and 3.  
+    (C) In lines 1, 2, and 3, the text that appears in parentheses should be enclosed in quotation marks.  
+    (D) No change is needed; the code segment works correctly as is.
+
+    **分析与解答：**
+    在 Java 中，所有字符串字面量都必须用双引号（`"`）括起来。原代码中的文本没有加引号，编译器会将它们当作变量名或标识符处理，导致编译错误。选项 (A) 和 (B) 都不能解决缺少引号的问题。选项 (C) 正确地将文本用双引号括起，使其成为合法的字符串字面量。选项 (D) 错误，因为代码无法编译通过。正确答案是 **(C)**。 [pdf_19]
+
+---
+
+## 1.3.C 算术表达式
+
+**算术表达式（Arithmetic Expression）** 由数值、变量和运算符构成，包括 `int` 类型和 `double` 类型的表达式。 [pdf_2]
+
+**算术运算符：** 加法 `+`、减法 `-`、乘法 `*`、除法 `/`、取余 `%`。
+
+
+### 运算结果的数据类型
 
 {: .important}
-> 对于一个算术表达式 `操作数1 操作符 操作数2`
-> 
-> 只要操作数中有 double 类型，结果一定是 double 类型。
-> 
-> 只有当两个操作数都是 int 类型，结果才是 int 类型。
->
-> 结果的类型与**数值无关**。例如
->
-> `2.5 * 4` 的结果是 double 类型的 10.0，尽管在数学上 10 是一个整数。
+> - 两个 `int` 值进行算术运算，结果类型为 `int`。
+> - 运算中至少有一个 `double` 值，结果类型为 `double`。
 
-### 1.3.C.3 Dividing 除法
-
-两个整数相除得到的结果是商的整数部分（**int 类型**）。**不是四舍五入！**
-
-只要有一个 double 类型的操作数，得到的就是精确的商（**double 类型**）。
+```java
+int a = 5 + 3;        // 5 + 3 = 8，int 类型
+double b = 5.0 + 3;   // 5.0 + 3 = 8.0，double 类型（int 自动提升为 double）
+double c = 5 + 3.0;   // 5 + 3.0 = 8.0，double 类型
+```
 
 {: .extra}
-> 实际上由于精度限制，如果商是无限小数，计算机也只能得到一个近似值。
+> **Exclusion Statement：** 结果为特殊 double 值（如无穷大和 NaN）的表达式不在 AP CSA 考试范围内。
 
-### 1.3.C.4 Remainder 模运算
+### 整数除法与浮点数除法
 
-模运算（%）用于计算**余数**。
+{: .important}
+> - 两个 `int` 值相除，结果只保留商的**整数部分**（截断，不四舍五入）。
+> - 运算中至少有一个 `double` 值，结果保留完整的商。 [pdf_2]
 
-`a % b` 得到 a 除以 b 的余数。
+```java
+int x = 7 / 2;        // 结果是 3（整数除法，小数部分被截断）
+double y = 7.0 / 2;   // 结果是 3.5（double 除法）
+double z = 7 / 2;     // 结果是 3.0！先做整数除法 7 / 2 = 3，再赋值给 double
+```
 
-{: .extra}
-> a < 0 和 b <= 0 的情况不在课程考察范围内。
+### 取余运算符（%）
 
-### 1.3.C.5 Compound Arithmetic Expression 复合算术表达式
+取余运算符 `%` 计算一个数除以另一个数的**余数**。
 
-对于一个复合的算术表达式，按照括号 > 乘除模（* / %）> 加减（+ -）的优先级顺序依次计算。
+```java
+int remainder = 17 % 5;   // 17 ÷ 5 = 3 余 2，remainder = 2
+```
 
-### 1.3.C.6 Dividing by Zero
+> **Exclusion Statement：** 被除数 a 小于 0，以及除数 b 小于等于 0 的情况不在 AP CSA 考试范围内。
 
-用整数除以 0 会导致 **ArithmeticException**。
+### 运算符优先级
+
+运算符可以组合成复合表达式。在编译时，数值根据**运算符优先级（Operator Precedence）** 与运算符结合，决定分组方式。可以使用圆括号 `()` 修改优先级。 
 
 {: .note}
-> 使用 double 除以 0 不会导致异常，这不在课程考察范围内。
->
-> 因此,考试时看到 0 在除数的位置上时一定可以确定引发异常。反过来，题目如果问如何才会出现 ArithmeticException，要想到令除数为0。
+> **优先级规则（从高到低）：**
+
+> 1. 圆括号 `()`
+> 2. 乘法 `*`、除法 `/`、取余 `%`（同级，从左到右计算）
+>  3. 加法 `+`、减法 `-`（同级，从左到右计算）
+
+```java
+int result = 5 + 10 * 2;        // 10 * 2 先算 → 5 + 20 = 25
+int result2 = (5 + 10) * 2;     // 5 + 10 先算 → 15 * 2 = 30
+int result3 = 17 % 5 + 3;       // 17 % 5 = 2 → 2 + 3 = 5
+```
+
+### 除零错误
+
+尝试用整数零除以整数会抛出 `ArithmeticException`。
+
+```java
+int x = 10 / 0;   // 运行时错误：ArithmeticException（整数除零）
+double y = 10.0 / 0.0;   // 结果为 Infinity（无穷大，不在考试范围内）
+```
+
+- ### 例题 4 — 运算符优先级
+
+    > Source: AP Classroom New Unit 1 TopicQuestion MCQ, Q1
+
+    Consider the following code segment.
+
+    ```java
+    int a = 5;
+    int b = 8;
+    int c = 3;
+    System.out.println(a + b / c * 2);
+    ```
+
+    What is printed as a result of executing the code segment?
+
+    (A) 2  
+    (B) 6  
+    (C) 8  
+    (D) 9
+
+    **分析与解答：**
+
+    按照运算符优先级规则，`/` 和 `*` 优先级高于 `+`，且同级从左到右计算。因此执行顺序为：
+
+    1. `b / c` → `8 / 3` → `2`（整数除法）
+    2. `2 * 2` → `4`
+    3. `a + 4` → `5 + 4` → `9`
+
+    正确答案是 **(D)**。 
+
+- ### 例题 5 — 整数除法与类型转换
+
+    > Source: AP CSA Course and Exam Description (Sample Exam Questions)
+
+    Consider the following code segment.
+
+    ```java
+    double q = 15.0;
+    int r = 2;
+    double x = (int) (q / r);
+    double y = q / r;
+    System.out.println(x + " " + y);
+    ```
+
+    What is printed as a result of executing this code segment?
+
+    (A) 7.0 7.0  
+    (B) 7.0 7.5  
+    (C) 7.5 7.0  
+    (D) 7.5 7.5
+
+    **分析与解答：**
+
+    逐步追踪：
+
+    - `q / r` → `15.0 / 2` → `7.5`（至少有一个 double，结果为 double）
+    - `(int)(q / r)` → `(int)(7.5)` → `7`（强制类型转换为 int，截断小数部分）
+    - `x = 7` → `x = 7.0`（赋值给 double 变量，自动提升为 7.0）
+    - `y = q / r` → `y = 7.5`
+
+    因此输出为 `7.0 7.5`。正确答案是 **(B)**。
+
+- ### 例题 6 — 取余运算符与优先级
+
+    > Source: Practice Exam 1 MCQ, Q4
+
+    Consider the following code segment.
+
+    ```java
+    int first = 5 + 10 * 2;
+    int second = first + first % 2;
+    ```
+
+    What is the value of `second` after this code segment is executed?
+
+    (A) 37  
+    (B) 30  
+    (C) 26  
+    (D) 0
+
+    **分析与解答：**
+
+    第一步：计算 `first`。`*` 优先级高于 `+`，所以 `10 * 2 = 20`，然后 `5 + 20 = 25`，`first = 25`。
+
+    第二步：计算 `second`。`%` 优先级高于 `+`，所以先计算 `first % 2` → `25 % 2 = 1`（25 除以 2 余 1），然后 `25 + 1 = 26`，`second = 26`。
+
+    正确答案是 **(C)**。
+
+- ### 例题 7 — 复合表达式（多种运算符组合）
+
+    > Source: AP Classroom Unit 1 Progress Check: MCQ Part A, Q7
+
+    Consider the following code segment.
+
+    ```java
+    int a = 1;
+    int b = 2;
+    int c = 3;
+    int d = 4;
+    double x = a + b * c % d;
+    ```
+
+    What is the value of x after executing the code segment?
+
+    (A) 1.0
+
+    (B) 2.5
+
+    (C) 3.0
+
+    (D) 7.0
+
+    **分析与解答：**
+
+    `*` 和 `%` 优先级相同且高于 `+`，从左到右计算：
+
+    1. `b * c` → `2 * 3 = 6`
+    2. `6 % d` → `6 % 4 = 2`（6 除以 4 余 2）
+    3. `a + 2` → `1 + 2 = 3`
+    4. `x = 3` → `x = 3.0`（赋值给 double 变量）
+
+    正确答案是 **(C)**。
+
+---
+
+## 考点总结
+
+| 考点                        | 核心内容                               | 考试要点                                 |
+| --------------------------- | -------------------------------------- | ---------------------------------------- |
+| System.out.print vs println | print 不换行，println 换行             | 根据输出格式要求选择正确的方法           |
+| 字符串字面量                | 双引号括起来的字符序列                 | 字符串必须用双引号，不能省略             |
+| 转义序列                    | `\"`、`\\`、`\n`                       | `\n` 产生换行，注意每个 `\n` 对应一行    |
+| 算术运算符                  | `+` `-` `*` `/` `%`                    | 两个 int 运算得 int，有 double 得 double |
+| 整数除法                    | int/int 只保留整数部分                 | 7/2=3，不是 3.5                          |
+| 取余运算                    | `%` 计算余数                           | 17%5=2，常用于判断奇偶、提取数字         |
+| 运算符优先级                | `*` `/` `%` 高于 `+` `-`，同级从左到右 | 使用圆括号可以改变优先级                 |
+| 除零错误                    | 整数除以零 → ArithmeticException       | 注意避免除零                             |

@@ -5,79 +5,137 @@ parent: Unit 4
 nav_order: 13
 ---
 
-# 4.13 Implementing 2D Array Algorithms
+# 4.13 — Implementing 2D Array Algorithms
 
-## 基础知识
+## 4.13.A 二维数组算法
 
-### 常见 2D 数组算法
-- 求所有元素和
-- 求每行/每列的和
-- 查找元素
+在二维数组上实现算法时，关键是**明确遍历的维度**：
 
-## 代码示例
+- **按行判断**：固定行 r，遍历该行的所有列。
+- **行列变换**：把 `mat[r][c]` 复制到新位置（如倒序行）。
+- **条件累加/判断**：逐元素检查条件。
 
-### 示例 1: 求和
-{% raw %}
-```java
-public class TwoDSum {
-    public static void main(String[] args) {
-        int[][] matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-        int sum = 0;
-        
-        for (int row = 0; row < matrix.length; row++) {
-            for (int col = 0; col < matrix[row].length; col++) {
-                sum += matrix[row][col];
-            }
-        }
-        
-        System.out.println("Sum: " + sum);
-    }
-}
-```
-{% endraw %}
+{: .note}
+> "该行所有元素都为正"的判断模式：先假设全正（初始值 `true`），一旦发现非正元素就改为 `false`。
 
-### 示例 2: 求每行的和
-{% raw %}
-```java
-public class RowSums {
-    public static void main(String[] args) {
-        int[][] matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-        
-        for (int row = 0; row < matrix.length; row++) {
-            int rowSum = 0;
-            for (int col = 0; col < matrix[row].length; col++) {
-                rowSum += matrix[row][col];
-            }
-            System.out.println("Row " + row + " sum: " + rowSum);
-        }
-    }
-}
-```
-{% endraw %}
+## 4.13.B 常见模式
 
-## 例题
+| 模式               | 关键写法                                   |
+| ------------------ | ------------------------------------------ |
+| 行内全正判断       | `allPositive = true`，遇 `<= 0` 改 false   |
+| 行倒序复制         | `changedMat[rows - row - 1][col] = mat[row][col]` |
+| 行/列求和          | 固定行（列）遍历另一维                     |
 
-### 例题 1: 编程题
-求 2D 数组中所有元素的最大值。
+- ### 例题 1 — 行内全正判断
 
-**参考答案:**
-{% raw %}
-```java
-public class TwoDMax {
-    public static void main(String[] args) {
-        int[][] matrix = {{1, 5, 3}, {4, 2, 6}, {9, 8, 7}};
-        int max = matrix[0][0];
-        
-        for (int row = 0; row < matrix.length; row++) {
-            for (int col = 0; col < matrix[row].length; col++) {
-                if (matrix[row][col] > max) {
-                    max = matrix[row][col];
-                }
-            }
-        }
-        
-        System.out.println("Max: " + max);
-    }
-}
-```
-{% endraw %}
+  > **Source:** AP Classroom Unit 4 Progress Check: MCQ Part C, Q7
+
+  The following method is intended to return true if all elements in row `x` of the 2D array nums are positive and false otherwise.
+
+  ```java
+  /**
+   * Precondition: x is a valid row index of nums.
+   */
+  public static boolean allPositiveInRow(int[][] nums, int x)
+  {
+      boolean allPositive = /* initial value */;
+      for (int y = 0; y < nums[0].length; y++)
+      {
+          if (nums[x][y] <= 0)
+          {
+              allPositive = /* updated value */;
+          }
+      }
+      return allPositive;
+  }
+  ```
+
+  Which of the following replacements for `/* initial value */` and `/* updated value */` can be used so that the method works as intended?
+
+  (A) Replace `/* initial value */` with true and replace `/* updated value */` with true.  
+  (B) Replace `/* initial value */` with true and replace `/* updated value */` with false.  
+  (C) Replace `/* initial value */` with false and replace `/* updated value */` with true.  
+  (D) Replace `/* initial value */` with false and replace `/* updated value */` with false.
+
+  <details markdown="block">
+    <summary><b>点击查看解答</b></summary>
+
+    **分析与解答：**  
+    先假设该行全为正（`allPositive = true`）；一旦发现元素 `<= 0`，就把它改为 `false`。这是"先假设成立、遇反例推翻"的模式。正确答案是 **(B)**。
+
+  </details>
+
+- ### 例题 2 — 行倒序复制
+
+  > **Source:** AP Classroom Unit 4 Progress Check: MCQ Part C, Q8
+
+  Consider the following code segment.
+
+  ```java
+  int[][] mat = {{1, 2, 3, 4},
+                 {1, 2, 3, 4},
+                 {5, 6, 7, 8},
+                 {5, 6, 7, 8}};
+
+  int numRows = mat.length;
+  int numCols = mat[0].length;
+  int[][] changedMat = new int[numRows][numCols];
+
+  for (int row = 0; row < numRows; row++)
+  {
+      for (int col = 0; col < numCols; col++)
+      {
+          changedMat[numRows - row - 1][col] = mat[row][col];
+      }
+  }
+  ```
+
+  Which of the following represents the contents of changedMat after executing this code segment?
+
+  (A)
+  ```
+  {5, 6, 7, 8}
+  {5, 6, 7, 8}
+  {1, 2, 3, 4}
+  {1, 2, 3, 4}
+  ```
+  (B)
+  ```
+  {1, 2, 3, 4}
+  {5, 6, 7, 8}
+  {1, 2, 3, 4}
+  {5, 6, 7, 8}
+  ```
+  (C)
+  ```
+  {4, 3, 2, 1}
+  {4, 3, 2, 1}
+  {8, 7, 6, 5}
+  {8, 7, 6, 5}
+  ```
+  (D)
+  ```
+  {1, 2, 3, 4}
+  {1, 2, 3, 4}
+  {5, 6, 7, 8}
+  {5, 6, 7, 8}
+  ```
+
+  <details markdown="block">
+    <summary><b>点击查看解答</b></summary>
+
+    **分析与解答：**  
+    赋值目标行是 `numRows - row - 1`：row=0（第 1 行 {1,2,3,4}）复制到第 4 行；row=1 复制到第 3 行；row=2（{5,6,7,8}）复制到第 2 行；row=3 复制到第 1 行。列不变。结果是行的**上下倒序**。正确答案是 **(A)**。
+
+  </details>
+
+---
+
+## 考点总结
+
+| 考点               | 关键内容                                     | 考试提示                                       |
+| ------------------ | -------------------------------------------- | ---------------------------------------------- |
+| 行内判断           | 初始 true，遇反例改 false                    | "全部满足"型判断用此模式                       |
+| 行列变换           | 目标索引用公式计算                           | 行倒序：rows - row - 1                         |
+| 遍历维度           | 固定行遍历列 / 固定列遍历行                  | 明确题目统计的是行还是列                       |
+| 逐元素条件         | 检查每个元素的属性                           | 注意索引 x（行）与 y（列）                    |

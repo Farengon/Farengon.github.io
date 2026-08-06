@@ -26,27 +26,26 @@ Done
 
 - ### 例题 1 — 选择正确的输出语句
 
-      > Source: AP Classroom Unit 1 Progress Check: MCQ Part A, Q8
+  > Source: AP Classroom Unit 1 Progress Check: MCQ Part A, Q8
 
-      Which of the following code segments will print the word Hello?
+  Which of the following code segments will print the word Hello?
 
-      (A) `System.out.print("Hello");`
-      (B) `System.out.print(Hello);`
-      (C) `"System.out.print(Hello)";`
-      (D)
+  (A) `System.out.print("Hello");`
+  (B) `System.out.print(Hello);`
+  (C) `"System.out.print(Hello)";`
+  (D)
+  ```
+  System.out.print(He);
+  System.out.print(llo);
+  ```
 
-      ```
-      System.out.print(He);
-      System.out.print(llo);
-      ```
-
-      <details markdown="block">
-        <summary><b>点击查看解答</b></summary>
+  <details markdown="block">
+    <summary><b>点击查看解答</b></summary>
 
         **分析与解答：**
         在 Java 中，字符串字面量必须用双引号括起来。选项 (A) 正确地使用了 `System.out.print("Hello")`，将字符串字面量 `"Hello"` 作为参数传递给 print 方法。选项 (B) 缺少引号，编译器会将 `Hello` 当作变量名处理。选项 (C) 将整个语句放在引号中，变成了一段字符串。选项 (D) 会输出 `Hello`，但分成两次输出，中间没有空格。正确答案是 **(A)**。
 
-      </details>
+  </details>
 
   **字符串字面量（String Literal）** 是由双引号括起来的一串字符序列。
 
@@ -217,8 +216,8 @@ double y = 10.0 / 0.0;   // 结果为 Infinity（无穷大，不在考试范围�
    (C) 8  
    (D) 9
 
-    <details markdown="block">
-      <summary><b>点击查看解答</b></summary>
+  <details markdown="block">
+    <summary><b>点击查看解答</b></summary>
     
       **分析与解答：**
 
@@ -324,6 +323,10 @@ double y = 10.0 / 0.0;   // 结果为 Infinity（无穷大，不在考试范围�
 
   (D) 7.0
 
+
+  <details markdown="block">
+    <summary><b>点击查看解答</b></summary>
+
   **分析与解答：**
 
   `*` 和 `%` 优先级相同且高于 `+`，从左到右计算：
@@ -333,6 +336,8 @@ double y = 10.0 / 0.0;   // 结果为 Infinity（无穷大，不在考试范围�
   4. `x = 3` → `x = 3.0`（赋值给 double 变量）
 
   正确答案是 **(C)**。
+
+  </details>
 
 ---
 

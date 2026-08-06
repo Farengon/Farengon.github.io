@@ -192,12 +192,12 @@ boolean isPassing = true;      // 声明 boolean 变量并初始化为 true
   (D) `z = 0;`
 
   <details markdown="block"">
-      <summary><b>点击查看解答</b></summary>
+    <summary><b>点击查看解答</b></summary>
     
     **分析与解答：**
     在 Java 中，变量必须先声明才能使用。选项 (A) 声明了一个 `boolean` 类型的变量 `z`，语法正确，可以编译。选项 (B) 试图将 `double` 值 `0.0` 赋值给 `int` 变量，类型不兼容，无法编译。选项 (C) 声明了 `int` 类型的变量 `z` 并初始化为 `0`，语法正确，可以编译。选项 (D) 中 `z` 未声明就直接使用，无法编译。该题中选项 (A) 和 (C) 都能使代码段编译通过，但题目要求选出**可以使用**的代码，注意变量声明时必须确保类型与值匹配。
 
-    </details>
+  </details>
 
 ---
 

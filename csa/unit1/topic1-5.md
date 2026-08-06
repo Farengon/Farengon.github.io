@@ -140,7 +140,7 @@ int roundedY = (int)(y + 0.5);  // (int)(8.1) = 8
    (D) `int result = (int) x + (int) 0.5;`
 
   <details markdown="block">
-      <summary><b>点击查看解答</b></summary>
+    <summary><b>点击查看解答</b></summary>
     
       **分析与解答：**  
       (A) 只截断，不四舍五入。(B) 编译错误：(int) x + 0.5 结果为 double，不能赋值给 int。(C) 正确：先加 0.5，再截断，实现四舍五入——若 x = 4.2，4.2 + 0.5 = 4.7，(int) 得 4；若 x = 7.6，7.6 + 0.5 = 8.1，(int) 得 8。(D) (int) x + (int) 0.5 = (int) x + 0 = (int) x，只截断，不四舍五入。正确答案是 (C)。
@@ -168,12 +168,12 @@ int roundedY = (int)(y + 0.5);  // (int)(8.1) = 8
    (D) 0.0 0.4
 
   <details markdown="block">
-      <summary><b>点击查看解答</b></summary>
+    <summary><b>点击查看解答</b></summary>
     
       分析与解答：
       `(int) w / x`：(int) 2.5 = 2，然后 2 / 5.0 → 2.0 / 5.0 = 0.4（自动扩宽）。`(int) (w / x)`：w / x = 2.5 / 5.0 = 0.4，(int) 0.4 = 0，赋值给 double z → 0.0。输出为 0.4 0.0。正确答案是 (B)。
 
-    </details>
+  </details>
 
 ---
 
@@ -210,8 +210,8 @@ int overflow = max + 1;       // 溢出，结果为 -2147483648
    (C) `/** Preconditions: num1 is between Integer.MIN_VALUE and Integer.MAX_VALUE, inclusive. num2 is between Integer.MIN_VALUE and Integer.MAX_VALUE, inclusive. */`  
    (D) `/** Precondition: (num1 + num2) is between Integer.MIN_VALUE and Integer.MAX_VALUE, inclusive. */`
 
-<details markdown="block">
-      <summary><b>点击查看解答</b></summary>
+  <details markdown="block">
+    <summary><b>点击查看解答</b></summary>
 
   分析与解答：
   溢出发生在表达式结果超出 `int` 的取值范围时。即使 `num1` 和 `num2` 各自在合法范围内，它们的和也可能超出范围。只有确保**和**在 `Integer.MIN_VALUE` 到 `Integer.MAX_VALUE` 之间，才能避免溢出。正确答案是 (D)。
@@ -238,8 +238,8 @@ int overflow = max + 1;       // 溢出，结果为 -2147483648
    (D) 3.0 2.3  
    (E) Nothing is printed. A compile-time error occurs because an int value cannot be assigned to a double.
 
-<details markdown="block">
-      <summary><b>点击查看解答</b></summary>
+  <details markdown="block">
+    <summary><b>点击查看解答</b></summary>
 
   分析与解答：
   `r % t` = 23 % 10 = 3，赋值给 double a → 自动扩宽为 3.0。`r / t` = 23 / 10 = 2（整数除法，结果截断），赋值给 double b → 自动扩宽为 2.0。输出为 3.0 2.0。int 值可以赋值给 double 变量（自动扩宽），不会编译错误，排除 (E)。正确答案是 (C)。

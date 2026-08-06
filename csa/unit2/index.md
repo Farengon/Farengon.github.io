@@ -1,15 +1,15 @@
 ---
 layout: default
-title: Unit 2
+title: Unit 2：Selection and Iteration
 parent: AP CSA
 nav_order: 2
 has_children: true
 permalink: /csa/unit2/
 ---
 
-# Unit 2: Selection and Iteration
+# Unit 2：选择与迭代 (Selection and Iteration)
 
-本单元介绍条件语句和循环结构。
+本单元介绍程序中的选择结构与迭代结构，包括布尔表达式、条件语句和循环。
 
 ## 单元概述
 - 考试权重: 25–35%

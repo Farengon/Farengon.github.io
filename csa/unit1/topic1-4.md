@@ -18,7 +18,6 @@ nav_order: 4
 引用类型（reference types）可以被赋值为一个新对象，也可以赋值为 `null`——`null` 是一个特殊值，表示该引用不关联任何对象。基本类型（primitive types）不能赋值为 `null`。
 
 {: .important}
-
 > 仅仅声明变量是不够的——在使用变量之前必须确保它已经被赋值（初始化）。尝试使用未初始化的变量会导致编译错误。
 
 ---
@@ -38,8 +37,7 @@ variable = expression;
 1. 计算右侧表达式的值，得到一个单一的结果
 2. 将该结果存入左侧变量中（**覆盖**该变量之前的值）
 
-{extra}
-
+{: .extra}
 > **Exclusion statement** — 在表达式中使用赋值运算符（如 `a = b = 4;` 或 `a[i += 5]`）不在 AP CSA 考试范围内。
 
 ---
@@ -78,8 +76,8 @@ variable = expression;
   (C) 20 100  
   (D) 20 200
 
-    <details markdown="block">
-      <summary><b>点击查看解答</b></summary>
+  <details markdown="block">
+    <summary><b>点击查看解答</b></summary>
     
   **分析与解答：**
 
@@ -97,7 +95,7 @@ variable = expression;
 
   本题考察赋值语句的执行顺序：右侧表达式 `temp * x` 先被求值为 `200`，再赋值给 `y`。
 
-    </details>
+  </details>
 
 - ### 例题 2 — 多变量赋值追踪
 
@@ -121,8 +119,8 @@ variable = expression;
   (C) 70 50  
   (D) 100 50
 
-    <details markdown="block">
-      <summary><b>点击查看解答</b></summary>
+  <details markdown="block">
+    <summary><b>点击查看解答</b></summary>
     
       **分析与解答：**
 
@@ -140,7 +138,7 @@ variable = expression;
 
       本题的关键点：赋值语句 `y = x;` 将 `x` 的**值**（20）复制给 `y`，之后 `x` 改变不影响 `y`。赋值语句 `x = w;` 将 `w` 的值（50）赋给 `x`，覆盖了 `x` 原来的值。
 
-    </details>
+  </details>
 
 - ### 例题 3 — 变量必须先声明再使用
 
@@ -162,8 +160,8 @@ variable = expression;
    (C) `int z = 0;`  
    (D) `z = 0;`
 
-    <details markdown="block">
-      <summary><b>点击查看解答</b></summary>
+  <details markdown="block">
+    <summary><b>点击查看解答</b></summary>
     
       **分析与解答：**
 
@@ -178,7 +176,7 @@ variable = expression;
 
       本题考察 Essential Knowledge 1.4.A.1：变量在使用前必须被赋值，且该值必须来自兼容的数据类型。
 
-    </details>
+  </details>
 
 - ### 例题 4 — 使用临时变量交换值
 
@@ -198,8 +196,8 @@ variable = expression;
    (C) `y = x; temp = y;`  
    (D) `y = x; temp = x;`
 
-    <details markdown="block">
-      <summary><b>点击查看解答</b></summary>
+  <details markdown="block">
+    <summary><b>点击查看解答</b></summary>
     
       **分析与解答：**
 
@@ -215,7 +213,7 @@ variable = expression;
 
       本题考察赋值语句的实际应用——使用临时变量交换两个变量的值，这是编程中的经典算法。
 
-    </details>
+  </details>
 
 - ### 例题 5 — 表达式求值产生单一值
 
@@ -237,8 +235,8 @@ variable = expression;
    (C) 14  
    (D) 18
 
-    <details markdown="block">
-      <summary><b>点击查看解答</b></summary>
+  <details markdown="block">
+    <summary><b>点击查看解答</b></summary>
     
       **分析与解答：**
 
@@ -254,7 +252,7 @@ variable = expression;
 
       本题考察 Essential Knowledge 1.4.A.3：表达式被求值以产生一个单一的值，该值具有确定的类型。
 
-    </details>
+  </details>
 
 ---
 
@@ -275,7 +273,6 @@ String line = sc.nextLine();          // 读取一整行
 ```
 
 {: .extra}
-
 > **Exclusion statement** — 任何特定形式的用户输入（如键盘输入的具体实现）不在 AP CSA 考试范围内。Scanner 在考试中的正式使用仅限于 Unit 4 中从文件读取数据。
 
 - ### 例题 6 — 程序输入的概念
@@ -289,6 +286,9 @@ String line = sc.nextLine();          // 读取一整行
    (C) It is used to perform mathematical calculations.  
    (D) It is used to create random numbers.
 
+  <details markdown="block">
+    <summary><b>点击查看解答</b></summary>
+
   **分析与解答：**
   - **(A)** 错误：显示输出到控制台使用的是 `System.out.print` 和 `System.out.println`。
   - **(B)** **正确**：`Scanner` 类用于从输入源（如键盘或文件）获取文本输入。
@@ -298,6 +298,8 @@ String line = sc.nextLine();          // 读取一整行
   正确答案是 **(B)**。
 
   本题考察 Essential Knowledge 1.4.B.1：`Scanner` 类是从键盘获取文本输入的一种方式。
+
+  </details>
 
 ---
 

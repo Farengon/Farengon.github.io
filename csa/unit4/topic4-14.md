@@ -5,82 +5,162 @@ parent: Unit 4
 nav_order: 14
 ---
 
-# 4.14 Searching Algorithms
+# 4.14 — Searching Algorithms
 
-## 基础知识
+## 4.14.A 线性查找（Linear Search）
 
-### 线性搜索
-逐个检查元素，适用于任何数组：
+**线性查找** 从数组一端开始，逐个比较元素直到找到目标：
+
 ```java
-public static int linearSearch(int[] arr, int target) {
-    for (int i = 0; i < arr.length; i++) {
-        if (arr[i] == target) {
-            return i;
+public static int linearSearch(int[] arr, int value)
+{
+    for (int j = 0; j < arr.length; j++)
+    {
+        if (arr[j] == value)
+        {
+            return j;      // 找到，返回索引
         }
     }
-    return -1;  // 没找到
+    return -1;             // 没找到，返回 -1
 }
 ```
 
-### 二分搜索
-要求数组已排序，效率更高：
-```java
-public static int binarySearch(int[] arr, int target) {
-    int low = 0;
-    int high = arr.length - 1;
-    
-    while (low <= high) {
-        int mid = (low + high) / 2;
-        if (arr[mid] == target) {
-            return mid;
-        } else if (arr[mid] < target) {
-            low = mid + 1;
-        } else {
-            high = mid - 1;
-        }
-    }
-    return -1;
-}
-```
+{: .important}
+> - 线性查找返回**第一个**匹配元素的索引；找不到返回 **-1**。
+> - 若从**后往前**遍历，返回的是**最后一个**匹配元素的索引。
+> - 遍历方向改变不影响"找到/未找到"，只影响返回的是第一个还是最后一个。
 
-## 代码示例
+## 4.14.B 部分范围查找
 
-### 示例 1: 线性搜索
-```java
-public class LinearSearch {
-    public static int search(int[] arr, int target) {
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == target) {
-                return i;
-            }
-        }
-        return -1;
-    }
-    
-    public static void main(String[] args) {
-        int[] numbers = {5, 2, 8, 1, 9};
-        int index = search(numbers, 8);
-        System.out.println("Found at index: " + index);  // 2
-    }
-}
-```
+有时只查找数组的**一部分**（如后半部分）。追踪时注意循环的起止索引和返回时机。
 
-## 例题
+- ### 例题 1 — 后半部分查找
 
-### 例题 1: 选择题
-线性搜索的时间复杂度是？
-A. O(1)
-B. O(n)
-C. O(n²)
-D. O(log n)
+  > **Source:** AP Classroom Unit 4 Progress Check: MCQ Part C, Q10
 
-**答案: B**
+  Consider the following method.
 
-### 例题 2: 选择题
-二分搜索要求数组？
-A. 为空
-B. 已排序
-C. 全是正数
-D. 大小固定
+  ```java
+  public static int findTarget(int[] nums, int target)
+  {
+      int answer = -1;
+      for (int j = nums.length - 1; j >= nums.length / 2; j--)
+      {
+          if (nums[j] == target)
+          {
+              answer = j;
+          }
+      }
+      return answer;
+  }
+  ```
 
-**答案: B**
+  The following code segment appears in another method in the same class as findTarget.
+
+  ```java
+  int[] arr = {4, 5, 8, 3, 8, 9, 8, 1};
+  System.out.println(findTarget(arr, 8));
+  ```
+
+  What is printed as a result of executing the code segment?
+
+  (A) 2  
+  (B) 4  
+  (C) 5  
+  (D) 6
+
+  <details markdown="block">
+    <summary><b>点击查看解答</b></summary>
+
+    **分析与解答：**  
+    循环从数组末尾（索引 7）向前遍历到索引 `length/2` = 4（后半部分：索引 4、5、6、7）。这部分的 8 出现在索引 4 和 6，每次匹配都更新 answer，最后一个匹配（索引 6）被保留……等等：j 从 7 到 4 递减，匹配 8 的索引有 6 和 4。遍历顺序 7→6(匹配,answer=6)→5→4(匹配,answer=4)。最终 answer = 4。正确答案是 **(B)**。
+
+  </details>
+
+- ### 例题 2 — 线性查找第一个匹配
+
+  > **Source:** AP Classroom Unit 4 Progress Check: MCQ Part C, Q11
+
+  Consider the following method.
+
+  ```java
+  public static int someSearch(int[] arr, int value)
+  {
+      for (int j = 0; j < arr.length; j++)
+      {
+          if (arr[j] == value)
+          {
+              return j;
+          }
+      }
+      return -1;
+  }
+  ```
+
+  The following code segment appears in a method in the same class as someSearch.
+
+  ```java
+  int[] myNumbers = {1, 2, 5, 2, 6, 3, 3, 5, 3};
+  System.out.println(someSearch(myNumbers, 3));
+  ```
+
+  What is printed as a result of executing the code segment?
+
+  (A) -1  
+  (B) 5  
+  (C) 6  
+  (D) 8
+
+  <details markdown="block">
+    <summary><b>点击查看解答</b></summary>
+
+    **分析与解答：**  
+    从左到右查找 3：索引 5 处是第一个 3，方法立即 `return 5`。虽然后面还有 3（索引 6、8），但遇到第一个匹配就返回。正确答案是 **(B)**。
+
+  </details>
+
+- ### 例题 3 — 反向查找的影响
+
+  > **Source:** AP Classroom Unit 4 Progress Check: MCQ Part C, Q12
+
+  Consider the method linearSearch, which takes an ArrayList of Integer elements and a target int value as parameters and returns the index of the first appearance of the target value in the list or -1 if the target value does not appear in the list.
+
+  ```java
+  public static int linearSearch(ArrayList<Integer> elements, int target)
+  {
+      for (int j = 0; j < elements.size(); j++)   // Line 3
+      {
+          if (elements.get(j) == target)
+          {
+              return j;
+          }
+      }
+      return -1;
+  }
+  ```
+
+  Which of the following describes how replacing line 3 with `for (int j = (elements.size() - 1); j >= 0; j--)` will affect the behavior of linearSearch?
+
+  (A) The modification has no effect: the modified method will continue to return the index of the first appearance of the target value in the list, or -1 if the target value does not appear in the list.  
+  (B) The modified method will return the index of the last appearance of the target value in the list, or -1 if the target value does not appear in the list.  
+  (C) The modified method will throw an IndexOutOfBoundsException.  
+  (D) The modified method will return -1 regardless of the inputs.
+
+  <details markdown="block">
+    <summary><b>点击查看解答</b></summary>
+
+    **分析与解答：**  
+    改为从后往前遍历后，遇到的第一个匹配就是**最后一次出现**的位置，方法返回目标值最后一次出现的索引（找不到仍返回 -1）。正确答案是 **(B)**。
+
+  </details>
+
+---
+
+## 考点总结
+
+| 考点             | 关键内容                                     | 考试提示                                       |
+| ---------------- | -------------------------------------------- | ---------------------------------------------- |
+| 线性查找         | 逐个比较，返回第一个匹配索引                 | 找不到返回 -1                                  |
+| 遍历方向         | 正序→第一个；倒序→最后一个                   | 只影响返回哪个匹配，不影响是否找到             |
+| 部分范围查找     | 循环起止索引限定查找范围                     | 追踪后半部分时注意起始索引                     |
+| 立即返回         | 找到即 return，不继续遍历                    | 多个匹配时返回最先遇到的                       |

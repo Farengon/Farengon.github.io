@@ -34,7 +34,7 @@ nav_order: 1
   (C) The algorithm assigns a string to the integer 5.  
   (D) The algorithm assigns a string to each integer from 1 to 5.
 
-  <details markdown="block>
+  <details markdown="block">
     <summary><b>点击查看解答</b></summary>
   
     **分析与解答：**  
@@ -60,7 +60,7 @@ nav_order: 1
   (C) The algorithm computes the product of the two numbers added to the average of the two numbers.  
   (D) The algorithm computes the sum of the two numbers divided by the product of the two numbers.  
 
-  <details markdown="block>
+  <details markdown="block">
     <summary><b>点击查看解答</b></summary>
   
     **分析与解答：**  
@@ -93,7 +93,7 @@ nav_order: 1
   (C) Set `a` to 2. Set `b` to 1. Set `c` to `a + b`. Display `c`.  
   (D) Set `a` to 1. Set `b` to 2. Set `c` to `a + b`. Display `a + b`.  
 
-  <details markdown="block>
+  <details markdown="block">
     <summary><b>点击查看解答</b></summary>
   
     **分析与解答：**  
@@ -159,7 +159,7 @@ AP CSA 考试中，编程错误分为三大类：
   (C) The algorithm contains a run-time error.  
   (D) The algorithm contains no errors.  
 
-  <details markdown="block>
+  <details markdown="block">
     <summary><b>点击查看解答</b></summary>
   
     **分析与解答：**  
@@ -187,7 +187,7 @@ AP CSA 考试中，编程错误分为三大类：
   (C) The code segment contains a run-time error.  
   (D) The code segment contains no errors.  
 
-  <details markdown="block>
+  <details markdown="block">
     <summary><b>点击查看解答</b></summary>
   
     **分析与解答：**  
@@ -215,7 +215,7 @@ AP CSA 考试中，编程错误分为三大类：
   (C) The code segment contains a run-time error.  
   (D) The code segment contains no errors.
 
-  <details markdown="block>
+  <details markdown="block">
     <summary><b>点击查看解答</b></summary>
   
     **分析与解答：**  

@@ -40,7 +40,7 @@ Done
     System.out.print(llo);
     ```
 
-    <details markdown="block>
+    <details markdown="block">
       <summary><b>点击查看解答</b></summary>
     
       **分析与解答：**
@@ -85,7 +85,7 @@ System.out.println("Path: C:\\Files");        // 输出: Path: C:\Files
     (C) It prints one line of text because the printed value is a single string literal.  
     (D) It prints nothing due to a syntax error.
 
-    <details markdown="block>
+    <details markdown="block">
       <summary><b>点击查看解答</b></summary>
     
       **分析与解答：**
@@ -117,7 +117,7 @@ System.out.println("Path: C:\\Files");        // 输出: Path: C:\Files
     (C) In lines 1, 2, and 3, the text that appears in parentheses should be enclosed in quotation marks.  
     (D) No change is needed; the code segment works correctly as is.
 
-    <details markdown="block>
+    <details markdown="block">
       <summary><b>点击查看解答</b></summary>
     
       **分析与解答：**
@@ -217,7 +217,7 @@ double y = 10.0 / 0.0;   // 结果为 Infinity（无穷大，不在考试范围�
     (C) 8  
     (D) 9
 
-    <details markdown="block>
+    <details markdown="block">
       <summary><b>点击查看解答</b></summary>
     
       **分析与解答：**
@@ -253,7 +253,7 @@ double y = 10.0 / 0.0;   // 结果为 Infinity（无穷大，不在考试范围�
     (C) 7.5 7.0  
     (D) 7.5 7.5
 
-    <details markdown="block>
+    <details markdown="block">
       <summary><b>点击查看解答</b></summary>
     
       **分析与解答：**
@@ -287,7 +287,7 @@ double y = 10.0 / 0.0;   // 结果为 Infinity（无穷大，不在考试范围�
     (C) 26  
     (D) 0
 
-    <details markdown="block>
+    <details markdown="block">
       <summary><b>点击查看解答</b></summary>
     
       **分析与解答：**

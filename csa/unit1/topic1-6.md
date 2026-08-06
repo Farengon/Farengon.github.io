@@ -46,7 +46,7 @@ nav_order: 6
     (C) 3
     (D) 4
 
-    <details markdown="block>
+    <details markdown="block"">
       <summary><b>点击查看解答</b></summary>
     
       分析与解答：
@@ -100,61 +100,77 @@ nav_order: 6
     System.out.print(val);
     ```
 
+    <details markdown="block"">
+      <summary><b>点击查看解答</b></summary>
+
     分析与解答：
     选项 (A) 中，`val *= val` 等价于 `val = val * val`，5 × 5 = 25，打印 25；`val++` 使 val 变为 26，打印 26，输出 2526。选项 (B) 输出 2525；选项 (C) 输出 1011；选项 (D) 输出 1010。**正确答案是 (A)。**
 
-### 例题 3 — 复合赋值运算符 *= 与调试
+    </details>
 
-> Source: AP Classroom Unit 1 Progress Check MCQ Part B, Q6
+- ### 例题 3 — 复合赋值运算符 *= 与调试
 
-```
-int x = 0;            // line 1
-x++;                  // line 2
-System.out.print(x);  // line 3
-x += 1;               // line 4
-System.out.print(x);  // line 5
-x *= 2;               // line 6
-System.out.print(x);  // line 7
-x *= 4;               // line 8
-System.out.print(x);  // line 9
-```
+    > Source: AP Classroom Unit 1 Progress Check MCQ Part B, Q6
 
-The code segment is intended to produce the following output. The code segment does not work as intended.
+    ```
+    int x = 0;            // line 1
+    x++;                  // line 2
+    System.out.print(x);  // line 3
+    x += 1;               // line 4
+    System.out.print(x);  // line 5
+    x *= 2;               // line 6
+    System.out.print(x);  // line 7
+    x *= 4;               // line 8
+    System.out.print(x);  // line 9
+    ```
 
-```
-1248
-```
+    The code segment is intended to produce the following output. The code segment does not work as intended.
 
-Which of the following changes can be made so that the code segment works as intended?
+    ```
+    1248
+    ```
 
-(A) Interchanging lines 2 and 4
-(B) Interchanging lines 6 and 8
-(C) Changing line 6 to `x += 2;`
-(D) Changing line 8 to `x *= 2;`
+    Which of the following changes can be made so that the code segment works as intended?
 
-分析与解答：
-当前代码执行过程：x = 0 → `x++` → x = 1，打印 1 → `x += 1` → x = 2，打印 2 → `x *= 2` → x = 4，打印 4 → `x *= 4` → x = 16，打印 16。实际输出为 12416，预期为 1248。将第 8 行 `x *= 4` 改为 `x *= 2` 后，x（此时为 4）乘以 2 得 8，打印 8。**正确答案是 (D)。** [pdf_18]
+    (A) Interchanging lines 2 and 4
+    (B) Interchanging lines 6 and 8
+    (C) Changing line 6 to `x += 2;`
+    (D) Changing line 8 to `x *= 2;`
 
-### 例题 4 — 后置递增与复合赋值组合
 
-> Source: AP Classroom New Unit 1 Topic Questions MCQ, Q20
+    <details markdown="block"">
+      <summary><b>点击查看解答</b></summary>
 
-```
-int a = 4;
-int b = 5;
-a++;
-b++;
-int c = a + b;
-a -= 1;
-System.out.println(a + c);
-```
+        分析与解答：
+        当前代码执行过程：x = 0 → `x++` → x = 1，打印 1 → `x += 1` → x = 2，打印 2 → `x *= 2` → x = 4，打印 4 → `x *= 4` → x = 16，打印 16。实际输出为 12416，预期为 1248。将第 8 行 `x *= 4` 改为 `x *= 2` 后，x（此时为 4）乘以 2 得 8，打印 8。**正确答案是 (D)。** 
 
-What is printed as a result of executing the code segment?
+    </details>
 
-(A) 10
-(B) 13
-(C) 14
-(D) 15
+- ### 例题 4 — 后置递增与复合赋值组合
 
-分析与解答：
-a = 4，b = 5。`a++` 使 a 变为 5；`b++` 使 b 变为 6。`c = a + b = 5 + 6 = 11`。`a -= 1` 等价于 `a = a - 1 = 5 - 1 = 4`。`a + c = 4 + 11 = 15`，输出 15。**正确答案是 (D)。** [pdf_17]
+    > Source: AP Classroom New Unit 1 Topic Questions MCQ, Q20
+
+    ```
+    int a = 4;
+    int b = 5;
+    a++;
+    b++;
+    int c = a + b;
+    a -= 1;
+    System.out.println(a + c);
+    ```
+
+    What is printed as a result of executing the code segment?
+
+    (A) 10
+    (B) 13
+    (C) 14
+    (D) 15
+
+    <details markdown="block"">
+      <summary><b>点击查看解答</b></summary>
+
+    分析与解答：
+    a = 4，b = 5。`a++` 使 a 变为 5；`b++` 使 b 变为 6。`c = a + b = 5 + 6 = 11`。`a -= 1` 等价于 `a = a - 1 = 5 - 1 = 4`。`a + c = 4 + 11 = 15`，输出 15。**正确答案是 (D)。**
+
+    </details>

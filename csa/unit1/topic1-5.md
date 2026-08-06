@@ -64,7 +64,7 @@ int roundedY = (int)(y + 0.5);  // (int)(8.1) = 8
     (C) 7.5 7.0  
     (D) 7.5 7.5  
 
-    <details markdown="block>
+    <details markdown="block">
       <summary><b>点击查看解答</b></summary>
     
       **分析与解答：**  
@@ -92,7 +92,7 @@ int roundedY = (int)(y + 0.5);  // (int)(8.1) = 8
     (C) 3.5 1.5  
     (D) 3.5 1.75  
 
-    <details markdown="block>
+    <details markdown="block">
       <summary><b>点击查看解答</b></summary>
     
       分析与解答：
@@ -120,7 +120,7 @@ int roundedY = (int)(y + 0.5);  // (int)(8.1) = 8
     (D) 98  
     (E) 99  
 
-    <details markdown="block>
+    <details markdown="block">
       <summary><b>点击查看解答</b></summary>
     
       分析与解答：
@@ -139,7 +139,7 @@ int roundedY = (int)(y + 0.5);  // (int)(8.1) = 8
     (C) `int result = (int)(x + 0.5);`  
     (D) `int result = (int) x + (int) 0.5;`  
 
-    <details markdown="block>
+    <details markdown="block">
       <summary><b>点击查看解答</b></summary>
     
       **分析与解答：**  
@@ -167,7 +167,7 @@ int roundedY = (int)(y + 0.5);  // (int)(8.1) = 8
     (C) 0.4 0.4  
     (D) 0.0 0.4  
 
-    <details markdown="block>
+    <details markdown="block">
       <summary><b>点击查看解答</b></summary>
     
       分析与解答：

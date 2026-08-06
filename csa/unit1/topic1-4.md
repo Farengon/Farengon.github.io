@@ -76,7 +76,7 @@ variable = expression;
     (C) 20 100  
     (D) 20 200
 
-    <details markdown="block>
+    <details markdown="block">
       <summary><b>点击查看解答</b></summary>
     
       **分析与解答：**
@@ -119,7 +119,7 @@ variable = expression;
     (C) 70 50  
     (D) 100 50
 
-    <details markdown="block>
+    <details markdown="block">
       <summary><b>点击查看解答</b></summary>
     
       **分析与解答：**
@@ -160,7 +160,7 @@ variable = expression;
     (C) `int z = 0;`  
     (D) `z = 0;`
 
-    <details markdown="block>
+    <details markdown="block">
       <summary><b>点击查看解答</b></summary>
     
       **分析与解答：**
@@ -196,7 +196,7 @@ variable = expression;
     (C) `y = x; temp = y;`  
     (D) `y = x; temp = x;`
 
-    <details markdown="block>
+    <details markdown="block">
       <summary><b>点击查看解答</b></summary>
     
       **分析与解答：**
@@ -235,7 +235,7 @@ variable = expression;
     (C) 14  
     (D) 18
 
-    <details markdown="block>
+    <details markdown="block">
       <summary><b>点击查看解答</b></summary>
     
       **分析与解答：**

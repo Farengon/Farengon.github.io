@@ -36,7 +36,7 @@ AP CSA 课程中使用的三种基本数据类型是 `int`、`double` 和 `boole
     (C) `int age;` / `boolean hasLicense;`  
     (D) `int age;` / `double hasLicense;`
 
-    <details markdown="block>
+    <details markdown="block">
       <summary><b>点击查看解答</b></summary>
     
       **分析与解答：**  
@@ -55,7 +55,7 @@ AP CSA 课程中使用的三种基本数据类型是 `int`、`double` 和 `boole
     (C) A Player class, a Score class, and a Remaining Time class, each with an int instance variable.  
     (D) A Score class and a RemainingTime class, each with a Player instance variable.
 
-    <details markdown="block>
+    <details markdown="block">
       <summary><b>点击查看解答</b></summary>
     
       **分析与解答：**
@@ -84,7 +84,7 @@ AP CSA 课程中使用的三种基本数据类型是 `int`、`double` 和 `boole
     (C) In line 4, example should be assigned a value.  
     (D) In line 5, a variable cannot be assigned to another variable.
 
-    <details markdown="block>
+    <details markdown="block">
       <summary><b>点击查看解答</b></summary>
     
       **分析与解答：**  
@@ -139,7 +139,7 @@ boolean isPassing = true;      // 声明 boolean 变量并初始化为 true
     (C) true  
     (D) false
 
-    <details markdown="block>
+    <details markdown="block">
       <summary><b>点击查看解答</b></summary>
     
       **分析与解答：**
@@ -164,7 +164,7 @@ boolean isPassing = true;      // 声明 boolean 变量并初始化为 true
     (C) 1.0  
     (D) false
 
-    <details markdown="block>
+    <details markdown="block">
       <summary><b>点击查看解答</b></summary>
     
       **分析与解答：**
@@ -191,7 +191,7 @@ boolean isPassing = true;      // 声明 boolean 变量并初始化为 true
     (C) `int z = 0;`  
     (D) `z = 0;`
 
-    <details markdown="block>
+    <details markdown="block"">
       <summary><b>点击查看解答</b></summary>
     
       **分析与解答：**

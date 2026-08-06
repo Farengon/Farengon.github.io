@@ -11,6 +11,7 @@ nav_order: 14
 
 **线性查找** 从数组一端开始，逐个比较元素直到找到目标：
 
+{% raw %}
 ```java
 public static int linearSearch(int[] arr, int value)
 {
@@ -24,6 +25,7 @@ public static int linearSearch(int[] arr, int value)
     return -1;             // 没找到，返回 -1
 }
 ```
+{% endraw %}
 
 {: .important}
 > - 线性查找返回**第一个**匹配元素的索引；找不到返回 **-1**。
@@ -38,6 +40,7 @@ public static int linearSearch(int[] arr, int value)
 
 对**二维数组**应用线性查找时，需要**先访问每一行**，再对每一行应用线性查找（逐行搜索）：
 
+{% raw %}
 ```java
 // 在 2D 数组中线性查找目标值（返回是否找到）
 public static boolean search2D(int[][] arr, int target)
@@ -55,6 +58,7 @@ public static boolean search2D(int[][] arr, int target)
     return false;
 }
 ```
+{% endraw %}
 
 {: .note}
 > 2D 数组的线性查找 = **外层循环逐行 + 内层循环逐元素**（每行都做一次线性查找）。
@@ -76,6 +80,7 @@ public static boolean search2D(int[][] arr, int target)
 
   Consider the following method.
 
+{% raw %}
   ```java
   public static int findTarget(int[] nums, int target)
   {
@@ -90,13 +95,16 @@ public static boolean search2D(int[][] arr, int target)
       return answer;
   }
   ```
+{% endraw %}
 
   The following code segment appears in another method in the same class as findTarget.
 
+{% raw %}
   ```java
   int[] arr = {4, 5, 8, 3, 8, 9, 8, 1};
   System.out.println(findTarget(arr, 8));
   ```
+{% endraw %}
 
   What is printed as a result of executing the code segment?
 
@@ -119,6 +127,7 @@ public static boolean search2D(int[][] arr, int target)
 
   Consider the following method.
 
+{% raw %}
   ```java
   public static int someSearch(int[] arr, int value)
   {
@@ -132,13 +141,16 @@ public static boolean search2D(int[][] arr, int target)
       return -1;
   }
   ```
+{% endraw %}
 
   The following code segment appears in a method in the same class as someSearch.
 
+{% raw %}
   ```java
   int[] myNumbers = {1, 2, 5, 2, 6, 3, 3, 5, 3};
   System.out.println(someSearch(myNumbers, 3));
   ```
+{% endraw %}
 
   What is printed as a result of executing the code segment?
 
@@ -161,6 +173,7 @@ public static boolean search2D(int[][] arr, int target)
 
   Consider the method linearSearch, which takes an ArrayList of Integer elements and a target int value as parameters and returns the index of the first appearance of the target value in the list or -1 if the target value does not appear in the list.
 
+{% raw %}
   ```java
   public static int linearSearch(ArrayList<Integer> elements, int target)
   {
@@ -174,6 +187,7 @@ public static boolean search2D(int[][] arr, int target)
       return -1;
   }
   ```
+{% endraw %}
 
   Which of the following describes how replacing line 3 with `for (int j = (elements.size() - 1); j >= 0; j--)` will affect the behavior of linearSearch?
 

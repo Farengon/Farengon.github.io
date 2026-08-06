@@ -50,33 +50,41 @@ nav_order: 10
   Which of the following can be used to replace `/* missing code */` so that this code segment prints the string `"EFCDAB"`?
 
   (A)
+{% raw %}
   ```java
   for (int j = str.length() - 1; j >= 0; j -= 1)
   {
       result += str.substring(j, j + 1);
   }
   ```
+{% endraw %}
   (B)
+{% raw %}
   ```java
   for (int j = str.length() - 1; j >= 0; j -= 2)
   {
       result += str.substring(j, j + 2);
   }
   ```
+{% endraw %}
   (C)
+{% raw %}
   ```java
   for (int j = str.length() - 2; j >= 0; j -= 1)
   {
       result += str.substring(j, j + 2);
   }
   ```
+{% endraw %}
   (D)
+{% raw %}
   ```java
   for (int j = str.length() - 2; j >= 0; j -= 2)
   {
       result += str.substring(j, j + 2);
   }
   ```
+{% endraw %}
 
   <details markdown="block">
     <summary><b>点击查看解答</b></summary>
@@ -92,6 +100,7 @@ nav_order: 10
 
   In the following code segment, str is a properly declared and initialized string. The code segment is intended to count the number of times that "a" appears in str.
 
+{% raw %}
   ```java
   int count = 0;
   String temp = str;
@@ -101,6 +110,7 @@ nav_order: 10
       /* missing code */
   }
   ```
+{% endraw %}
 
   Which of the following can be used to replace `/* missing code */` so that the code segment works as intended?
 
@@ -150,6 +160,7 @@ nav_order: 10
 
   In the following code segment, the String variable phrase has been properly declared and initialized such that it meets these conditions. The code segment is intended to create the acronym of the String stored in phrase and store it in the variable text.
 
+{% raw %}
   ```java
   String temp = phrase;
   String text = temp.substring(0, 1);
@@ -159,6 +170,7 @@ nav_order: 10
       /* missing code */
   }
   ```
+{% endraw %}
 
   Which of the following can be used to replace `/* missing code */` so that the code segment works as intended?
 
@@ -199,6 +211,7 @@ nav_order: 10
 
   Consider the following code segment.
 
+{% raw %}
   ```java
   String str = "qrstu";
   String result = "";
@@ -208,6 +221,7 @@ nav_order: 10
   }
   System.out.println(result);
   ```
+{% endraw %}
 
   What, if anything, is printed as a result of executing this code segment?
 
@@ -230,6 +244,7 @@ nav_order: 10
 
   Consider the following code segment.
 
+{% raw %}
   ```java
   String str = "a black cat sat on a table";
   int counter = 0;
@@ -242,6 +257,7 @@ nav_order: 10
   }
   System.out.println(counter);
   ```
+{% endraw %}
 
   What is printed as a result of executing the code segment?
 
@@ -264,6 +280,7 @@ nav_order: 10
 
   Consider the following code segment.
 
+{% raw %}
   ```java
   String word = "Computer Science";
   String str = "";
@@ -276,6 +293,7 @@ nav_order: 10
   }
   System.out.println(str);
   ```
+{% endraw %}
 
   What is printed as a result of executing the code segment?
 

@@ -93,6 +93,7 @@ Vbox b2 = new Vbox(2, 8, 4);  // 匹配 Vbox(int w, int h, int d)
 
   The Person class has exactly two constructors. Partial declarations of the constructors are shown.
 
+{% raw %}
   ```java
   public Person(int idNumber, boolean isActive)
   { /* implementation not shown */ }
@@ -100,6 +101,7 @@ Vbox b2 = new Vbox(2, 8, 4);  // 匹配 Vbox(int w, int h, int d)
   public Person(int idNumber, int age, boolean isActive)
   { /* implementation not shown */ }
   ```
+{% endraw %}
 
   Which of the following statements does not correctly create an object of type Person?
 
@@ -122,10 +124,12 @@ Vbox b2 = new Vbox(2, 8, 4);  // 匹配 Vbox(int w, int h, int d)
 
   The Player class has only one constructor. A partial declaration of the constructor is shown.
 
+{% raw %}
   ```java
   public Player(boolean isOnline, int numLives)
   { /* implementation not shown */ }
   ```
+{% endraw %}
 
   Which of the following statements correctly creates a Player object?
 
@@ -174,10 +178,12 @@ Vbox b2 = new Vbox(2, 8, 4);  // 匹配 Vbox(int w, int h, int d)
 
   Consider the following Point2D class constructor header.
 
+{% raw %}
   ```java
   public Point2D(double x, double y)
   { /* implementation not shown */ }
   ```
+{% endraw %}
 
   Which of the following code segments will correctly create an instance of a Point2D object?
 

@@ -15,6 +15,7 @@ nav_order: 9
 - **把当前对象作为参数传递**：`this` 可以传给其他方法。
 - **调用当前对象的其他方法**：`this.methodName()`。
 
+{% raw %}
 ```java
 public class Friend
 {
@@ -26,6 +27,7 @@ public class Friend
     }
 }
 ```
+{% endraw %}
 
 {: .important}
 > 当参数名与实例变量同名时，不带 `this` 的 `name = name;` 只是把参数赋给**它自己**，实例变量不会被赋值！必须写 `this.name = name;`。
@@ -34,12 +36,14 @@ public class Friend
 
 `this` 可以表示"当前正在执行方法的那个对象"，常用于跨对象协作：
 
+{% raw %}
 ```java
 public void checkID(Checker c)
 {
     c.validate(this);   // 把当前对象传给 Checker 的方法
 }
 ```
+{% endraw %}
 
 {: .note}
 > **类方法（static 方法）没有 `this` 引用**（EK 3.9.A.3）：static 方法不属于任何特定对象，因此内部**不能使用 `this`**。`this` 只能在**实例方法**和**构造方法**中使用。
@@ -50,6 +54,7 @@ public void checkID(Checker c)
 
   Consider the following class definition.
 
+{% raw %}
   ```java
   public class Player
   {
@@ -70,6 +75,7 @@ public void checkID(Checker c)
       }
   }
   ```
+{% endraw %}
 
   The Player class contains a getTotal method, which returns the total score for the player.
 
@@ -98,6 +104,7 @@ public void checkID(Checker c)
 
   Consider the following class declaration.
 
+{% raw %}
   ```java
   public class Thing
   {
@@ -128,6 +135,7 @@ public void checkID(Checker c)
       }
   }
   ```
+{% endraw %}
 
   The following code segment appears in a class other than Thing.
 
@@ -159,6 +167,7 @@ public void checkID(Checker c)
 
   Consider the following class definition.
 
+{% raw %}
   ```java
   public class Friend
   {
@@ -175,6 +184,7 @@ public void checkID(Checker c)
       }
   }
   ```
+{% endraw %}
 
   The following code segment appears in a class other than Friend. It is intended to print the string "Jessie" but does not work as intended because of an error in the Friend class.
 
@@ -204,6 +214,7 @@ public void checkID(Checker c)
 
   Consider the following class definitions.
 
+{% raw %}
   ```java
   public class Item
   {
@@ -244,6 +255,7 @@ public void checkID(Checker c)
       }
   }
   ```
+{% endraw %}
 
   The following code segment appears in a class other than Item or Checker.
 
@@ -302,6 +314,7 @@ public void checkID(Checker c)
 
   Consider the following class definitions.
 
+{% raw %}
   ```java
   public class Class1
   {
@@ -344,6 +357,7 @@ public void checkID(Checker c)
       }
   }
   ```
+{% endraw %}
 
   The following code segment appears in a class other than Class1 or Class2.
 
@@ -374,6 +388,7 @@ public void checkID(Checker c)
 
   Consider the following class definitions.
 
+{% raw %}
   ```java
   public class MenuItem
   {
@@ -411,6 +426,7 @@ public void checkID(Checker c)
       }
   }
   ```
+{% endraw %}
 
   The following code segment appears in a class other than MenuItem or Combo.
 

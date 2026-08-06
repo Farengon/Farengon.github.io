@@ -30,6 +30,7 @@ nav_order: 6
 
   Consider the following method.
 
+{% raw %}
   ```java
   public String mystery(String message, int x)
   {
@@ -37,6 +38,7 @@ nav_order: 6
       return message;
   }
   ```
+{% endraw %}
 
   The following code segment appears in a method in the same class as mystery.
 
@@ -66,6 +68,7 @@ nav_order: 6
 
   Consider the following class definition.
 
+{% raw %}
   ```java
   public class Location
   {
@@ -75,9 +78,11 @@ nav_order: 6
       { /* implementation not shown */ }
   }
   ```
+{% endraw %}
 
   The following method is intended to create a copy of a Location object.
 
+{% raw %}
   ```java
   public Location clone(Location loc)
   {
@@ -87,6 +92,7 @@ nav_order: 6
       return loc1;
   }
   ```
+{% endraw %}
 
   Which of the following best describes the conditions under which the method works as intended?
 
@@ -109,6 +115,7 @@ nav_order: 6
 
   Consider the following class definition.
 
+{% raw %}
   ```java
   public class Item
   {
@@ -121,9 +128,11 @@ nav_order: 6
       }
   }
   ```
+{% endraw %}
 
   The following method appears in a class other than Item. The method is intended to calculate and return the sales tax of the item specified by the parameter myItem. The sales tax will be calculated as the cost of the item times the value of the parameter taxRate.
 
+{% raw %}
   ```java
   public double getTax(Item myItem, double taxRate)
   {
@@ -131,6 +140,7 @@ nav_order: 6
       return cost * taxRate;
   }
   ```
+{% endraw %}
 
   Which of the following expressions can be used to replace `/* missing code */` so that this method works as intended?
 
@@ -153,6 +163,7 @@ nav_order: 6
 
   Consider the following Worker class. The class includes the method getEarnings, which is intended to return the total amount earned by the worker.
 
+{% raw %}
   ```java
   public class Worker
   {
@@ -179,6 +190,7 @@ nav_order: 6
       }
   }
   ```
+{% endraw %}
 
   The following code segment appears in a method in a class other than Worker. The code segment is intended to print the value 800.0, but instead prints a different value because of an error in the Worker class.
 

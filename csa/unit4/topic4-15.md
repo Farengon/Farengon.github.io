@@ -11,6 +11,7 @@ nav_order: 15
 
 **选择排序** 每轮从未排序部分选出**最小值**，放到已排序部分的末尾：
 
+{% raw %}
 ```java
 public static void selectionSort(int[] arr)
 {
@@ -33,6 +34,7 @@ public static void selectionSort(int[] arr)
     }
 }
 ```
+{% endraw %}
 
 {: .important}
 > - 每完成一轮外层循环，**最小/次小**的元素就位一个。
@@ -46,6 +48,7 @@ public static void selectionSort(int[] arr)
 
   The following method is a correct implementation of the selection sort algorithm. The method correctly sorts the elements of arr so that they appear in order from least to greatest.
 
+{% raw %}
   ```java
   public static void selectionSort(int[] arr)
   {
@@ -65,6 +68,7 @@ public static void selectionSort(int[] arr)
       }
   }
   ```
+{% endraw %}
 
   Which of the following could be the contents of arr after two passes of the outer loop (i.e., when j = 1 at the point indicated by the end of the outer loop)?
 
@@ -87,6 +91,7 @@ public static void selectionSort(int[] arr)
 
   The following method is intended to sort an array of integers into ascending order.
 
+{% raw %}
   ```java
   public static void sort(int[] arr)
   {
@@ -106,6 +111,7 @@ public static void selectionSort(int[] arr)
       }
   }
   ```
+{% endraw %}
 
   This method works as intended for some, but not all, int arrays. Which of the following arrays can be used to show that the method does not work as intended?
 
@@ -128,6 +134,7 @@ public static void selectionSort(int[] arr)
 
   Consider the following correct implementation of the selection sort algorithm.
 
+{% raw %}
   ```java
   public static void selectionSort(int[] elements)
   {
@@ -150,13 +157,16 @@ public static void selectionSort(int[] arr)
       }
   }
   ```
+{% endraw %}
 
   The following declaration and method call appear in a method in the same class as selectionSort.
 
+{% raw %}
   ```java
   int[] arr = {30, 40, 10, 50, 20};
   selectionSort(arr);
   ```
+{% endraw %}
 
   How many times is the statement `elements[minIndex] = temp;` in line 17 of the method executed as a result of the call to selectionSort?
 
@@ -179,6 +189,7 @@ public static void selectionSort(int[] arr)
 
 **插入排序（Insertion Sort）** 是一种**迭代**排序算法。它把未排序部分的一个元素**插入**到已排序部分的正确位置，通过**移动（shift）**已排序部分的元素来为新元素腾出位置：
 
+{% raw %}
 ```java
 public static void insertionSort(int[] arr)
 {
@@ -195,6 +206,7 @@ public static void insertionSort(int[] arr)
     }
 }
 ```
+{% endraw %}
 
 {: .important}
 > 选择排序 vs 插入排序：

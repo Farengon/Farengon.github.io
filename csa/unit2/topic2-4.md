@@ -11,6 +11,7 @@ nav_order: 4
 
 **嵌套 if（Nested if）** 是 if 语句内部再包含 if 语句：
 
+{% raw %}
 ```java
 if (外层条件) {
     if (内层条件) {
@@ -20,6 +21,7 @@ if (外层条件) {
     }
 }
 ```
+{% endraw %}
 
 {: .important}
 > 追踪嵌套 if 时，**一层一层判断**：先看外层条件是否为 true，再进入内层判断。注意每个 `else` 与哪个 `if` 配对。
@@ -39,6 +41,7 @@ if (外层条件) {
 
   Consider the following code segment, which uses properly declared and initialized `int` variables `x` and `y` and the `String` variable `result`.
 
+{% raw %}
   ```java
   String result = "";
   if (x < 5)
@@ -66,6 +69,7 @@ if (外层条件) {
   }
   result += "f";
   ```
+{% endraw %}
 
   What is the value of `result` after the code segment is executed if `x` has the value 15 and `y` has the value 5?
 
@@ -88,6 +92,7 @@ if (外层条件) {
 
   In the following code segment, `str` is a properly declared and initialized String variable.
 
+{% raw %}
   ```java
   int result = 0;
   if (str.length() > 5)
@@ -106,10 +111,12 @@ if (外层条件) {
       result = 3;
   }
   ```
+{% endraw %}
 
   Which of the following code segments assigns the same value to `result` as the preceding code segment for all values of `str`?
 
   (A)
+{% raw %}
   ```java
   int result = 0;
   if (str.indexOf("A") < 0)
@@ -125,7 +132,9 @@ if (外层条件) {
       result = 1;
   }
   ```
+{% endraw %}
   (B)
+{% raw %}
   ```java
   int result = 0;
   if (str.indexOf("A") < 0)
@@ -144,7 +153,9 @@ if (外层条件) {
       }
   }
   ```
+{% endraw %}
   (C)
+{% raw %}
   ```java
   int result = 0;
   if (str.indexOf("A") < 0)
@@ -166,7 +177,9 @@ if (外层条件) {
       }
   }
   ```
+{% endraw %}
   (D)
+{% raw %}
   ```java
   int result = 0;
   if (str.indexOf("B") < 0)
@@ -188,6 +201,7 @@ if (外层条件) {
       }
   }
   ```
+{% endraw %}
 
   <details markdown="block">
     <summary><b>点击查看解答</b></summary>
@@ -203,6 +217,7 @@ if (外层条件) {
 
   Consider the following code segment.
 
+{% raw %}
   ```java
   int start = 4;
   int end = 5;
@@ -233,6 +248,7 @@ if (外层条件) {
       }
   }
   ```
+{% endraw %}
 
   What is the value of end after the code segment is executed?
 
@@ -255,6 +271,7 @@ if (外层条件) {
 
   Consider the following code segment.
 
+{% raw %}
   ```java
   int x = 7;
   int y = 4;
@@ -287,6 +304,7 @@ if (外层条件) {
       }
   }
   ```
+{% endraw %}
 
   What are the values of a, b, and x after the code segment is executed?
 

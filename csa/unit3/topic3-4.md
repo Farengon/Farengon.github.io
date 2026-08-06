@@ -11,6 +11,7 @@ nav_order: 4
 
 **构造方法（Constructor）** 在创建对象时被调用，用于**初始化对象的实例变量**：
 
+{% raw %}
 ```java
 public class Person
 {
@@ -22,6 +23,7 @@ public class Person
     }
 }
 ```
+{% endraw %}
 
 {: .important}
 > - 构造方法的名字**必须与类名完全相同**。
@@ -49,6 +51,7 @@ public class Person
 
   Consider the following class definition.
 
+{% raw %}
   ```java
   public class Person
   {
@@ -56,6 +59,7 @@ public class Person
       /* missing constructor */
   }
   ```
+{% endraw %}
 
   The following statement, which is located in a method in a different class, creates a new Person object with its attribute name initialized to "Washington".
 
@@ -66,33 +70,41 @@ public class Person
   Which of the following can be used to replace `/* missing constructor */` so that the object p is correctly created?
 
   (A)
+{% raw %}
   ```java
   private Person(String n)
   {
       name = n;
   }
   ```
+{% endraw %}
   (B)
+{% raw %}
   ```java
   public Person()
   {
       name = n;
   }
   ```
+{% endraw %}
   (C)
+{% raw %}
   ```java
   public Person(String n)
   {
       name = n;
   }
   ```
+{% endraw %}
   (D)
+{% raw %}
   ```java
   public Person(String name)
   {
       String n = name;
   }
   ```
+{% endraw %}
 
   <details markdown="block">
     <summary><b>点击查看解答</b></summary>
@@ -108,6 +120,7 @@ public class Person
 
   Consider the following Student class.
 
+{% raw %}
   ```java
   public class Student
   {
@@ -121,6 +134,7 @@ public class Person
       }
   }
   ```
+{% endraw %}
 
   The following code segment appears in a class other than Student.
 
@@ -149,6 +163,7 @@ public class Person
 
   Consider the following class definition.
 
+{% raw %}
   ```java
   public class Dog
   {
@@ -166,6 +181,7 @@ public class Person
       }
   }
   ```
+{% endraw %}
 
   The following segment appears in a class other than Dog.
 
@@ -241,6 +257,7 @@ public class Person
 
   Consider the following partial Person class definition. The instance variable adult should be set to true if the person's age is at least 18 years old, and should be set to false otherwise.
 
+{% raw %}
   ```java
   public class Person
   {
@@ -263,6 +280,7 @@ public class Person
       }
   }
   ```
+{% endraw %}
 
   Which of the following statements, when appearing in a method in a class other than Person, will correctly create an instance of a Person object that represents an adult person?
 
@@ -285,6 +303,7 @@ public class Person
 
   Consider the following class definition.
 
+{% raw %}
   ```java
   public class Tester
   {
@@ -294,6 +313,7 @@ public class Person
       /* missing constructor */
   }
   ```
+{% endraw %}
 
   The following statement appears in a method in a class other than Tester. It is intended to create a new Tester object with its attributes set to 10 and 20.
 
@@ -304,6 +324,7 @@ public class Person
   Which of the following can be used to replace `/* missing constructor */` so that the object t is correctly created?
 
   (A)
+{% raw %}
   ```java
   public Tester(int first, int second)
   {
@@ -311,7 +332,9 @@ public class Person
       num2 = second;
   }
   ```
+{% endraw %}
   (B)
+{% raw %}
   ```java
   public Tester(int first, int second)
   {
@@ -319,7 +342,9 @@ public class Person
       num2 = 2;
   }
   ```
+{% endraw %}
   (C)
+{% raw %}
   ```java
   public Tester(int first, int second)
   {
@@ -327,7 +352,9 @@ public class Person
       second = 20;
   }
   ```
+{% endraw %}
   (D)
+{% raw %}
   ```java
   public Tester(int first, int second)
   {
@@ -335,6 +362,7 @@ public class Person
       second = num2;
   }
   ```
+{% endraw %}
 
   <details markdown="block">
     <summary><b>点击查看解答</b></summary>

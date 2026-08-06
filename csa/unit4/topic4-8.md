@@ -130,6 +130,7 @@ ArrayList<Integer> ages = new ArrayList<Integer>();
 
   Consider the following method.
 
+{% raw %}
   ```java
   public static void processNumbers(ArrayList<Integer> numbers)
   {
@@ -138,6 +139,7 @@ ArrayList<Integer> ages = new ArrayList<Integer>();
       numbers.remove(last + 1);
   }
   ```
+{% endraw %}
 
   Which of the following best describes the preconditions necessary for the method to run without error?
 
@@ -160,6 +162,7 @@ ArrayList<Integer> ages = new ArrayList<Integer>();
 
   Consider the following code segment.
 
+{% raw %}
   ```java
   ArrayList<Integer> nums = new ArrayList<Integer>();
   nums.add(12);
@@ -174,6 +177,7 @@ ArrayList<Integer> ages = new ArrayList<Integer>();
       nums.set(nums.size() - 1, x);
   }
   ```
+{% endraw %}
 
   Which of the following best describes the behavior of the code segment?
 

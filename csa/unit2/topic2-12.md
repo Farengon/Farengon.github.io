@@ -29,6 +29,7 @@ nav_order: 12
 
   Consider the following code segment, in which `m` and `n` are properly declared and initialized `int` variables.
 
+{% raw %}
   ```java
   int result = 0;
   for (int i = 0; i < n; i++)
@@ -39,6 +40,7 @@ nav_order: 12
       }
   }
   ```
+{% endraw %}
 
   Which of the following best describes the conditions that must be true of `m` and `n` so that after this code segment executes, the value of `result` is greater than 0?
 
@@ -61,6 +63,7 @@ nav_order: 12
 
   Consider the following code segment.
 
+{% raw %}
   ```java
   double sum = 0.0;
   for (int outer = 1; outer <= 4; outer++)
@@ -71,6 +74,7 @@ nav_order: 12
       }
   }
   ```
+{% endraw %}
 
   How many times will Math.random() be called as a result of executing this code segment?
 
@@ -93,6 +97,7 @@ nav_order: 12
 
   The following code segment appears in a method in the same class as the method doSomething().
 
+{% raw %}
   ```java
   int i = 1;
   while (i < 3)
@@ -104,6 +109,7 @@ nav_order: 12
       i++;
   }
   ```
+{% endraw %}
 
   How many times will doSomething() be called as a result of executing this code segment?
 
@@ -126,6 +132,7 @@ nav_order: 12
 
   Consider the following code segment.
 
+{% raw %}
   ```java
   for (int x = 1; x <= 3; x++)
   {
@@ -135,6 +142,7 @@ nav_order: 12
       }
   }
   ```
+{% endraw %}
 
   Which of the following best describes the behavior of this code segment?
 
@@ -157,6 +165,7 @@ nav_order: 12
 
   Consider the following code segment.
 
+{% raw %}
   ```java
   int counter = 0;
   for (int x = 10; x > 0; x--)
@@ -167,6 +176,7 @@ nav_order: 12
       }
   }
   ```
+{% endraw %}
 
   How many times will the statement in line 6 be executed as a result of running the code segment?
 

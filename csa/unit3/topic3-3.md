@@ -11,6 +11,7 @@ nav_order: 3
 
 一个 Java 类的**组成部分（Anatomy）**包括：
 
+{% raw %}
 ```java
 public class Item          // 类声明（class header）
 {
@@ -28,6 +29,7 @@ public class Item          // 类声明（class header）
     }
 }
 ```
+{% endraw %}
 
 **访问修饰符（Access Modifiers）：**
 
@@ -53,6 +55,7 @@ public class Item          // 类声明（class header）
 
   Consider the following partial class declaration.
 
+{% raw %}
   ```java
   public class Item
   {
@@ -62,6 +65,7 @@ public class Item          // 类声明（class header）
       /* There may be instance variables, constructors, and methods that are not shown. */
   }
   ```
+{% endraw %}
 
   The following code segments each appear in a class other than Item. Assume that myItem and myItem2 are Item objects that have been properly instantiated.
 
@@ -100,6 +104,7 @@ public class Item          // 类声明（class header）
 
   The following Candy class is used to represent pieces of candy.
 
+{% raw %}
   ```java
   public class Candy        // line 1
   {
@@ -109,6 +114,7 @@ public class Item          // 类声明（class header）
       /* There may be instance variables, constructors, and methods that are not shown. */
   }
   ```
+{% endraw %}
 
   The class is intended to allow external classes to create Candy objects, but external classes should not be able to modify the attributes of Candy objects. Access to the class is not constrained as intended.
 
@@ -136,6 +142,7 @@ public class Item          // 类声明（class header）
   Which of the following declarations is the most appropriate for the Profile class?
 
   (A)
+{% raw %}
   ```java
   private class Profile
   {
@@ -144,7 +151,9 @@ public class Item          // 类声明（class header）
       private int followers;
   }
   ```
+{% endraw %}
   (B)
+{% raw %}
   ```java
   public class Profile
   {
@@ -153,7 +162,9 @@ public class Item          // 类声明（class header）
       public int followers;
   }
   ```
+{% endraw %}
   (C)
+{% raw %}
   ```java
   public class Profile
   {
@@ -162,7 +173,9 @@ public class Item          // 类声明（class header）
       private int followers;
   }
   ```
+{% endraw %}
   (D)
+{% raw %}
   ```java
   private class Profile
   {
@@ -171,6 +184,7 @@ public class Item          // 类声明（class header）
       private int followers;
   }
   ```
+{% endraw %}
 
   <details markdown="block">
     <summary><b>点击查看解答</b></summary>
@@ -186,16 +200,19 @@ public class Item          // 类声明（class header）
 
   Consider the design of a Player class that will contain two int attributes and a constructor. The class will also contain a method getScore that can be accessed from outside the class. A partial definition of the Player class is shown.
 
+{% raw %}
   ```java
   public class Player
   {
       /* missing code */
   }
   ```
+{% endraw %}
 
   Which of the following replacements for `/* missing code */` is the most appropriate implementation of the class?
 
   (A)
+{% raw %}
   ```java
   private int score;
   private int id;
@@ -204,7 +221,9 @@ public class Item          // 类声明（class header）
   private int getScore()
   { /* implementation not shown */ }
   ```
+{% endraw %}
   (B)
+{% raw %}
   ```java
   private int score;
   private int id;
@@ -213,7 +232,9 @@ public class Item          // 类声明（class header）
   public int getScore()
   { /* implementation not shown */ }
   ```
+{% endraw %}
   (C)
+{% raw %}
   ```java
   public int score;
   public int id;
@@ -222,7 +243,9 @@ public class Item          // 类声明（class header）
   private int getScore()
   { /* implementation not shown */ }
   ```
+{% endraw %}
   (D)
+{% raw %}
   ```java
   public int score;
   public int id;
@@ -231,6 +254,7 @@ public class Item          // 类声明（class header）
   public int getScore()
   { /* implementation not shown */ }
   ```
+{% endraw %}
 
   <details markdown="block">
     <summary><b>点击查看解答</b></summary>
@@ -246,6 +270,7 @@ public class Item          // 类声明（class header）
 
   Consider the following Bugs class, which is intended to simulate variations in a population of bugs. The population is stored in the method's int attribute. The getPopulation method is intended to allow methods in other classes to access a Bugs object's population value. However, the class does not compile.
 
+{% raw %}
   ```java
   public class Bugs
   {
@@ -262,6 +287,7 @@ public class Item          // 类声明（class header）
       }
   }
   ```
+{% endraw %}
 
   Which of the following best explains why the Bugs class does not compile?
 

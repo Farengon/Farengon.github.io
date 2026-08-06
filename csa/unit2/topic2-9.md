@@ -44,6 +44,7 @@ nav_order: 9
 
   Consider the following code segment.
 
+{% raw %}
   ```java
   int num = 245;
   int temp = num;
@@ -53,6 +54,7 @@ nav_order: 9
       temp /= 10;
   }
   ```
+{% endraw %}
 
   What is printed as a result of executing this code segment?
 
@@ -75,6 +77,7 @@ nav_order: 9
 
   In the following code segment, assume that low and high are properly declared and initialized int variables and that `low < high`. The code segment is intended to print the sum of the integers between low and high, inclusive, but does not always work as intended.
 
+{% raw %}
   ```java
   int sum = 0;          // line 1
   int j = low;          // line 2
@@ -85,6 +88,7 @@ nav_order: 9
   }
   System.out.println(sum);
   ```
+{% endraw %}
 
   Which of the following changes can be made so that this code segment works as intended?
 
@@ -107,6 +111,7 @@ nav_order: 9
 
   In the following code segment, num has been assigned a positive int value.
 
+{% raw %}
   ```java
   int x = 0;
   int temp = num;
@@ -117,6 +122,7 @@ nav_order: 9
   }
   System.out.println(x);
   ```
+{% endraw %}
 
   Which of the following best describes the value printed by this code segment?
 

@@ -34,6 +34,7 @@ permalink: /csa/
 
 现在你可以新建一个文件夹，在 IDE 中打开这个文件夹，并在里面新建一个叫做“Helloworld.java”的文件。复制粘贴下面这段代码：
 
+{% raw %}
 ```java
 public class Helloworld {
 	public static void main(String[] args) {
@@ -41,5 +42,6 @@ public class Helloworld {
 	}
 }
 ```
+{% endraw %}
 
 点击“运行”，你就会看到计算机输出“Hello world！”

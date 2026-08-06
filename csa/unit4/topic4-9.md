@@ -11,18 +11,22 @@ nav_order: 9
 
 遍历 ArrayList 使用 `size()` 和 `get(i)`：
 
+{% raw %}
 ```java
 for (int i = 0; i < list.size(); i++)
 {
     System.out.println(list.get(i));
 }
 ```
+{% endraw %}
 
 也可以使用增强 for：
 
+{% raw %}
 ```java
 for (Integer num : list) { ... }
 ```
+{% endraw %}
 
 {: .note}
 > 增强 for 循环中的变量是元素的**副本**，修改它不会改变 ArrayList。
@@ -47,6 +51,7 @@ for (Integer num : list) { ... }
   [13, 2, -4, 0, 34, -12, -13, 18, -27]
   ```
 
+{% raw %}
   ```java
   for (int i = 0; i < numbers.size(); i++)   // Line 1
   {
@@ -57,6 +62,7 @@ for (Integer num : list) { ... }
       i--;                                   // Line 7
   }
   ```
+{% endraw %}
 
   The code segment is intended to remove all negative values from numbers. However, the code segment is not working as intended.
 
@@ -81,6 +87,7 @@ for (Integer num : list) { ... }
 
   In the following code segment, intList is properly declared and initialized as an `ArrayList<Integer>` variable.
 
+{% raw %}
   ```java
   int someVal = 0;
   for (int i = 0; i < intList.size(); i += 2)
@@ -89,6 +96,7 @@ for (Integer num : list) { ... }
   }
   System.out.println(someVal);
   ```
+{% endraw %}
 
   Which of the following best describes the value printed as a result of executing the code segment?
 
@@ -111,6 +119,7 @@ for (Integer num : list) { ... }
 
   In the following code segment, numbers is a properly declared and initialized `ArrayList` variable.
 
+{% raw %}
   ```java
   for (int i = 0; i < numbers.size(); i++)
   {
@@ -120,6 +129,7 @@ for (Integer num : list) { ... }
       }
   }
   ```
+{% endraw %}
 
   The code segment is intended to remove all negative values from numbers. Which of the following best describes the conditions in which the code segment works as intended?
 
@@ -142,6 +152,7 @@ for (Integer num : list) { ... }
 
   Consider the following code segment.
 
+{% raw %}
   ```java
   double x = 0.0;
   for (double number : numbers)
@@ -150,6 +161,7 @@ for (Integer num : list) { ... }
   }
   System.out.println(x / numbers.size());
   ```
+{% endraw %}
 
   Assume that numbers is an ArrayList that has been initialized with the following Double objects.
 
@@ -178,6 +190,7 @@ for (Integer num : list) { ... }
 
   In the following code segment, words is an ArrayList of two or more String objects.
 
+{% raw %}
   ```java
   int prev = words.get(0).length();
   int count = 0;
@@ -192,6 +205,7 @@ for (Integer num : list) { ... }
       prev = curr;
   }
   ```
+{% endraw %}
 
   Which of the following best describes the value assigned to count as a result of executing the code segment?
 

@@ -11,12 +11,14 @@ nav_order: 5
 
 **方法（Method）** 定义类的一个行为。方法声明包括：
 
+{% raw %}
 ```java
 public double getPrice()     // 访问修饰符 + 返回类型 + 方法名 + 参数列表
 {
     return price;            // 方法体（return 语句返回结果）
 }
 ```
+{% endraw %}
 
 - **返回类型（return type）**：`void` 表示不返回任何值；其他类型（如 `int`、`double`、`String`）必须用 `return` 返回匹配类型的值。
 - **参数（parameters）**：方法需要的输入。
@@ -32,6 +34,7 @@ public double getPrice()     // 访问修饰符 + 返回类型 + 方法名 + 参
 - **访问器方法（Accessor Method）**：让外部类**获取**实例变量/类变量的**值副本**，是**非 void** 方法（有返回值）。如 `getPrice()`。
 - **修改器方法（Mutator Method）**：**改变**实例变量/类变量的值，通常（但不一定）是 **void** 方法。如 `setPrice(double p)`、`updateX(int amount)`。
 
+{% raw %}
 ```java
 public double getPrice()              // 访问器：返回值副本
 {
@@ -43,6 +46,7 @@ public void setPrice(double newPrice) // 修改器：改变实例变量
     price = newPrice;
 }
 ```
+{% endraw %}
 
 ## 3.5.C 编写方法时常见错误
 
@@ -57,6 +61,7 @@ public void setPrice(double newPrice) // 修改器：改变实例变量
 
   Consider the following class definition.
 
+{% raw %}
   ```java
   public class MyClass
   {
@@ -73,6 +78,7 @@ public void setPrice(double newPrice) // 修改器：改变实例变量
       }
   }
   ```
+{% endraw %}
 
   Suppose that tester is a properly instantiated reference to a MyClass object and num is an int value. Which of the following best describes the conditions under which the value of the instance variable x is unchanged as a result of the call `tester.updateX(num)`?
 
@@ -95,6 +101,7 @@ public void setPrice(double newPrice) // 修改器：改变实例变量
 
   Consider the following class definition.
 
+{% raw %}
   ```java
   public class XYPoint
   {
@@ -113,6 +120,7 @@ public void setPrice(double newPrice) // 修改器：改变实例变量
       }
   }
   ```
+{% endraw %}
 
   The following code segment appears in a class other than XYPoint.
 
@@ -151,6 +159,7 @@ public void setPrice(double newPrice) // 修改器：改变实例变量
 
   Consider the following class definition.
 
+{% raw %}
   ```java
   public class Fraction
   {
@@ -169,6 +178,7 @@ public void setPrice(double newPrice) // 修改器：改变实例变量
       }
   }
   ```
+{% endraw %}
 
   Suppose that `fr` is a properly instantiated reference to a Fraction object. Which of the following best describes the conditions under which the call `fr.getDecimal()` will fail to return a value?
 
@@ -191,6 +201,7 @@ public void setPrice(double newPrice) // 修改器：改变实例变量
 
   Consider the following class definition.
 
+{% raw %}
   ```java
   public class RentalCar
   {
@@ -209,6 +220,7 @@ public void setPrice(double newPrice) // 修改器：改变实例变量
       }
   }
   ```
+{% endraw %}
 
   The calculateFee method is intended to calculate the total fee for renting a car. The total fee is equal to the number of days of the rental, days, times the daily rental rate plus the number of miles driven, miles, times the per mile rate.
 
@@ -233,6 +245,7 @@ public void setPrice(double newPrice) // 修改器：改变实例变量
 
   Consider the following class definition.
 
+{% raw %}
   ```java
   public class Circle
   {
@@ -246,6 +259,7 @@ public void setPrice(double newPrice) // 修改器：改变实例变量
       }
   }
   ```
+{% endraw %}
 
   Which of the following best explains why the computeArea method will not compile?
 
@@ -268,6 +282,7 @@ public void setPrice(double newPrice) // 修改器：改变实例变量
 
   Consider the following class definition. The class does not compile.
 
+{% raw %}
   ```java
   public class Info
   {
@@ -292,6 +307,7 @@ public void setPrice(double newPrice) // 修改器：改变实例变量
       }
   }
   ```
+{% endraw %}
 
   Which of the following best explains why the class will not compile?
 
@@ -314,6 +330,7 @@ public void setPrice(double newPrice) // 修改器：改变实例变量
 
   Consider the following class definition. The raisePrice method is intended to increase the value of the instance variable price by the value of the parameter amount. The method does not work as intended.
 
+{% raw %}
   ```java
   public class Toy
   {
@@ -332,6 +349,7 @@ public void setPrice(double newPrice) // 修改器：改变实例变量
       }
   }
   ```
+{% endraw %}
 
   Which of the following changes can be made so that the Toy class compiles without error and the method raisePrice works as intended?
 

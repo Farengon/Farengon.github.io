@@ -11,11 +11,13 @@ nav_order: 7
 
 **while 循环**在条件为 true 时反复执行循环体：
 
+{% raw %}
 ```java
 while (条件) {
     // 循环体
 }
 ```
+{% endraw %}
 
 {: .important}
 > - 进入循环前先判断条件；条件为 false 时循环体**一次也不执行**。
@@ -36,6 +38,7 @@ while (条件) {
   Which of the following code segments can be used to print only the even integers between 2 and 10, inclusive?
 
   (A)
+{% raw %}
   ```java
   int num = 0;
   while (num < 10)
@@ -44,7 +47,9 @@ while (条件) {
       num += 2;
   }
   ```
+{% endraw %}
   (B)
+{% raw %}
   ```java
   int num = 0;
   while (num <= 10)
@@ -53,7 +58,9 @@ while (条件) {
       num += 2;
   }
   ```
+{% endraw %}
   (C)
+{% raw %}
   ```java
   int num = 0;
   while (num < 10)
@@ -62,7 +69,9 @@ while (条件) {
       System.out.println(num);
   }
   ```
+{% endraw %}
   (D)
+{% raw %}
   ```java
   int num = 0;
   while (num <= 10)
@@ -71,6 +80,7 @@ while (条件) {
       System.out.println(num);
   }
   ```
+{% endraw %}
 
   <details markdown="block">
     <summary><b>点击查看解答</b></summary>
@@ -86,6 +96,7 @@ while (条件) {
 
   In the following code segment, x is an int variable with a positive value.
 
+{% raw %}
   ```java
   int temp = x;
   while (temp > 0)
@@ -94,6 +105,7 @@ while (条件) {
   }
   System.out.println(temp == 0);
   ```
+{% endraw %}
 
   Which of the following best describes the behavior of the code segment?
 
@@ -116,6 +128,7 @@ while (条件) {
 
   Consider the following code segment. Assume that the int variable input has been properly declared and initialized.
 
+{% raw %}
   ```java
   int answer = 1;
   if (input != 0)
@@ -129,6 +142,7 @@ while (条件) {
   }
   System.out.println(answer);
   ```
+{% endraw %}
 
   Which of the following best describes the condition in which this code segment always results in integer overflow?
 
@@ -151,6 +165,7 @@ while (条件) {
 
   Consider the following code segment.
 
+{% raw %}
   ```java
   int a = 1;
   String result = "";
@@ -161,6 +176,7 @@ while (条件) {
   }
   System.out.println(result);
   ```
+{% endraw %}
 
   What is printed as a result of executing this code segment?
 
@@ -183,6 +199,7 @@ while (条件) {
 
   Consider the following code segment.
 
+{% raw %}
   ```java
   int num = 1;
   int count = 0;
@@ -195,6 +212,7 @@ while (条件) {
       num++;
   }
   ```
+{% endraw %}
 
   What value is stored in the variable count as a result of executing the code segment?
 
@@ -245,6 +263,7 @@ while (条件) {
 
   The following code segment is intended to print the number of digits in the int variable num, where `num > 0`.
 
+{% raw %}
   ```java
   int count = 0;
   while ( /* missing condition */ )
@@ -254,6 +273,7 @@ while (条件) {
   }
   System.out.println(count);
   ```
+{% endraw %}
 
   Which of the following can be used to replace `/* missing condition */` so that the code segment works as intended?
 

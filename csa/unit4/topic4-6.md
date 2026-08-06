@@ -33,6 +33,7 @@ Scanner scan = new Scanner(file);    // 把 Scanner 连接到文件
 
 ## 4.6.B 文件读取的循环模式
 
+{% raw %}
 ```java
 while (fileInput.hasNext())
 {
@@ -40,6 +41,7 @@ while (fileInput.hasNext())
     // 处理 temp
 }
 ```
+{% endraw %}
 
 {: .important}
 > - 循环中**每轮只读取一次**数据并保存到临时变量，避免重复读取。
@@ -86,6 +88,7 @@ while (fileInput.hasNext())
 
   In the following code segment, a valid Scanner object named fileInput is created to read from the text file numbers.txt. Assume that the text file contains only numerical data and spaces.
 
+{% raw %}
   ```java
   File numData = new File("numbers.txt");
   Scanner fileInput = new Scanner(numData);
@@ -97,24 +100,30 @@ while (fileInput.hasNext())
   }
   System.out.println(sum);
   ```
+{% endraw %}
 
   Which of the following can be used to replace `/* missing code */` so that the code segment prints the sum of the positive numbers in the file?
 
   (A)
+{% raw %}
   ```java
   if (fileInput > 0)
   {
       sum = sum + fileInput;
   }
   ```
+{% endraw %}
   (B)
+{% raw %}
   ```java
   if (fileInput.nextDouble() > 0)
   {
       sum = sum + fileInput.nextDouble();
   }
   ```
+{% endraw %}
   (C)
+{% raw %}
   ```java
   double temp = fileInput.nextDouble();
   if (temp > 0)
@@ -122,7 +131,9 @@ while (fileInput.hasNext())
       sum = sum + temp;
   }
   ```
+{% endraw %}
   (D)
+{% raw %}
   ```java
   double temp = fileInput.nextDouble();
   if (temp > 0)
@@ -130,6 +141,7 @@ while (fileInput.hasNext())
       sum = sum + fileInput.nextDouble();
   }
   ```
+{% endraw %}
 
   <details markdown="block">
     <summary><b>点击查看解答</b></summary>
@@ -153,6 +165,7 @@ while (fileInput.hasNext())
 
   In the following code segment, a valid Scanner object named source is created to read from the text file.
 
+{% raw %}
   ```java
   int x = 0;
   File text = new File("data.txt");
@@ -164,6 +177,7 @@ while (fileInput.hasNext())
   }
   System.out.println(x);
   ```
+{% endraw %}
 
   What is printed as a result of executing the code segment?
 
@@ -192,6 +206,7 @@ while (fileInput.hasNext())
 
   In the following code segment, a valid Scanner object named scan is created to read from the text file. The code segment is intended to store the values from grades.txt into an int array.
 
+{% raw %}
   ```java
   File gradeFile = new File("grades.txt");
   Scanner scan = new Scanner(gradeFile);
@@ -203,6 +218,7 @@ while (fileInput.hasNext())
       reportCard[i] = currentGrade;
   }
   ```
+{% endraw %}
 
   Which of the following can replace `/* missing expression */` so that the code segment works as intended?
 

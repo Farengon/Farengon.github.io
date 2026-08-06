@@ -11,6 +11,7 @@ nav_order: 11
 
 **嵌套循环**是循环体内再包含循环。外层循环每执行一次，内层循环完整执行一轮：
 
+{% raw %}
 ```java
 for (int outer = 0; outer < 3; outer++) {
     for (int inner = 0; inner < 4; inner++) {
@@ -19,6 +20,7 @@ for (int outer = 0; outer < 3; outer++) {
     System.out.println();
 }
 ```
+{% endraw %}
 
 {: .important}
 > - 内层循环体执行的总次数 = **外层迭代次数 × 内层迭代次数**。
@@ -37,6 +39,7 @@ for (int outer = 0; outer < 3; outer++) {
 
   Consider the following code segment.
 
+{% raw %}
   ```java
   for (int j = 1; j <= 4; j++)          // Line 1
   {
@@ -47,6 +50,7 @@ for (int outer = 0; outer < 3; outer++) {
       System.out.println();
   }
   ```
+{% endraw %}
 
   The code segment is intended to produce the following output, but does not work as intended.
 
@@ -78,6 +82,7 @@ for (int outer = 0; outer < 3; outer++) {
 
   Consider the following code segment, in which `m` and `n` are properly declared and initialized `int` variables.
 
+{% raw %}
   ```java
   int result = 0;
   for (int i = 0; i < n; i++)
@@ -88,6 +93,7 @@ for (int outer = 0; outer < 3; outer++) {
       }
   }
   ```
+{% endraw %}
 
   Which of the following best describes the conditions that must be true of `m` and `n` so that after this code segment executes, the value of `result` is greater than 0?
 
@@ -110,6 +116,7 @@ for (int outer = 0; outer < 3; outer++) {
 
   Consider the following code segment.
 
+{% raw %}
   ```java
   int a = 1;
   while (a <= 2)
@@ -123,6 +130,7 @@ for (int outer = 0; outer < 3; outer++) {
       a++;
   }
   ```
+{% endraw %}
 
   The code segment is intended to print `"******"`.
 
@@ -147,6 +155,7 @@ for (int outer = 0; outer < 3; outer++) {
 
   Consider the following code segment.
 
+{% raw %}
   ```java
   double sum = 0.0;
   for (int outer = 1; outer <= 4; outer++)
@@ -157,6 +166,7 @@ for (int outer = 0; outer < 3; outer++) {
       }
   }
   ```
+{% endraw %}
 
   How many times will Math.random() be called as a result of executing this code segment?
 
@@ -179,6 +189,7 @@ for (int outer = 0; outer < 3; outer++) {
 
   The following code segment appears in a method in the same class as the method doSomething().
 
+{% raw %}
   ```java
   int i = 1;
   while (i < 3)
@@ -190,6 +201,7 @@ for (int outer = 0; outer < 3; outer++) {
       i++;
   }
   ```
+{% endraw %}
 
   How many times will doSomething() be called as a result of executing this code segment?
 
@@ -212,6 +224,7 @@ for (int outer = 0; outer < 3; outer++) {
 
   Consider the following code segment.
 
+{% raw %}
   ```java
   for (int x = 1; x <= 3; x++)
   {
@@ -221,6 +234,7 @@ for (int outer = 0; outer < 3; outer++) {
       }
   }
   ```
+{% endraw %}
 
   Which of the following best describes the behavior of this code segment?
 
@@ -243,6 +257,7 @@ for (int outer = 0; outer < 3; outer++) {
 
   Consider the following code segment.
 
+{% raw %}
   ```java
   for (int outer = 0; outer < 3; outer++)
   {
@@ -252,6 +267,7 @@ for (int outer = 0; outer < 3; outer++) {
       }
   }
   ```
+{% endraw %}
 
   Which of the following can be used as a replacement for `/* missing loop header */` so that the code segment produces the output `00-01-02-11-12-22-`?
 
@@ -274,6 +290,7 @@ for (int outer = 0; outer < 3; outer++) {
 
   Consider the following code segment.
 
+{% raw %}
   ```java
   int counter = 0;
   for (int x = 10; x > 0; x--)
@@ -284,6 +301,7 @@ for (int outer = 0; outer < 3; outer++) {
       }
   }
   ```
+{% endraw %}
 
   How many times will the statement in line 6 be executed as a result of running the code segment?
 
@@ -306,6 +324,7 @@ for (int outer = 0; outer < 3; outer++) {
 
   Consider the following code segment.
 
+{% raw %}
   ```java
   int count = 0;
   for (int x = 1; x <= 3; x++)
@@ -317,6 +336,7 @@ for (int outer = 0; outer < 3; outer++) {
   }
   System.out.println(count);
   ```
+{% endraw %}
 
   Which of the following can be used to replace `/* missing loop header */` so that the code segment prints 6?
 
@@ -339,6 +359,7 @@ for (int outer = 0; outer < 3; outer++) {
 
   Consider the following code segment.
 
+{% raw %}
   ```java
   /* missing loop header */
   {
@@ -349,6 +370,7 @@ for (int outer = 0; outer < 3; outer++) {
       System.out.println();
   }
   ```
+{% endraw %}
 
   This code segment is intended to produce the following output.
 
@@ -379,6 +401,7 @@ for (int outer = 0; outer < 3; outer++) {
 
   In the following code segment, outerMax and innerMax are properly declared and initialized int variables that are greater than or equal to zero.
 
+{% raw %}
   ```java
   for (int outer = 0; outer < outerMax; outer++)
   {
@@ -388,6 +411,7 @@ for (int outer = 0; outer < 3; outer++) {
       }
   }
   ```
+{% endraw %}
 
   Which of the following best describes the behavior of the code segment?
 
@@ -410,6 +434,7 @@ for (int outer = 0; outer < 3; outer++) {
 
   Consider the following code segment.
 
+{% raw %}
   ```java
   int val = 1;
   while (val <= 6)
@@ -421,6 +446,7 @@ for (int outer = 0; outer < 3; outer++) {
       val++;
   }
   ```
+{% endraw %}
 
   How many times will the statement in line 6 be executed as a result of running the code segment?
 

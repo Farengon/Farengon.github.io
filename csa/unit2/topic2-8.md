@@ -11,11 +11,13 @@ nav_order: 8
 
 **for 循环**把循环变量的**初始化、条件、更新**集中在一行。for 循环头有三部分：
 
+{% raw %}
 ```java
 for (初始化; 布尔条件; 更新) {
     // 循环体
 }
 ```
+{% endraw %}
 
 例如：`for (int j = 1; j <= 5; j++)` 让 j 依次取 1、2、3、4、5。
 
@@ -28,6 +30,7 @@ for (初始化; 布尔条件; 更新) {
 
 ## 2.8.B for 与 while 的等价转换
 
+{% raw %}
 ```java
 // for 循环
 for (int i = 0; i < 10; i++) { ... }
@@ -39,6 +42,7 @@ while (i < 10) {
     i++;   // 更新语句的位置与循环体内操作顺序相关
 }
 ```
+{% endraw %}
 
 - ### 例题 1 — 无限循环的条件
 
@@ -46,6 +50,7 @@ while (i < 10) {
 
   Consider the following code segment.
 
+{% raw %}
   ```java
   int sum = 0;
   for (int j = 1; /* missing condition */; j += 2)
@@ -53,6 +58,7 @@ while (i < 10) {
       sum += j;
   }
   ```
+{% endraw %}
 
   Which of the following replacements for `/* missing condition */` will cause an infinite loop?
 
@@ -77,15 +83,18 @@ while (i < 10) {
 
   **Code Segment 1**
 
+{% raw %}
   ```java
   for (int i = 0; i < 10; i++)
   {
       System.out.println("counting " + i);
   }
   ```
+{% endraw %}
 
   **Code Segment 2**
 
+{% raw %}
   ```java
   int x = 0;
   while (x < 10)
@@ -94,6 +103,7 @@ while (i < 10) {
       System.out.println("counting " + x);
   }
   ```
+{% endraw %}
 
   Which of the following changes can be made to Code Segment 2 so that the outputs of the two code segments are identical as intended?
 
@@ -116,6 +126,7 @@ while (i < 10) {
 
   Consider the following code segment.
 
+{% raw %}
   ```java
   for (int m = 16; m > 0; m -= 2)
   {
@@ -125,6 +136,7 @@ while (i < 10) {
       }
   }
   ```
+{% endraw %}
 
   What is printed as a result of executing this code segment?
 
@@ -147,6 +159,7 @@ while (i < 10) {
 
   In the following code segment, num has been assigned a positive int value. The following code segment is intended to print true if num is even and is intended to print false otherwise.
 
+{% raw %}
   ```java
   boolean isEven = true;
   if (/* missing code */)
@@ -155,6 +168,7 @@ while (i < 10) {
   }
   System.out.println(isEven);
   ```
+{% endraw %}
 
   Which of the following can replace `/* missing code */` so that this code segment works as intended?
 
@@ -179,21 +193,25 @@ while (i < 10) {
 
   **Code Segment 1**
 
+{% raw %}
   ```java
   for (int k = 1; k <= 5; k++)
   {
       System.out.print(k);
   }
   ```
+{% endraw %}
 
   **Code Segment 2**
 
+{% raw %}
   ```java
   for (int k = 5; k >= 1; k--)
   {
       System.out.print(k);
   }
   ```
+{% endraw %}
 
   Which of the following best explains the difference, if any, between the output of code segment 1 and code segment 2?
 
@@ -216,16 +234,19 @@ while (i < 10) {
 
   Consider the following code segment.
 
+{% raw %}
   ```java
   for (int j = 1; j < 10; j += 2)
   {
       System.out.print(j);
   }
   ```
+{% endraw %}
 
   Which of the following code segments will produce the same output as the given code segment?
 
   (A)
+{% raw %}
   ```java
   int j = 1;
   while (j < 10)
@@ -234,7 +255,9 @@ while (i < 10) {
       System.out.print(j);
   }
   ```
+{% endraw %}
   (B)
+{% raw %}
   ```java
   int j = 1;
   while (j < 10)
@@ -243,7 +266,9 @@ while (i < 10) {
       j += 2;
   }
   ```
+{% endraw %}
   (C)
+{% raw %}
   ```java
   int j = 1;
   while (j <= 10)
@@ -252,7 +277,9 @@ while (i < 10) {
       System.out.print(j);
   }
   ```
+{% endraw %}
   (D)
+{% raw %}
   ```java
   int j = 1;
   while (j >= 10)
@@ -261,6 +288,7 @@ while (i < 10) {
       System.out.print(j);
   }
   ```
+{% endraw %}
 
   <details markdown="block">
     <summary><b>点击查看解答</b></summary>

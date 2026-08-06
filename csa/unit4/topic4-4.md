@@ -11,12 +11,14 @@ nav_order: 4
 
 **遍历（Traversal）** 是逐个访问数组中每个元素的过程：
 
+{% raw %}
 ```java
 for (int i = 0; i < arr.length; i++)
 {
     System.out.println(arr[i]);
 }
 ```
+{% endraw %}
 
 {: .important}
 > - 用 `arr.length` 作为循环上限，避免越界。
@@ -24,12 +26,14 @@ for (int i = 0; i < arr.length; i++)
 
 ## 4.4.B 增强 for 循环（Enhanced for / for-each）
 
+{% raw %}
 ```java
 for (int value : arr)
 {
     System.out.println(value);
 }
 ```
+{% endraw %}
 
 {: .important}
 > - 增强 for 循环变量是数组元素的**副本**：**修改 value 不会改变数组元素**！
@@ -57,6 +61,7 @@ for (int value : arr)
   Which of the following can replace `/* missing code */` so that the code segment will work as intended?
 
   (A)
+{% raw %}
   ```java
   int x = 10;
   for (int value : numbers)
@@ -65,14 +70,18 @@ for (int value : arr)
       x += 10;
   }
   ```
+{% endraw %}
   (B)
+{% raw %}
   ```java
   for (int j = 0; j < numbers.length; j++)
   {
       numbers[j] = j * 10;
   }
   ```
+{% endraw %}
   (C)
+{% raw %}
   ```java
   numbers[0] = 10;
   for (int j = 0; j < numbers.length; j++)
@@ -80,7 +89,9 @@ for (int value : arr)
       numbers[j] = numbers[j] + 10;
   }
   ```
+{% endraw %}
   (D)
+{% raw %}
   ```java
   numbers[3] = 40;
   for (int j = numbers.length - 1; j > 0; j--)
@@ -88,6 +99,7 @@ for (int value : arr)
       numbers[j - 1] = numbers[j] - 10;
   }
   ```
+{% endraw %}
 
   <details markdown="block">
     <summary><b>点击查看解答</b></summary>
@@ -103,6 +115,7 @@ for (int value : arr)
 
   Consider the following code segment.
 
+{% raw %}
   ```java
   int[] nums = {5, 10, 15, 20, 25, 30};
   for (int k = 0; k < nums.length - 1; k += 2)
@@ -110,6 +123,7 @@ for (int value : arr)
       nums[k] = nums[k + 1];
   }
   ```
+{% endraw %}
 
   What are the contents of nums after executing the code segment?
 
@@ -132,6 +146,7 @@ for (int value : arr)
 
   Consider the following code segment.
 
+{% raw %}
   ```java
   int[] arr = {10, 20, 30, 40, 50};
   for (int x = 1; x < arr.length - 1; x++)
@@ -139,6 +154,7 @@ for (int value : arr)
       arr[x + 1] = arr[x] + arr[x + 1];
   }
   ```
+{% endraw %}
 
   Which of the following represents the contents of arr after the code segment has been executed?
 
@@ -161,6 +177,7 @@ for (int value : arr)
 
   Consider the following code segment.
 
+{% raw %}
   ```java
   int[] arr1 = {2, 4, 6, 8, 10};
   int num = 0;
@@ -169,6 +186,7 @@ for (int value : arr)
       num += 10;
   }
   ```
+{% endraw %}
 
   Which of the following best describes the behavior of the code segment?
 
@@ -191,6 +209,7 @@ for (int value : arr)
 
   In the following code segment, data is an int array with at least two elements.
 
+{% raw %}
   ```java
   int answer = 0;
   for (int val : data)
@@ -202,6 +221,7 @@ for (int value : arr)
   }
   System.out.println(answer);
   ```
+{% endraw %}
 
   Which of the following best describes the value printed by the code segment?
 

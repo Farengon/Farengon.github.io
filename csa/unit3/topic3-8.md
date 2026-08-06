@@ -31,6 +31,7 @@ nav_order: 8
 
   Consider the following class definition.
 
+{% raw %}
   ```java
   public class ComputeObject
   {
@@ -55,6 +56,7 @@ nav_order: 8
       }
   }
   ```
+{% endraw %}
 
   The following code segment appears in a class other than ComputeObject.
 
@@ -84,6 +86,7 @@ nav_order: 8
 
   Consider the following class definition.
 
+{% raw %}
   ```java
   public class Stars
   {
@@ -117,6 +120,7 @@ nav_order: 8
       }
   }
   ```
+{% endraw %}
 
   The following code segment appears in a class other than Stars.
 
@@ -158,6 +162,7 @@ nav_order: 8
 
   Consider the following class, which models a bank account. The deposit method is intended to update the account balance by a given amount; however, it does not work as intended.
 
+{% raw %}
   ```java
   public class BankAccount
   {
@@ -178,6 +183,7 @@ nav_order: 8
       }
   }
   ```
+{% endraw %}
 
   Which of the following best explains why the deposit method does not work as intended?
 
@@ -200,6 +206,7 @@ nav_order: 8
 
   Consider the following Worker class.
 
+{% raw %}
   ```java
   public class Worker
   {
@@ -226,6 +233,7 @@ nav_order: 8
       }
   }
   ```
+{% endraw %}
 
   The following code segment appears in a method in a class other than Worker. The code segment is intended to print the value 800.0, but instead prints a different value because of an error in the Worker class.
 

@@ -11,11 +11,13 @@ nav_order: 3
 
 **数组（Array）** 是**固定长度**的同类型元素的集合。创建数组：
 
+{% raw %}
 ```java
 int[] sequence = new int[3];   // 长度为 3 的 int 数组，默认值 {0, 0, 0}
 String[] names = new String[4]; // 长度为 4 的 String 数组，默认值 {null, null, null, null}
 int[] scores = {85, 92, 78};    // 用初始化列表直接赋值
 ```
+{% endraw %}
 
 {: .important}
 > - 数组长度**创建后不能改变**。
@@ -92,11 +94,13 @@ int x = sequence[1]; // 读取索引 1 的元素
 
   Consider the following code segment.
 
+{% raw %}
   ```java
   int[] scores = {85, 92, 78, 90, 88};
   scores[1] *= 2;
   scores[2] += 10;
   ```
+{% endraw %}
 
   Which of the following best describes the behavior of lines 2 and 3 in the code segment?
 
@@ -119,11 +123,13 @@ int x = sequence[1]; // 读取索引 1 的元素
 
   Consider the following code segment.
 
+{% raw %}
   ```java
   int[] arr = {1, 2, 3, 4, 5};
   arr[1] = 4;
   arr[3] = 2;
   ```
+{% endraw %}
 
   Which of the following represents the contents of arr after the code segment has been executed?
 

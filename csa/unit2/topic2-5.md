@@ -60,12 +60,14 @@ nav_order: 5
 
   A fitness application categorizes daily step counts into different activity levels. The "Active" level is defined as any step count between 10,000 and 15,000, inclusive. The following code segment is intended to determine if a user's step count falls within the "Active" category.
 
+{% raw %}
   ```java
   if (steps > 10000 && steps < 15000)
   {
       activityLevel = "Active";
   }
   ```
+{% endraw %}
 
   Which of the following best explains the error, if any, in this code segment?
 

@@ -11,6 +11,7 @@ nav_order: 17
 
 **递归（Recursion）** 不仅可以用于数学计算，还可以用来**遍历** `String`、数组和 `ArrayList` 对象——用递归代替循环，逐个访问元素。
 
+{% raw %}
 ```java
 // 用递归遍历数组（打印每个元素）
 public static void traverse(int[] arr, int index)
@@ -23,6 +24,7 @@ public static void traverse(int[] arr, int index)
     traverse(arr, index + 1);         // 递归调用：访问下一个元素
 }
 ```
+{% endraw %}
 
 {: .note}
 > 递归遍历的关键：**基础情况**（索引越界时停止）+ **递归调用**（参数推进，如 `index + 1`）。参数值记录遍历进度，就像循环控制变量记录循环进度一样。
@@ -33,6 +35,7 @@ public static void traverse(int[] arr, int index)
 
   The following recursive method is intended to return the index of the first occurrence of goal in arr between index start and index end, inclusive. The index of the first occurrence of goal is the index closest to start where goal is found. If goal does not appear in the range of indices from start to end, the method returns -1. However, the method does not work as intended.
 
+{% raw %}
   ```java
   /** Precondition: 0 <= start <= end, end < arr.length */
   public static int locateItem(int[] arr, int goal, int start, int end)
@@ -51,6 +54,7 @@ public static void traverse(int[] arr, int index)
       }
   }
   ```
+{% endraw %}
 
   Which of the following changes can be made so that the method works as intended?
 
@@ -73,6 +77,7 @@ public static void traverse(int[] arr, int index)
 
   Consider the following method.
 
+{% raw %}
   ```java
   public static void find(String[] words, int s, int i)
   {
@@ -87,6 +92,7 @@ public static void traverse(int[] arr, int index)
       }
   }
   ```
+{% endraw %}
 
   The following code segment appears in a method in the same class as find.
 
@@ -127,6 +133,7 @@ public static void traverse(int[] arr, int index)
 4. 若目标值 **大于** 中间元素，则在**右半部分**继续查找。
 5. 每轮都**排除一半**元素，直到找到目标或区间为空。
 
+{% raw %}
 ```java
 // 递归版二分查找：在 [low, high] 区间内查找 target
 public static int binarySearch(int[] arr, int target, int low, int high)
@@ -150,6 +157,7 @@ public static int binarySearch(int[] arr, int target, int low, int high)
     }
 }
 ```
+{% endraw %}
 
 {: .note}
 > - **效率**：二分查找每次排除一半元素，**通常比线性查找更高效**（线性查找要逐个检查）。
@@ -177,6 +185,7 @@ public static int binarySearch(int[] arr, int target, int low, int high)
 1. **分解（Divide）**：把数组从中间分成两半，递归地对两半分别排序。
 2. **合并（Merge）**：把两个已排序的子数组合并成一个有序数组。
 
+{% raw %}
 ```java
 // 归并排序主方法：排序 arr 的 [low, high] 区间
 public static void mergeSort(int[] arr, int low, int high)
@@ -190,6 +199,7 @@ public static void mergeSort(int[] arr, int low, int high)
     }
 }
 ```
+{% endraw %}
 
 **合并过程（merge）**：用两个指针分别遍历左右两个有序子数组，每次取较小者放入临时数组，最后把剩余元素和临时结果复制回原数组。
 

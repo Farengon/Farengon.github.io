@@ -48,6 +48,7 @@ nav_order: 5
 
   The following code segment is intended to fill the fibs array with the first ten Fibonacci numbers. The code segment does not work as intended.
 
+{% raw %}
   ```java
   int[] fibs = new int[10];
   fibs[0] = 1;
@@ -57,6 +58,7 @@ nav_order: 5
       fibs[j] = fibs[j - 2] + fibs[j - 1];
   }
   ```
+{% endraw %}
 
   Which of the following best explains why the code segment does not work as intended?
 
@@ -79,6 +81,7 @@ nav_order: 5
 
   The following method is intended to return an array with the values of the parameter letters in reverse order. The method does not work as intended.
 
+{% raw %}
   ```java
   public static String[] reverseArray(String[] letters)
   {
@@ -90,6 +93,7 @@ nav_order: 5
       return revLetters;
   }
   ```
+{% endraw %}
 
   Which of the following changes can be made so the method returns the intended value?
 
@@ -112,6 +116,7 @@ nav_order: 5
 
   In the following code segment, assume that the int array numArr has been properly declared and initialized. The code segment is intended to reverse the order of the elements in numArr. For example, if numArr initially contains {1, 3, 5, 7, 9}, it should contain {9, 7, 5, 3, 1} after the code segment executes.
 
+{% raw %}
   ```java
   /* missing loop header */
   {
@@ -120,6 +125,7 @@ nav_order: 5
       numArr[numArr.length - k - 1] = temp;
   }
   ```
+{% endraw %}
 
   Which of the following can be used to replace `/* missing loop header */` so that the code segment works as intended?
 

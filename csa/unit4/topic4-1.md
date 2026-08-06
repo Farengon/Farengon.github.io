@@ -32,6 +32,7 @@ nav_order: 1
 
   The following SocialMediaAccount class is used to represent a user of a social media site. It includes attributes for the user's username, real name, email address, and ID number.
 
+{% raw %}
   ```java
   public class SocialMediaAccount
   {
@@ -53,6 +54,7 @@ nav_order: 1
       }
   }
   ```
+{% endraw %}
 
   What is the greatest personal privacy risk posed to users by this class design?
 
@@ -75,6 +77,7 @@ nav_order: 1
 
   The following class is used to store information about a customer.
 
+{% raw %}
   ```java
   public class Customer
   {
@@ -88,6 +91,7 @@ nav_order: 1
       { /* implementation not shown */ }
   }
   ```
+{% endraw %}
 
   Which of the following statements best describes the privacy of the customer's payment information?
 

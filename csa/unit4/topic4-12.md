@@ -11,6 +11,7 @@ nav_order: 12
 
 标准遍历用**嵌套 for 循环**：外层遍历行，内层遍历列。
 
+{% raw %}
 ```java
 for (int r = 0; r < mat.length; r++)        // 遍历行
 {
@@ -21,6 +22,7 @@ for (int r = 0; r < mat.length; r++)        // 遍历行
     System.out.println();
 }
 ```
+{% endraw %}
 
 {: .note}
 > 增强 for 遍历二维数组：外层遍历每个一维数组（行），内层遍历行内元素。
@@ -66,6 +68,7 @@ for (int r = 0; r < mat.length; r++)        // 遍历行
   Which of the following can be used to replace `/* missing code */` so that the code segment works as intended?
 
   (A)
+{% raw %}
   ```java
   for (int c = 0; c <= r; c++)
   {
@@ -73,7 +76,9 @@ for (int r = 0; r < mat.length; r++)        // 遍历行
   }
   System.out.println();
   ```
+{% endraw %}
   (B)
+{% raw %}
   ```java
   for (int c = 0; c <= r; c++)
   {
@@ -81,7 +86,9 @@ for (int r = 0; r < mat.length; r++)        // 遍历行
   }
   System.out.println();
   ```
+{% endraw %}
   (C)
+{% raw %}
   ```java
   for (int c = 1; c < r; c++)
   {
@@ -89,13 +96,16 @@ for (int r = 0; r < mat.length; r++)        // 遍历行
   }
   System.out.println();
   ```
+{% endraw %}
   (D)
+{% raw %}
   ```java
   for (int c = 0; c <= r; c++)
   {
       System.out.print(mat[r][c] + " ");
   }
   ```
+{% endraw %}
 
   <details markdown="block">
     <summary><b>点击查看解答</b></summary>
@@ -111,6 +121,7 @@ for (int r = 0; r < mat.length; r++)        // 遍历行
 
   Consider the following code segment.
 
+{% raw %}
   ```java
   int[][] board = new int[5][4];
   /* code to initialize board */
@@ -124,6 +135,7 @@ for (int r = 0; r < mat.length; r++)        // 遍历行
       }
   }
   ```
+{% endraw %}
 
   Which of the following best describes the value of total as a result of executing the code segment?
 
@@ -146,6 +158,7 @@ for (int r = 0; r < mat.length; r++)        // 遍历行
 
   Consider the following method, sumRows, which is intended to traverse all the rows in the two-dimensional (2D) integer array num and print the sum of all the elements in each row.
 
+{% raw %}
   ```java
   public static void sumRows(int[][] num)
   {
@@ -160,6 +173,7 @@ for (int r = 0; r < mat.length; r++)        // 遍历行
       }
   }
   ```
+{% endraw %}
 
   For example, if num contains {% raw %}{{3, 5}, {6, 8}}{% endraw %}, then sumRows(num) should print the following.
 
@@ -190,6 +204,7 @@ for (int r = 0; r < mat.length; r++)        // 遍历行
 
   In the following code segment, board is a properly declared and initialized 2D array of int values.
 
+{% raw %}
   ```java
   int sum = 0;
   for (int r = 0; r < board.length; r++)      // Line 2
@@ -203,6 +218,7 @@ for (int r = 0; r < mat.length; r++)        // 遍历行
       }
   }
   ```
+{% endraw %}
 
   The code segment is intended to compute the sum of all elements in all rows that have odd-numbered row indices. However, the code segment is not working as intended. Which of the following changes can be made so that the code segment works as intended?
 

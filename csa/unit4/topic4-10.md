@@ -45,6 +45,7 @@ nav_order: 10
   Which of the following can replace `/* missing code */` to produce this result?
 
   (A)
+{% raw %}
   ```java
   int initialSize = myList.size();
   for (int i = 0; i < initialSize; i++)
@@ -53,7 +54,9 @@ nav_order: 10
       yourList.add(myList.get(0));
   }
   ```
+{% endraw %}
   (B)
+{% raw %}
   ```java
   int initialSize = myList.size();
   for (int i = 1; i <= initialSize; i++)
@@ -61,14 +64,18 @@ nav_order: 10
       yourList.add(myList.get(i));
   }
   ```
+{% endraw %}
   (C)
+{% raw %}
   ```java
   for (Integer temp : myList)
   {
       yourList.add(0, temp);
   }
   ```
+{% endraw %}
   (D)
+{% raw %}
   ```java
   for (Integer temp : myList)
   {
@@ -76,6 +83,7 @@ nav_order: 10
       yourList.add(temp);
   }
   ```
+{% endraw %}
 
   <details markdown="block">
     <summary><b>点击查看解答</b></summary>
@@ -91,6 +99,7 @@ nav_order: 10
 
   Consider the following method.
 
+{% raw %}
   ```java
   public void removeAll(int target, ArrayList<Integer> list)
   {
@@ -103,6 +112,7 @@ nav_order: 10
       }
   }
   ```
+{% endraw %}
 
   The method is intended to remove all values matching a target value from its ArrayList parameter. However, it is not working as intended.
 
@@ -127,6 +137,7 @@ nav_order: 10
 
   The following code segment initializes and processes an ArrayList of String elements. The loop is intended to delete every other element in the ArrayList starting with the first element.
 
+{% raw %}
   ```java
   ArrayList<String> nameList = new ArrayList<String>();
   nameList.add("Stacey");
@@ -139,6 +150,7 @@ nav_order: 10
       /* missing code */
   }
   ```
+{% endraw %}
 
   After the code segment is executed, nameList should contain ["Bob", "Pete"].
 
@@ -175,6 +187,7 @@ nav_order: 10
 
   Consider the following method.
 
+{% raw %}
   ```java
   public static void transform(ArrayList<Integer> items)
   {
@@ -184,6 +197,7 @@ nav_order: 10
       }
   }
   ```
+{% endraw %}
 
   The following code segment appears in a method in the same class as transform.
 
@@ -218,6 +232,7 @@ nav_order: 10
 
   In the code segment shown, myList is an ArrayList of integers. The code segment is intended to remove all elements with the value 0 from myList.
 
+{% raw %}
   ```java
   int j = 0;
   while (j < myList.size())
@@ -229,6 +244,7 @@ nav_order: 10
       j++;
   }
   ```
+{% endraw %}
 
   The code segment does not always work as intended.
 

@@ -59,12 +59,14 @@ nav_order: 7
 
   Consider the following calculate method.
 
+{% raw %}
   ```java
   public double calculate(double x)
   {
       return x + 1.5;
   }
   ```
+{% endraw %}
 
   The following code segment calls the method calculate in the same class.
 

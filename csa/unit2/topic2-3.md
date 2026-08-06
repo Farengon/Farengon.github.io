@@ -11,6 +11,7 @@ nav_order: 3
 
 **if 语句**根据布尔条件决定是否执行某段代码：
 
+{% raw %}
 ```java
 if (条件) {
     // 条件为 true 时执行
@@ -20,6 +21,7 @@ if (条件) {
     // 所有条件均为 false 时执行
 }
 ```
+{% endraw %}
 
 {: .note}
 > - **选择语句（selection statements）**改变语句的**顺序执行**流程——if 语句是其中一种。
@@ -38,6 +40,7 @@ if (条件) {
 
   In the following code segment, n is a properly declared and initialized int variable.
 
+{% raw %}
   ```java
   boolean result = false;
   if (n >= 10)
@@ -50,6 +53,7 @@ if (条件) {
   }
   System.out.println(result);
   ```
+{% endraw %}
 
   Which of the following best describes the behavior of the code segment?
 
@@ -72,6 +76,7 @@ if (条件) {
 
   Consider the following code segment.
 
+{% raw %}
   ```java
   int quant = 20;
   int unitPrice = 4;
@@ -88,6 +93,7 @@ if (条件) {
   }
   total = quant * unitPrice + ship;
   ```
+{% endraw %}
 
   What is the value of `total` after this code segment is executed?
 
@@ -121,6 +127,7 @@ if (条件) {
   Which of the following can be used to replace `/* missing code */` so that the code segment works as intended?
 
   (A)
+{% raw %}
   ```java
   if (numNights > 5)
   {
@@ -128,7 +135,9 @@ if (条件) {
       totalCost += (numNights * 25);
   }
   ```
+{% endraw %}
   (B)
+{% raw %}
   ```java
   if (numNights > 5)
   {
@@ -136,7 +145,9 @@ if (条件) {
   }
   totalCost += (numNights * 25);
   ```
+{% endraw %}
   (C)
+{% raw %}
   ```java
   totalCost += (numNights * 25);
   if (numNights > 5)
@@ -144,7 +155,9 @@ if (条件) {
       totalCost *= 0.9;
   }
   ```
+{% endraw %}
   (D)
+{% raw %}
   ```java
   totalCost += 25;
   if (numNights > 5)
@@ -152,6 +165,7 @@ if (条件) {
       totalCost *= 0.9;
   }
   ```
+{% endraw %}
 
   <details markdown="block">
     <summary><b>点击查看解答</b></summary>
@@ -167,6 +181,7 @@ if (条件) {
 
   Consider the following code segment.
 
+{% raw %}
   ```java
   int temp = 75;
   String choice;
@@ -185,6 +200,7 @@ if (条件) {
       choice += " with sibling";
   }
   ```
+{% endraw %}
 
   What is the value of choice after executing the code segment?
 
@@ -207,6 +223,7 @@ if (条件) {
 
   Consider the following code segment.
 
+{% raw %}
   ```java
   double regularPrice = 100.0;
   boolean onClearance = true;
@@ -223,6 +240,7 @@ if (条件) {
   }
   System.out.println(finalPrice);
   ```
+{% endraw %}
 
   What is printed as a result of executing the code segment?
 

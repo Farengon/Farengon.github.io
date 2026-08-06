@@ -96,12 +96,14 @@ table[2][1]   // 第 3 行第 2 列的元素
 
   The following method is intended to return the total number of elements in the 2D array arr. The method does not work as intended.
 
+{% raw %}
   ```java
   public int totalElements(int[][] arr)
   {
       return arr.length * arr.length;   // Line 3
   }
   ```
+{% endraw %}
 
   Which of the following changes can be made so that the code segment works as intended?
 

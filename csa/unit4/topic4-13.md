@@ -44,6 +44,7 @@ nav_order: 13
 
   The following method is intended to return true if all elements in row `x` of the 2D array nums are positive and false otherwise.
 
+{% raw %}
   ```java
   /**
    * Precondition: x is a valid row index of nums.
@@ -61,6 +62,7 @@ nav_order: 13
       return allPositive;
   }
   ```
+{% endraw %}
 
   Which of the following replacements for `/* initial value */` and `/* updated value */` can be used so that the method works as intended?
 
@@ -107,33 +109,41 @@ nav_order: 13
   Which of the following represents the contents of changedMat after executing this code segment?
 
   (A)
+{% raw %}
   ```
   {5, 6, 7, 8}
   {5, 6, 7, 8}
   {1, 2, 3, 4}
   {1, 2, 3, 4}
   ```
+{% endraw %}
   (B)
+{% raw %}
   ```
   {1, 2, 3, 4}
   {5, 6, 7, 8}
   {1, 2, 3, 4}
   {5, 6, 7, 8}
   ```
+{% endraw %}
   (C)
+{% raw %}
   ```
   {4, 3, 2, 1}
   {4, 3, 2, 1}
   {8, 7, 6, 5}
   {8, 7, 6, 5}
   ```
+{% endraw %}
   (D)
+{% raw %}
   ```
   {1, 2, 3, 4}
   {1, 2, 3, 4}
   {5, 6, 7, 8}
   {5, 6, 7, 8}
   ```
+{% endraw %}
 
   <details markdown="block">
     <summary><b>点击查看解答</b></summary>

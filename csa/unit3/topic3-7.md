@@ -15,6 +15,7 @@ nav_order: 7
 - 类变量在类被加载时初始化（只初始化一次）。
 - 通过**类名.变量名**访问，也可以在方法中直接使用。
 
+{% raw %}
 ```java
 public class TestObject
 {
@@ -28,6 +29,7 @@ public class TestObject
     }
 }
 ```
+{% endraw %}
 
 ## 3.7.B 类方法（Class Methods / static Methods）
 
@@ -49,6 +51,7 @@ public class TestObject
 
   Consider the following StringFinder class.
 
+{% raw %}
   ```java
   public class StringFinder
   {
@@ -73,6 +76,7 @@ public class TestObject
       }
   }
   ```
+{% endraw %}
 
   The following code segment appears in a class other than StringFinder.
 
@@ -108,6 +112,7 @@ public class TestObject
 
   Consider the following class definition.
 
+{% raw %}
   ```java
   public class Widget
   {
@@ -118,6 +123,7 @@ public class TestObject
       { /* implementation not shown */ }
   }
   ```
+{% endraw %}
 
   The following code segment appears in a class other than Widget.
 
@@ -128,33 +134,41 @@ public class TestObject
   Which of the following implementations of doSomething will allow this code segment to run without error when added to the Widget class?
 
   (A)
+{% raw %}
   ```java
   public int doSomething()
   {
       return number;
   }
   ```
+{% endraw %}
   (B)
+{% raw %}
   ```java
   public int doSomething()
   {
       return word.length();
   }
   ```
+{% endraw %}
   (C)
+{% raw %}
   ```java
   public static int doSomething()
   {
       return number;
   }
   ```
+{% endraw %}
   (D)
+{% raw %}
   ```java
   public static int doSomething()
   {
       return word.length();
   }
   ```
+{% endraw %}
 
   <details markdown="block">
     <summary><b>点击查看解答</b></summary>
@@ -170,6 +184,7 @@ public class TestObject
 
   Consider the following class declaration.
 
+{% raw %}
   ```java
   public class TestObject
   {
@@ -188,6 +203,7 @@ public class TestObject
       }
   }
   ```
+{% endraw %}
 
   The following code segment appears in a class other than TestObject. Assume that no other TestObject objects have been created.
 
@@ -218,6 +234,7 @@ public class TestObject
 
   Consider the following class definition.
 
+{% raw %}
   ```java
   public class WordClass
   {
@@ -234,6 +251,7 @@ public class TestObject
       }
   }
   ```
+{% endraw %}
 
   Which of the following is a true statement about the behavior of WordClass objects?
 
@@ -256,6 +274,7 @@ public class TestObject
 
   Consider the following class definition.
 
+{% raw %}
   ```java
   public class Something
   {
@@ -272,6 +291,7 @@ public class TestObject
       }
   }
   ```
+{% endraw %}
 
   The following code segment appears in a method in a class other than Something.
 
@@ -301,6 +321,7 @@ public class TestObject
 
   Consider the following class definition.
 
+{% raw %}
   ```java
   public class Element
   {
@@ -320,9 +341,11 @@ public class TestObject
       }
   }
   ```
+{% endraw %}
 
   The following code segment appears in a class other than Element. Assume that no other Element objects have been created.
 
+{% raw %}
   ```java
   Element a = new Element(1);
   Element b = new Element(Element.getMaxValue());
@@ -332,6 +355,7 @@ public class TestObject
       Element d = new Element(4);
   }
   ```
+{% endraw %}
 
   Which of the following best describes the number of times that the code segment updates maxValue after it is initialized to 0?
 

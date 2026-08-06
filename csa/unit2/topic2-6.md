@@ -44,6 +44,7 @@ System.out.println(s1 == s2);   // true（同一引用）
 
   In the following code segment, x is a properly declared and initialized boolean variable and y is a properly declared and initialized int variable.
 
+{% raw %}
   ```java
   boolean a = !x && y > 50000;
   boolean b = !(x || y <= 50000);
@@ -67,6 +68,7 @@ System.out.println(s1 == s2);   // true（同一引用）
       System.out.println("Fourth");
   }
   ```
+{% endraw %}
 
   Which of the following is always printed as a result of executing this code segment?
 
@@ -112,6 +114,7 @@ System.out.println(s1 == s2);   // true（同一引用）
 
   In the following code segment, str1 and str2 are String objects. The code segment is intended to print true if str1 and str2 are non-null strings that contain the same sequence of characters. The code segment is intended to print false otherwise.
 
+{% raw %}
   ```java
   boolean result = false;            // line 1
   if (str1 != null && str2 != null)  // line 2
@@ -120,6 +123,7 @@ System.out.println(s1 == s2);   // true（同一引用）
   }
   System.out.println(result);
   ```
+{% endraw %}
 
   Which of the following best explains the error, if any, in the code segment?
 
@@ -167,6 +171,7 @@ System.out.println(s1 == s2);   // true（同一引用）
 
   In the following code segment, the int variables a, b, c, and d have been properly declared and initialized.
 
+{% raw %}
   ```java
   if (a < b || c != d)
   {
@@ -177,10 +182,12 @@ System.out.println(s1 == s2);   // true（同一引用）
       System.out.println("cat");
   }
   ```
+{% endraw %}
 
   Which of the following code segments produces the same output as the given code segment for all values of a, b, c, and d?
 
   (A)
+{% raw %}
   ```java
   if (a < b && c != d)
   {
@@ -191,7 +198,9 @@ System.out.println(s1 == s2);   // true（同一引用）
       System.out.println("cat");
   }
   ```
+{% endraw %}
   (B)
+{% raw %}
   ```java
   if (a > b && c == d)
   {
@@ -202,7 +211,9 @@ System.out.println(s1 == s2);   // true（同一引用）
       System.out.println("dog");
   }
   ```
+{% endraw %}
   (C)
+{% raw %}
   ```java
   if (a >= b || c == d)
   {
@@ -213,7 +224,9 @@ System.out.println(s1 == s2);   // true（同一引用）
       System.out.println("dog");
   }
   ```
+{% endraw %}
   (D)
+{% raw %}
   ```java
   if (a >= b && c == d)
   {
@@ -224,6 +237,7 @@ System.out.println(s1 == s2);   // true（同一引用）
       System.out.println("dog");
   }
   ```
+{% endraw %}
 
   <details markdown="block">
     <summary><b>点击查看解答</b></summary>

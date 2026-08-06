@@ -14,6 +14,7 @@ nav_order: 16
 1. **基本情况（Base Case）**：停止递归的条件，直接返回结果。
 2. **递归情况（Recursive Case）**：把问题缩小，调用自身。
 
+{% raw %}
 ```java
 public static int mystery(int n)
 {
@@ -24,6 +25,7 @@ public static int mystery(int n)
     return (n % 10) + mystery(n / 10);   // 递归情况
 }
 ```
+{% endraw %}
 
 {: .important}
 > 追踪递归时，**逐层展开**调用，最后**从最内层开始**逐层返回结果。注意每层调用的参数如何变化（如 n/10、n-2、substring(1) 等）。
@@ -41,6 +43,7 @@ public static int mystery(int n)
 
 **任何递归解法都可以用迭代（循环）实现，反之亦然**——递归只是另一种形式的重复（repetition）。
 
+{% raw %}
 ```java
 // 递归版：求 1 到 n 的和
 public static int sumRec(int n)
@@ -63,6 +66,7 @@ public static int sumIter(int n)
     return sum;
 }
 ```
+{% endraw %}
 
 {: .note}
 > **Exclusion Statement：** 编写递归代码不在 AP CSA 考试范围内——考试只要求**追踪（trace）**递归方法的结果。
@@ -86,6 +90,7 @@ public static int sumIter(int n)
 
   Consider the following method.
 
+{% raw %}
   ```java
   public static int mystery(int n)
   {
@@ -96,6 +101,7 @@ public static int sumIter(int n)
       return (n % 10) + mystery(n / 10);
   }
   ```
+{% endraw %}
 
   Assume that the int variable num is properly declared and initialized to a value greater than 0. Which of the following best describes the value returned by the call `mystery(num)`?
 
@@ -118,6 +124,7 @@ public static int sumIter(int n)
 
   The following recursive method is intended to return true if origNum is divisible by each digit in numsToDivideBy, and to return false otherwise. For example, `isDivisible(236, 24)` should return true because 236 is divisible by both 2 and 4. The method does not always work as intended.
 
+{% raw %}
   ```java
   public static boolean isDivisible(int origNum, int numsToDivideBy)
   {
@@ -135,6 +142,7 @@ public static int sumIter(int n)
       }
   }
   ```
+{% endraw %}
 
   Which of the following method calls can be used to demonstrate that the method does not work as intended?
 
@@ -157,6 +165,7 @@ public static int sumIter(int n)
 
   Consider the following recursive method.
 
+{% raw %}
   ```java
   public static int mystery(int x)
   {
@@ -170,6 +179,7 @@ public static int sumIter(int n)
       }
   }
   ```
+{% endraw %}
 
   What is returned as a result of the method call `mystery(5)`?
 
@@ -192,6 +202,7 @@ public static int sumIter(int n)
 
   Consider the following recursive method.
 
+{% raw %}
   ```java
   public static String doSomething(String str)
   {
@@ -205,6 +216,7 @@ public static int sumIter(int n)
       }
   }
   ```
+{% endraw %}
 
   Assume that myString is a properly declared and initialized String object. Which of the following best describes the result of the call `doSomething(myString)`?
 

@@ -34,10 +34,8 @@ nav_order: 1
   (C) The algorithm assigns a string to the integer 5.  
   (D) The algorithm assigns a string to each integer from 1 to 5.
 
-  <details>
+  <details markdown="block>
     <summary><b>点击查看解答</b></summary>
-
-    <br>
   
     **分析与解答：**  
     题目描述了一个算法：对于 1 到 3 的整数，分别赋值为该整数本身对应的字符串；对于大于 3 的整数，赋值为 "too many"。题目问的是算法的行为描述。选项 (A) 和 (B) 使用了"prints"（打印输出），但算法描述中只说了"assigns"（赋值），并未涉及输出。选项 (C) 只描述了赋值给 5 这一个整数，范围过窄。选项 (D) 正确地描述了算法给 1 到 5 的每个整数都进行了赋值。因此正确答案是 **(D)**。
@@ -62,15 +60,20 @@ nav_order: 1
   (C) The algorithm computes the product of the two numbers added to the average of the two numbers.  
   (D) The algorithm computes the sum of the two numbers divided by the product of the two numbers.  
 
-  **分析与解答：**  
-  让我们一步步追踪：
+  <details markdown="block>
+    <summary><b>点击查看解答</b></summary>
+  
+    **分析与解答：**  
+    让我们一步步追踪：
 
-  - Step 1: `num1 + num2`（两数之和）
-  - Step 2: `(num1 + num2) / 2`（两数的平均值）
-  - Step 3: `num1 * num2`（两数之积）
-  - Step 4: `(num1 * num2) / ((num1 + num2) / 2)`（积除以平均值）
+    - Step 1: `num1 + num2`（两数之和）
+    - Step 2: `(num1 + num2) / 2`（两数的平均值）
+    - Step 3: `num1 * num2`（两数之积）
+    - Step 4: `(num1 * num2) / ((num1 + num2) / 2)`（积除以平均值）
 
-  因此，最终结果是两数之积除以两数的平均值。正确答案是 **(A)**。
+    因此，最终结果是两数之积除以两数的平均值。正确答案是 **(A)**。
+
+  </details>
 
 - ### 例题 3 — 用流程图描述算法
 
@@ -90,15 +93,20 @@ nav_order: 1
   (C) Set `a` to 2. Set `b` to 1. Set `c` to `a + b`. Display `c`.  
   (D) Set `a` to 1. Set `b` to 2. Set `c` to `a + b`. Display `a + b`.  
 
-  **分析与解答：**  
-  同一个算法意味着相同的步骤序列。原算法执行：
+  <details markdown="block>
+    <summary><b>点击查看解答</b></summary>
+  
+    **分析与解答：**  
+    同一个算法意味着相同的步骤序列。原算法执行：
 
-  1. a = 1
-  2. b = 2
-  3. c = a + b（即 1 + 2 = 3）
-  4. 显示 c 的值（即 3）
+    1. a = 1
+    2. b = 2
+    3. c = a + b（即 1 + 2 = 3）
+    4. 显示 c 的值（即 3）
 
-  选项 (B) 完全匹配。注意选项 (D) 虽然计算相同，但最后一步显示的是 `a + b` 而不是 `c`，所以描述方式不同，输出**行为**可能不同（题目问的是"described in a different way"即不同的描述方式，这里 (D) 改变的是输出方式，与原算法不等价）。正确答案是 **(B)**。
+    选项 (B) 完全匹配。注意选项 (D) 虽然计算相同，但最后一步显示的是 `a + b` 而不是 `c`，所以描述方式不同，输出**行为**可能不同（题目问的是"described in a different way"即不同的描述方式，这里 (D) 改变的是输出方式，与原算法不等价）。正确答案是 **(B)**。
+
+  </details>
 
 ---
 
@@ -151,8 +159,13 @@ AP CSA 考试中，编程错误分为三大类：
   (C) The algorithm contains a run-time error.  
   (D) The algorithm contains no errors.  
 
-  **分析与解答：**  
-  算法的目的是计算 `num` 的平方（`num * num`），但实际计算的是 `num * 2`（两倍）。程序可以正常执行，不会编译报错，也不会崩溃，但输出的结果不是预期的平方值。这种错误属于**逻辑错误**。正确答案是 **(B)**。
+  <details markdown="block>
+    <summary><b>点击查看解答</b></summary>
+  
+    **分析与解答：**  
+    算法的目的是计算 `num` 的平方（`num * num`），但实际计算的是 `num * 2`（两倍）。程序可以正常执行，不会编译报错，也不会崩溃，但输出的结果不是预期的平方值。这种错误属于**逻辑错误**。正确答案是 **(B)**。
+
+  </details>
 
 - ### 例题 5 — 识别语法错误
 
@@ -174,8 +187,13 @@ AP CSA 考试中，编程错误分为三大类：
   (C) The code segment contains a run-time error.  
   (D) The code segment contains no errors.  
 
-  **分析与解答：**  
-  在 Java 中，每条语句必须以分号（`;`）结束。`int a = 5` 后面缺少了分号，这是一个**语法错误**，编译器会在编译时检测到并报错。正确答案是 **(A)**。
+  <details markdown="block>
+    <summary><b>点击查看解答</b></summary>
+  
+    **分析与解答：**  
+    在 Java 中，每条语句必须以分号（`;`）结束。`int a = 5` 后面缺少了分号，这是一个**语法错误**，编译器会在编译时检测到并报错。正确答案是 **(A)**。
+
+  </details>
 
 - ### 例题 6 — 识别运行时错误
 
@@ -197,5 +215,10 @@ AP CSA 考试中，编程错误分为三大类：
   (C) The code segment contains a run-time error.  
   (D) The code segment contains no errors.
 
-  **分析与解答：**  
-  语法上没有错误。但执行到 `x / y` 时，`y = 0`，在 Java 中整数除以零会抛出 `ArithmeticException`，导致程序崩溃。这是一个**运行时错误**。正确答案是 **(C)**。
+  <details markdown="block>
+    <summary><b>点击查看解答</b></summary>
+  
+    **分析与解答：**  
+    语法上没有错误。但执行到 `x / y` 时，`y = 0`，在 Java 中整数除以零会抛出 `ArithmeticException`，导致程序崩溃。这是一个**运行时错误**。正确答案是 **(C)**。
+
+  </details>

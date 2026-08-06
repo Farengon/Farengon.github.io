@@ -40,15 +40,13 @@ Done
     System.out.print(llo);
     ```
 
-    **分析与解答：**  
-    在 Java 中，字符串字面量必须用双引号括起来。选项 (A) 正确地使用了 `System.out.print("Hello")`，将字符串字面量 `"Hello"` 作为参数传递给 print 方法。选项 (B) 缺少引号，编译器会将 `Hello` 当作变量名处理。选项 (C) 将整个语句放在引号中，变成了一段字符串。选项 (D) 会输出 `Hello`，但分成两次输出，中间没有空格。正确答案是 **(A)**。
+    <details markdown="block>
+      <summary><b>点击查看解答</b></summary>
+    
+      **分析与解答：**
+      在 Java 中，字符串字面量必须用双引号括起来。选项 (A) 正确地使用了 `System.out.print("Hello")`，将字符串字面量 `"Hello"` 作为参数传递给 print 方法。选项 (B) 缺少引号，编译器会将 `Hello` 当作变量名处理。选项 (C) 将整个语句放在引号中，变成了一段字符串。选项 (D) 会输出 `Hello`，但分成两次输出，中间没有空格。正确答案是 **(A)**。
 
----
-
-## 1.3.B 字符串字面量与转义序列
-
-**字面量（Literal）** 是代码中对固定值的表示。
-
+    </details>
 **字符串字面量（String Literal）** 是由双引号括起来的一串字符序列。
 
 ```java
@@ -87,10 +85,13 @@ System.out.println("Path: C:\\Files");        // 输出: Path: C:\Files
     (C) It prints one line of text because the printed value is a single string literal.  
     (D) It prints nothing due to a syntax error.
 
-    **分析与解答：**  
-    字符串中的每个 `\n` 转义序列都会产生一个换行。字符串中共有四个 `\n`，因此将输出五行文本（"AP"、"Computer"、"Science"、"A"、"rocks" 各占一行）。注意 `System.out.print` 不会在末尾自动添加换行，但 `\n` 本身已经产生了换行效果。正确答案是 **(A)**。 [pdf_9]
+    <details markdown="block>
+      <summary><b>点击查看解答</b></summary>
+    
+      **分析与解答：**
+      字符串中的每个 `\n` 转义序列都会产生一个换行。字符串中共有四个 `\n`，因此将输出五行文本（"AP"、"Computer"、"Science"、"A"、"rocks" 各占一行）。注意 `System.out.print` 不会在末尾自动添加换行，但 `\n` 本身已经产生了换行效果。正确答案是 **(A)**。 [pdf_9]
 
-- ### 例题 3 — 字符串字面量的语法
+    </details>
 
     > Source: AP Classroom New Unit 1 TopicQuestion MCQ, Q21
 
@@ -116,8 +117,13 @@ System.out.println("Path: C:\\Files");        // 输出: Path: C:\Files
     (C) In lines 1, 2, and 3, the text that appears in parentheses should be enclosed in quotation marks.  
     (D) No change is needed; the code segment works correctly as is.
 
-    **分析与解答：**
-    在 Java 中，所有字符串字面量都必须用双引号（`"`）括起来。原代码中的文本没有加引号，编译器会将它们当作变量名或标识符处理，导致编译错误。选项 (A) 和 (B) 都不能解决缺少引号的问题。选项 (C) 正确地将文本用双引号括起，使其成为合法的字符串字面量。选项 (D) 错误，因为代码无法编译通过。正确答案是 **(C)**。
+    <details markdown="block>
+      <summary><b>点击查看解答</b></summary>
+    
+      **分析与解答：**
+      在 Java 中，所有字符串字面量都必须用双引号（`"`）括起来。原代码中的文本没有加引号，编译器会将它们当作变量名或标识符处理，导致编译错误。选项 (A) 和 (B) 都不能解决缺少引号的问题。选项 (C) 正确地将文本用双引号括起，使其成为合法的字符串字面量。选项 (D) 错误，因为代码无法编译通过。正确答案是 **(C)**。
+
+    </details>
 
 ---
 
@@ -211,15 +217,20 @@ double y = 10.0 / 0.0;   // 结果为 Infinity（无穷大，不在考试范围�
     (C) 8  
     (D) 9
 
-    **分析与解答：**
+    <details markdown="block>
+      <summary><b>点击查看解答</b></summary>
+    
+      **分析与解答：**
 
-    按照运算符优先级规则，`/` 和 `*` 优先级高于 `+`，且同级从左到右计算。因此执行顺序为：
+      按照运算符优先级规则，`/` 和 `*` 优先级高于 `+`，且同级从左到右计算。因此执行顺序为：
 
-    1. `b / c` → `8 / 3` → `2`（整数除法）
-    2. `2 * 2` → `4`
-    3. `a + 4` → `5 + 4` → `9`
+      1. `b / c` → `8 / 3` → `2`（整数除法）
+      2. `2 * 2` → `4`
+      3. `a + 4` → `5 + 4` → `9`
 
-    正确答案是 **(D)**。 
+      正确答案是 **(D)**。 
+
+    </details>
 
 - ### 例题 5 — 整数除法与类型转换
 
@@ -242,16 +253,21 @@ double y = 10.0 / 0.0;   // 结果为 Infinity（无穷大，不在考试范围�
     (C) 7.5 7.0  
     (D) 7.5 7.5
 
-    **分析与解答：**
+    <details markdown="block>
+      <summary><b>点击查看解答</b></summary>
+    
+      **分析与解答：**
 
-    逐步追踪：
+      逐步追踪：
 
-    - `q / r` → `15.0 / 2` → `7.5`（至少有一个 double，结果为 double）
-    - `(int)(q / r)` → `(int)(7.5)` → `7`（强制类型转换为 int，截断小数部分）
-    - `x = 7` → `x = 7.0`（赋值给 double 变量，自动提升为 7.0）
-    - `y = q / r` → `y = 7.5`
+      - `q / r` → `15.0 / 2` → `7.5`（至少有一个 double，结果为 double）
+      - `(int)(q / r)` → `(int)(7.5)` → `7`（强制类型转换为 int，截断小数部分）
+      - `x = 7` → `x = 7.0`（赋值给 double 变量，自动提升为 7.0）
+      - `y = q / r` → `y = 7.5`
 
-    因此输出为 `7.0 7.5`。正确答案是 **(B)**。
+      因此输出为 `7.0 7.5`。正确答案是 **(B)**。
+
+    </details>
 
 - ### 例题 6 — 取余运算符与优先级
 
@@ -271,13 +287,18 @@ double y = 10.0 / 0.0;   // 结果为 Infinity（无穷大，不在考试范围�
     (C) 26  
     (D) 0
 
-    **分析与解答：**
+    <details markdown="block>
+      <summary><b>点击查看解答</b></summary>
+    
+      **分析与解答：**
 
-    第一步：计算 `first`。`*` 优先级高于 `+`，所以 `10 * 2 = 20`，然后 `5 + 20 = 25`，`first = 25`。
+      第一步：计算 `first`。`*` 优先级高于 `+`，所以 `10 * 2 = 20`，然后 `5 + 20 = 25`，`first = 25`。
 
-    第二步：计算 `second`。`%` 优先级高于 `+`，所以先计算 `first % 2` → `25 % 2 = 1`（25 除以 2 余 1），然后 `25 + 1 = 26`，`second = 26`。
+      第二步：计算 `second`。`%` 优先级高于 `+`，所以先计算 `first % 2` → `25 % 2 = 1`（25 除以 2 余 1），然后 `25 + 1 = 26`，`second = 26`。
 
-    正确答案是 **(C)**。
+      正确答案是 **(C)**。
+
+    </details>
 
 - ### 例题 7 — 复合表达式（多种运算符组合）
 

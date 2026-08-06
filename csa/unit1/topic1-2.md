@@ -36,8 +36,13 @@ AP CSA 课程中使用的三种基本数据类型是 `int`、`double` 和 `boole
     (C) `int age;` / `boolean hasLicense;`  
     (D) `int age;` / `double hasLicense;`
 
-    **分析与解答：**  
-    年龄通常用整数表示（如 15 岁、17 岁），所以 `int` 是最合适的数据类型。是否有驾照是一个「是/否」的判断，所以 `boolean` 是最合适的数据类型。选项 (C) 正确地使用了 `int` 表示年龄、`boolean` 表示是否有驾照，因此正确答案是 **(C)**。 [pdf_9]
+    <details markdown="block>
+      <summary><b>点击查看解答</b></summary>
+    
+      **分析与解答：**  
+      年龄通常用整数表示（如 15 岁、17 岁），所以 `int` 是最合适的数据类型。是否有驾照是一个「是/否」的判断，所以 `boolean` 是最合适的数据类型。选项 (C) 正确地使用了 `int` 表示年龄、`boolean` 表示是否有驾照，因此正确答案是 **(C)**。 [pdf_9]
+
+    </details>
 
 - ### 例题 2 — 选择合适的数据类型（类设计）
 
@@ -50,8 +55,13 @@ AP CSA 课程中使用的三种基本数据类型是 `int`、`double` 和 `boole
     (C) A Player class, a Score class, and a Remaining Time class, each with an int instance variable.  
     (D) A Score class and a RemainingTime class, each with a Player instance variable.
 
-    **分析与解答：**
-    分数和剩余时间（秒）都是整数值，因此用 `int` 类型存储是最合适的。同时，这两个属性都属于同一个 Player（玩家），将它们放在一个 `Player` 类中作为实例变量是最直接、最合理的设计。选项 (A) 使用了不合理的抽象；选项 (C) 和 (D) 引入了不必要的额外类。正确答案是 **(B)**。 [pdf_8]
+    <details markdown="block>
+      <summary><b>点击查看解答</b></summary>
+    
+      **分析与解答：**
+      分数和剩余时间（秒）都是整数值，因此用 `int` 类型存储是最合适的。同时，这两个属性都属于同一个 Player（玩家），将它们放在一个 `Player` 类中作为实例变量是最直接、最合理的设计。选项 (A) 使用了不合理的抽象；选项 (C) 和 (D) 引入了不必要的额外类。正确答案是 **(B)**。 [pdf_8]
+
+    </details>
 
 - ### 例题 3 — 区分基本类型与引用类型
 
@@ -74,8 +84,13 @@ AP CSA 课程中使用的三种基本数据类型是 `int`、`double` 和 `boole
     (C) In line 4, example should be assigned a value.  
     (D) In line 5, a variable cannot be assigned to another variable.
 
-    **分析与解答：**  
-    `null` 是一个特殊值，表示引用不指向任何对象，它只能赋值给引用类型变量。`double` 是基本类型，不是引用类型，因此不能将 `null` 赋值给 `double` 变量。这个例子清晰地区分了基本类型和引用类型的差异——基本类型存储实际值，而引用类型存储对象的引用（可以为 `null`）。正确答案是 **(B)**。
+    <details markdown="block>
+      <summary><b>点击查看解答</b></summary>
+    
+      **分析与解答：**  
+      `null` 是一个特殊值，表示引用不指向任何对象，它只能赋值给引用类型变量。`double` 是基本类型，不是引用类型，因此不能将 `null` 赋值给 `double` 变量。这个例子清晰地区分了基本类型和引用类型的差异——基本类型存储实际值，而引用类型存储对象的引用（可以为 `null`）。正确答案是 **(B)**。
+
+    </details>
 
 ---
 
@@ -124,8 +139,13 @@ boolean isPassing = true;      // 声明 boolean 变量并初始化为 true
     (C) true  
     (D) false
 
-    **分析与解答：**
-    `int` 变量只能存储整数（integer）值。`0.5` 是小数（需要 `double` 类型），`true` 和 `false` 是布尔值（需要 `boolean` 类型）。只有 `1` 是一个整数，可以存储在 `int` 变量中。正确答案是 **(B)**。 
+    <details markdown="block>
+      <summary><b>点击查看解答</b></summary>
+    
+      **分析与解答：**
+      `int` 变量只能存储整数（integer）值。`0.5` 是小数（需要 `double` 类型），`true` 和 `false` 是布尔值（需要 `boolean` 类型）。只有 `1` 是一个整数，可以存储在 `int` 变量中。正确答案是 **(B)**。 
+
+    </details>
 
 - ### 例题 5 — boolean 变量可存储的值
 
@@ -144,8 +164,13 @@ boolean isPassing = true;      // 声明 boolean 变量并初始化为 true
     (C) 1.0  
     (D) false
 
-    **分析与解答：**
-    `boolean` 变量只能存储 `true` 或 `false` 两个值。`-1` 和 `0` 是整数，`1.0` 是浮点数，只有 `false` 是合法的布尔值。正确答案是 **(D)**。 
+    <details markdown="block>
+      <summary><b>点击查看解答</b></summary>
+    
+      **分析与解答：**
+      `boolean` 变量只能存储 `true` 或 `false` 两个值。`-1` 和 `0` 是整数，`1.0` 是浮点数，只有 `false` 是合法的布尔值。正确答案是 **(D)**。 
+
+    </details>
 
 - ### 例题 6 — 变量必须先声明再使用
 
@@ -166,8 +191,13 @@ boolean isPassing = true;      // 声明 boolean 变量并初始化为 true
     (C) `int z = 0;`  
     (D) `z = 0;`
 
-    **分析与解答：**
-    在 Java 中，变量必须先声明才能使用。选项 (A) 声明了一个 `boolean` 类型的变量 `z`，语法正确，可以编译。选项 (B) 试图将 `double` 值 `0.0` 赋值给 `int` 变量，类型不兼容，无法编译。选项 (C) 声明了 `int` 类型的变量 `z` 并初始化为 `0`，语法正确，可以编译。选项 (D) 中 `z` 未声明就直接使用，无法编译。该题中选项 (A) 和 (C) 都能使代码段编译通过，但题目要求选出**可以使用**的代码，注意变量声明时必须确保类型与值匹配。 
+    <details markdown="block>
+      <summary><b>点击查看解答</b></summary>
+    
+      **分析与解答：**
+      在 Java 中，变量必须先声明才能使用。选项 (A) 声明了一个 `boolean` 类型的变量 `z`，语法正确，可以编译。选项 (B) 试图将 `double` 值 `0.0` 赋值给 `int` 变量，类型不兼容，无法编译。选项 (C) 声明了 `int` 类型的变量 `z` 并初始化为 `0`，语法正确，可以编译。选项 (D) 中 `z` 未声明就直接使用，无法编译。该题中选项 (A) 和 (C) 都能使代码段编译通过，但题目要求选出**可以使用**的代码，注意变量声明时必须确保类型与值匹配。 
+
+    </details>
 
 ---
 

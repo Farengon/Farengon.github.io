@@ -18,6 +18,7 @@ nav_order: 4
 引用类型（reference types）可以被赋值为一个新对象，也可以赋值为 `null`——`null` 是一个特殊值，表示该引用不关联任何对象。基本类型（primitive types）不能赋值为 `null`。
 
 {: .important}
+
 > 仅仅声明变量是不够的——在使用变量之前必须确保它已经被赋值（初始化）。尝试使用未初始化的变量会导致编译错误。
 
 ---
@@ -38,6 +39,7 @@ variable = expression;
 2. 将该结果存入左侧变量中（**覆盖**该变量之前的值）
 
 {extra}
+
 > **Exclusion statement** — 在表达式中使用赋值运算符（如 `a = b = 4;` 或 `a[i += 5]`）不在 AP CSA 考试范围内。
 
 ---
@@ -56,68 +58,68 @@ variable = expression;
 
 - ### 例题 1 — 赋值语句追踪
 
-    > Source: AP Classroom Practice Exam 1 MCQ, Q1
+  > Source: AP Classroom Practice Exam 1 MCQ, Q1
 
-    Consider the following code segment.
+  Consider the following code segment.
 
-    ```java
-    int x = 20;
-    int y = 10;
-    int temp = x;
-    x = y;
-    y = temp * x;
-    System.out.println(x + " " + y);
-    ```
+  ```java
+  int x = 20;
+  int y = 10;
+  int temp = x;
+  x = y;
+  y = temp * x;
+  System.out.println(x + " " + y);
+  ```
 
-    What is printed as a result of executing this code segment?
+  What is printed as a result of executing this code segment?
 
-    (A) 10 100  
-    (B) 10 200  
-    (C) 20 100  
-    (D) 20 200
+  (A) 10 100  
+  (B) 10 200  
+  (C) 20 100  
+  (D) 20 200
 
     <details markdown="block">
       <summary><b>点击查看解答</b></summary>
     
-      **分析与解答：**
+  **分析与解答：**
 
-      逐步追踪变量的值：
+  逐步追踪变量的值：
 
-      | 语句            | x      | y                 | temp |
-      | --------------- | ------ | ----------------- | ---- |
-      | `int x = 20;`   | 20     | —                 | —    |
-      | `int y = 10;`   | 20     | 10                | —    |
-      | `int temp = x;` | 20     | 10                | 20   |
-      | `x = y;`        | **10** | 10                | 20   |
-      | `y = temp * x;` | 10     | **20 × 10 = 200** | 20   |
+  | 语句            | x      | y                 | temp |
+  | --------------- | ------ | ----------------- | ---- |
+  | `int x = 20;`   | 20     | —                 | —    |
+  | `int y = 10;`   | 20     | 10                | —    |
+  | `int temp = x;` | 20     | 10                | 20   |
+  | `x = y;`        | **10** | 10                | 20   |
+  | `y = temp * x;` | 10     | **20 × 10 = 200** | 20   |
 
-      最终 `x = 10`，`y = 200`。程序输出 `10 200`。正确答案是 **(B)**。
+  最终 `x = 10`，`y = 200`。程序输出 `10 200`。正确答案是 **(B)**。
 
-      本题考察赋值语句的执行顺序：右侧表达式 `temp * x` 先被求值为 `200`，再赋值给 `y`。
+  本题考察赋值语句的执行顺序：右侧表达式 `temp * x` 先被求值为 `200`，再赋值给 `y`。
 
     </details>
 
 - ### 例题 2 — 多变量赋值追踪
 
-    > Source: AP Classroom Practice Exam 2 MCQ, Q1
+  > Source: AP Classroom Practice Exam 2 MCQ, Q1
 
-    Consider the following code segment.
+  Consider the following code segment.
 
-    ```java
-    int w = 50;
-    int x = 20;
-    int y = x;
-    x = w;
-    w = x + y;
-    System.out.println(w + " " + x);
-    ```
+  ```java
+  int w = 50;
+  int x = 20;
+  int y = x;
+  x = w;
+  w = x + y;
+  System.out.println(w + " " + x);
+  ```
 
-    What is printed as a result of executing the code segment?
+  What is printed as a result of executing the code segment?
 
-    (A) 40 20  
-    (B) 70 20  
-    (C) 70 50  
-    (D) 100 50
+  (A) 40 20  
+  (B) 70 20  
+  (C) 70 50  
+  (D) 100 50
 
     <details markdown="block">
       <summary><b>点击查看解答</b></summary>
@@ -142,23 +144,23 @@ variable = expression;
 
 - ### 例题 3 — 变量必须先声明再使用
 
-    > Source: AP Classroom New Unit 1 TopicQuestion MCQ, Q9
+  > Source: AP Classroom New Unit 1 TopicQuestion MCQ, Q9
 
-    Consider the following code segment.
+  Consider the following code segment.
 
-    ```java
-    int x = 5;
-    int y = 6;
-    /* missing code */
-    z = (x + y) / 2;
-    ```
+  ```java
+  int x = 5;
+  int y = 6;
+  /* missing code */
+  z = (x + y) / 2;
+  ```
 
-    Which of the following can replace `/* missing code */` so that the code segment compiles without error?
+  Which of the following can replace `/* missing code */` so that the code segment compiles without error?
 
-    (A) `boolean z = true;`  
-    (B) `int z = 0.0;`  
-    (C) `int z = 0;`  
-    (D) `z = 0;`
+  (A) `boolean z = true;`  
+   (B) `int z = 0.0;`  
+   (C) `int z = 0;`  
+   (D) `z = 0;`
 
     <details markdown="block">
       <summary><b>点击查看解答</b></summary>
@@ -180,21 +182,21 @@ variable = expression;
 
 - ### 例题 4 — 使用临时变量交换值
 
-    > Source: AP Classroom New Unit 1 TopicQuestion MCQ, Q12
+  > Source: AP Classroom New Unit 1 TopicQuestion MCQ, Q12
 
-    Consider the following code segment that is intended to swap the values of the `int` variables `x` and `y`.
+  Consider the following code segment that is intended to swap the values of the `int` variables `x` and `y`.
 
-    ```java
-    int temp = x;
-    /* missing code */
-    ```
+  ```java
+  int temp = x;
+  /* missing code */
+  ```
 
-    Which of the following can replace `/* missing code */` so that the code segment works as intended?
+  Which of the following can replace `/* missing code */` so that the code segment works as intended?
 
-    (A) `x = y; y = temp;`  
-    (B) `y = x; x = temp;`  
-    (C) `y = x; temp = y;`  
-    (D) `y = x; temp = x;`
+  (A) `x = y; y = temp;`  
+   (B) `y = x; x = temp;`  
+   (C) `y = x; temp = y;`  
+   (D) `y = x; temp = x;`
 
     <details markdown="block">
       <summary><b>点击查看解答</b></summary>
@@ -217,23 +219,23 @@ variable = expression;
 
 - ### 例题 5 — 表达式求值产生单一值
 
-    > Source: AP CSA Course and Exam Description (Sample Exam Questions)
+  > Source: AP CSA Course and Exam Description (Sample Exam Questions)
 
-    Consider the following code segment.
+  Consider the following code segment.
 
-    ```java
-    int a = 3;
-    int b = 4;
-    int result = a * b + 2;
-    System.out.println(result);
-    ```
+  ```java
+  int a = 3;
+  int b = 4;
+  int result = a * b + 2;
+  System.out.println(result);
+  ```
 
-    What is printed as a result of executing this code segment?
+  What is printed as a result of executing this code segment?
 
-    (A) 9  
-    (B) 12  
-    (C) 14  
-    (D) 18
+  (A) 9  
+   (B) 12  
+   (C) 14  
+   (D) 18
 
     <details markdown="block">
       <summary><b>点击查看解答</b></summary>
@@ -273,37 +275,37 @@ String line = sc.nextLine();          // 读取一整行
 ```
 
 {: .extra}
+
 > **Exclusion statement** — 任何特定形式的用户输入（如键盘输入的具体实现）不在 AP CSA 考试范围内。Scanner 在考试中的正式使用仅限于 Unit 4 中从文件读取数据。
 
 - ### 例题 6 — 程序输入的概念
 
-    > Source: AP CSA Course and Exam Description
+  > Source: AP CSA Course and Exam Description
 
-    Which of the following best describes the purpose of the `Scanner` class in Java?
+  Which of the following best describes the purpose of the `Scanner` class in Java?
 
-    (A) It is used to display output to the console.  
-    (B) It is used to obtain text input from an input source such as the keyboard.  
-    (C) It is used to perform mathematical calculations.  
-    (D) It is used to create random numbers.
+  (A) It is used to display output to the console.  
+   (B) It is used to obtain text input from an input source such as the keyboard.  
+   (C) It is used to perform mathematical calculations.  
+   (D) It is used to create random numbers.
 
-    **分析与解答：**
+  **分析与解答：**
+  - **(A)** 错误：显示输出到控制台使用的是 `System.out.print` 和 `System.out.println`。
+  - **(B)** **正确**：`Scanner` 类用于从输入源（如键盘或文件）获取文本输入。
+  - **(C)** 错误：Java 有内置的算术运算符进行数学计算。
+  - **(D)** 错误：生成随机数使用的是 `Math.random()` 方法。
 
-    - **(A)** 错误：显示输出到控制台使用的是 `System.out.print` 和 `System.out.println`。
-    - **(B)** **正确**：`Scanner` 类用于从输入源（如键盘或文件）获取文本输入。
-    - **(C)** 错误：Java 有内置的算术运算符进行数学计算。
-    - **(D)** 错误：生成随机数使用的是 `Math.random()` 方法。
+  正确答案是 **(B)**。
 
-    正确答案是 **(B)**。
-
-    本题考察 Essential Knowledge 1.4.B.1：`Scanner` 类是从键盘获取文本输入的一种方式。
+  本题考察 Essential Knowledge 1.4.B.1：`Scanner` 类是从键盘获取文本输入的一种方式。
 
 ---
 
 ## 考点总结
 
-| 考点编号 | 核心内容                                                     | 关联例题     |
-| -------- | ------------------------------------------------------------ | ------------ |
+| 考点编号 | 核心内容                                                                | 关联例题     |
+| -------- | ----------------------------------------------------------------------- | ------------ |
 | 1.4.A.1  | 变量必须先赋值再使用；值必须来自兼容的数据类型；引用类型可赋值为 `null` | 例题 3       |
-| 1.4.A.2  | 赋值运算符 `=` 将右侧表达式的值存入左侧变量                  | 例题 1、2、4 |
-| 1.4.A.3  | 表达式求值产生一个单一的值，该值具有确定的类型               | 例题 5       |
-| 1.4.B.1  | 输入可以来自多种来源；`Scanner` 类用于获取文本输入           | 例题 6       |
+| 1.4.A.2  | 赋值运算符 `=` 将右侧表达式的值存入左侧变量                             | 例题 1、2、4 |
+| 1.4.A.3  | 表达式求值产生一个单一的值，该值具有确定的类型                          | 例题 5       |
+| 1.4.B.1  | 输入可以来自多种来源；`Scanner` 类用于获取文本输入                      | 例题 6       |

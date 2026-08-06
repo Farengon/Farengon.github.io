@@ -47,24 +47,24 @@ int roundedY = (int)(y + 0.5);  // (int)(8.1) = 8
 
 - ### 例题 1 — 显式转换与自动扩宽
 
-    > Source: AP CSA Course and Exam Description (Sample Exam Questions)
+  > Source: AP CSA Course and Exam Description (Sample Exam Questions)
 
-    ```java
-    double q = 15.0;
-    int r = 2;
-    double x = (int) (q / r);
-    double y = q / r;
-    System.out.println(x + " " + y);
-    ```
+  ```java
+  double q = 15.0;
+  int r = 2;
+  double x = (int) (q / r);
+  double y = q / r;
+  System.out.println(x + " " + y);
+  ```
 
-    What is printed?
+  What is printed?
 
-    (A) 7.0 7.0  
-    (B) 7.0 7.5  
-    (C) 7.5 7.0  
-    (D) 7.5 7.5  
+  (A) 7.0 7.0  
+   (B) 7.0 7.5  
+   (C) 7.5 7.0  
+   (D) 7.5 7.5
 
-    <details markdown="block">
+  <details markdown="block">
       <summary><b>点击查看解答</b></summary>
     
       **分析与解答：**  
@@ -74,72 +74,72 @@ int roundedY = (int)(y + 0.5);  // (int)(8.1) = 8
 
 - ### 例题 2 — 类型转换与截断
 
-    > Source: Unit 1 Progress Check MCQ Part B, Q1
+  > Source: Unit 1 Progress Check MCQ Part B, Q1
 
-    ```java
-    double a = 7;
-    int b = (int) (a / 2);
-    double c = (double) b / 2;
-    System.out.print(b);
-    System.out.print(" ");
-    System.out.print(c);
-    ```
+  ```java
+  double a = 7;
+  int b = (int) (a / 2);
+  double c = (double) b / 2;
+  System.out.print(b);
+  System.out.print(" ");
+  System.out.print(c);
+  ```
 
-    What is printed?
+  What is printed?
 
-    (A) 3 1.0  
-    (B) 3 1.5  
-    (C) 3.5 1.5  
-    (D) 3.5 1.75  
+  (A) 3 1.0  
+   (B) 3 1.5  
+   (C) 3.5 1.5  
+   (D) 3.5 1.75
 
-    <details markdown="block">
-      <summary><b>点击查看解答</b></summary>
+  <details markdown="block">
+    <summary><b>点击查看解答</b></summary>
     
-      分析与解答：
-      `double a = 7;` → a = 7.0（int 7 自动扩宽为 double）。`a / 2` → 7.0 / 2 = 3.5。`(int)(3.5)` 截断小数，b = 3。`(double) b / 2` → (double) 3 / 2 → 3.0 / 2 = 1.5（注意：(double) 只作用于 b，2 自动扩宽）。输出为 3 1.5。正确答案是 (B)。
+        分析与解答：
+        `double a = 7;` → a = 7.0（int 7 自动扩宽为 double）。`a / 2` → 7.0 / 2 = 3.5。`(int)(3.5)` 截断小数，b = 3。`(double) b / 2` → (double) 3 / 2 → 3.0 / 2 = 1.5（注意：(double) 只作用于 b，2 自动扩宽）。输出为 3 1.5。正确答案是 (B)。
 
     </details>
 
 - ### 例题 3 — 先截断后相加 vs 先相加后截断
 
-    > Source: APCSA 2024 MCQ, Q5
+  > Source: APCSA 2024 MCQ, Q5
 
-    ```java
-    double valOne = 5.75;
-    double valTwo = 2.75;
-    int x = (int) valOne + (int) valTwo;
-    int y = (int) (valOne + valTwo);
-    System.out.println(x + "" + y);
-    ```
+  ```java
+  double valOne = 5.75;
+  double valTwo = 2.75;
+  int x = (int) valOne + (int) valTwo;
+  int y = (int) (valOne + valTwo);
+  System.out.println(x + "" + y);
+  ```
 
-    What is printed?
+  What is printed?
 
-    (A) 77  
-    (B) 78  
-    (C) 79  
-    (D) 98  
-    (E) 99  
+  (A) 77  
+   (B) 78  
+   (C) 79  
+   (D) 98  
+   (E) 99
 
-    <details markdown="block">
-      <summary><b>点击查看解答</b></summary>
-    
-      分析与解答：
-      `(int) valOne` = (int) 5.75 = 5，`(int) valTwo` = (int) 2.75 = 2，x = 5 + 2 = 7。`valOne + valTwo` = 5.75 + 2.75 = 8.5，y = (int) 8.5 = 8。输出为 78。正确答案是 (B)。
+  <details markdown="block">
+    <summary><b>点击查看解答</b></summary>
+        
+        分析与解答：
+        `(int) valOne` = (int) 5.75 = 5，`(int) valTwo` = (int) 2.75 = 2，x = 5 + 2 = 7。`valOne + valTwo` = 5.75 + 2.75 = 8.5，y = (int) 8.5 = 8。输出为 78。正确答案是 (B)。
 
     </details>
 
 - ### 例题 4 — 使用 (int)(x + 0.5) 四舍五入
 
-    > Source: Unit 1 Progress Check MCQ Part B, Q2
+  > Source: Unit 1 Progress Check MCQ Part B, Q2
 
-    Assume that `x` is a double variable with a **positive** value. Which of the following code segments can be used to round `x` to the nearest integer and store the rounded value in the variable `result`?
+  Assume that `x` is a double variable with a **positive** value. Which of the following code segments can be used to round `x` to the nearest integer and store the rounded value in the variable `result`?
 
-    (A) `int result = (int) x;`  
-    (B) `int result = (int) x + 0.5;`  
-    (C) `int result = (int)(x + 0.5);`  
-    (D) `int result = (int) x + (int) 0.5;`  
+  (A) `int result = (int) x;`  
+   (B) `int result = (int) x + 0.5;`  
+   (C) `int result = (int)(x + 0.5);`  
+   (D) `int result = (int) x + (int) 0.5;`
 
-    <details markdown="block">
+  <details markdown="block">
       <summary><b>点击查看解答</b></summary>
     
       **分析与解答：**  
@@ -149,25 +149,25 @@ int roundedY = (int)(y + 0.5);  // (int)(8.1) = 8
 
 - ### 例题 5 — 类型转换时机：先除后转 vs 先转后除
 
-    > Source: Practice Exam 1 MCQ, Q8
+  > Source: Practice Exam 1 MCQ, Q8
 
-    ```
-    double w = 2.5;
-    double x = 5.0;
-    double z = (int) w / x;
-    System.out.print(z + " ");
-    z = (int) (w / x);
-    System.out.println(z);
-    ```
+  ```
+  double w = 2.5;
+  double x = 5.0;
+  double z = (int) w / x;
+  System.out.print(z + " ");
+  z = (int) (w / x);
+  System.out.println(z);
+  ```
 
-    What is printed?
+  What is printed?
 
-    (A) 0.0 0.0  
-    (B) 0.4 0.0  
-    (C) 0.4 0.4  
-    (D) 0.0 0.4  
+  (A) 0.0 0.0  
+   (B) 0.4 0.0  
+   (C) 0.4 0.4  
+   (D) 0.0 0.4
 
-    <details markdown="block">
+  <details markdown="block">
       <summary><b>点击查看解答</b></summary>
     
       分析与解答：
@@ -196,42 +196,52 @@ int overflow = max + 1;       // 溢出，结果为 -2147483648
 
 - ### 例题 6 — 溢出与 Integer.MAX_VALUE
 
-    > Source: Unit 1 Progress Check MCQ Part B, Q10
+  > Source: Unit 1 Progress Check MCQ Part B, Q10
 
-    ```java
-    int result = num1 + num2;
-    System.out.println(result);
-    ```
+  ```java
+  int result = num1 + num2;
+  System.out.println(result);
+  ```
 
-    Which of the following preconditions for the method is most appropriate to avoid an overflow error?
+  Which of the following preconditions for the method is most appropriate to avoid an overflow error?
 
-    (A) `/** Precondition: num1 and num2 are both positive. */`  
-    (B) `/** Precondition: num1 is not equal to num2 */`  
-    (C) `/** Preconditions: num1 is between Integer.MIN_VALUE and Integer.MAX_VALUE, inclusive. num2 is between Integer.MIN_VALUE and Integer.MAX_VALUE, inclusive. */`  
-    (D) `/** Precondition: (num1 + num2) is between Integer.MIN_VALUE and Integer.MAX_VALUE, inclusive. */`
+  (A) `/** Precondition: num1 and num2 are both positive. */`  
+   (B) `/** Precondition: num1 is not equal to num2 */`  
+   (C) `/** Preconditions: num1 is between Integer.MIN_VALUE and Integer.MAX_VALUE, inclusive. num2 is between Integer.MIN_VALUE and Integer.MAX_VALUE, inclusive. */`  
+   (D) `/** Precondition: (num1 + num2) is between Integer.MIN_VALUE and Integer.MAX_VALUE, inclusive. */`
 
-    分析与解答：
-    溢出发生在表达式结果超出 `int` 的取值范围时。即使 `num1` 和 `num2` 各自在合法范围内，它们的和也可能超出范围。只有确保**和**在 `Integer.MIN_VALUE` 到 `Integer.MAX_VALUE` 之间，才能避免溢出。正确答案是 (D)。
+<details markdown="block">
+      <summary><b>点击查看解答</b></summary>
+
+  分析与解答：
+  溢出发生在表达式结果超出 `int` 的取值范围时。即使 `num1` 和 `num2` 各自在合法范围内，它们的和也可能超出范围。只有确保**和**在 `Integer.MIN_VALUE` 到 `Integer.MAX_VALUE` 之间，才能避免溢出。正确答案是 (D)。
+
+  </details>
 
 - ### 例题 7 — 整数除法与自动扩宽
 
-    > Source: APCSA 2024 MCQ, Q30
+  > Source: APCSA 2024 MCQ, Q30
 
-    ```java
-    int r = 23;
-    int t = 10;
-    double a = r % t;
-    double b = r / t;
-    System.out.println(a + " " + b);
-    ```
+  ```java
+  int r = 23;
+  int t = 10;
+  double a = r % t;
+  double b = r / t;
+  System.out.println(a + " " + b);
+  ```
 
-    What, if anything, is printed?
+  What, if anything, is printed?
 
-    (A) 2.0 3.0  
-    (B) 2.3 3.0  
-    (C) 3.0 2.0  
-    (D) 3.0 2.3  
-    (E) Nothing is printed. A compile-time error occurs because an int value cannot be assigned to a double.
+  (A) 2.0 3.0  
+   (B) 2.3 3.0  
+   (C) 3.0 2.0  
+   (D) 3.0 2.3  
+   (E) Nothing is printed. A compile-time error occurs because an int value cannot be assigned to a double.
 
-    分析与解答：
-    `r % t` = 23 % 10 = 3，赋值给 double a → 自动扩宽为 3.0。`r / t` = 23 / 10 = 2（整数除法，结果截断），赋值给 double b → 自动扩宽为 2.0。输出为 3.0 2.0。int 值可以赋值给 double 变量（自动扩宽），不会编译错误，排除 (E)。正确答案是 (C)。
+<details markdown="block">
+      <summary><b>点击查看解答</b></summary>
+
+  分析与解答：
+  `r % t` = 23 % 10 = 3，赋值给 double a → 自动扩宽为 3.0。`r / t` = 23 / 10 = 2（整数除法，结果截断），赋值给 double b → 自动扩宽为 2.0。输出为 3.0 2.0。int 值可以赋值给 double 变量（自动扩宽），不会编译错误，排除 (E)。正确答案是 (C)。
+
+  </details>

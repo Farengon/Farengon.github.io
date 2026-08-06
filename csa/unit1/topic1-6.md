@@ -46,7 +46,7 @@ nav_order: 6
     (C) 3
     (D) 4
 
-    <details markdown="block"">
+  <details markdown="block"">
       <summary><b>点击查看解答</b></summary>
     
       分析与解答：
@@ -100,7 +100,7 @@ nav_order: 6
     System.out.print(val);
     ```
 
-    <details markdown="block"">
+  <details markdown="block"">
       <summary><b>点击查看解答</b></summary>
 
     分析与解答：
@@ -138,7 +138,7 @@ nav_order: 6
     (D) Changing line 8 to `x *= 2;`
 
 
-    <details markdown="block"">
+  <details markdown="block"">
       <summary><b>点击查看解答</b></summary>
 
         分析与解答：
@@ -167,7 +167,7 @@ nav_order: 6
     (C) 14
     (D) 15
 
-    <details markdown="block"">
+  <details markdown="block"">
       <summary><b>点击查看解答</b></summary>
 
     分析与解答：

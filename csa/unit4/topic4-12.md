@@ -40,6 +40,7 @@ for (int r = 0; r < mat.length; r++)        // 遍历行
 
   Consider the following code segment.
 
+  {% raw %}
   ```java
   int[][] mat = {{1, 2, 3, 4},
                  {5, 6, 7, 8},
@@ -51,6 +52,7 @@ for (int r = 0; r < mat.length; r++)        // 遍历行
       /* missing code */
   }
   ```
+  {% endraw %}
 
   This code segment is intended to produce the following output.
 
@@ -159,7 +161,7 @@ for (int r = 0; r < mat.length; r++)        // 遍历行
   }
   ```
 
-  For example, if num contains {{3, 5}, {6, 8}}, then sumRows(num) should print the following.
+  For example, if num contains {% raw %}{{3, 5}, {6, 8}}{% endraw %}, then sumRows(num) should print the following.
 
   ```
   8 14
@@ -169,10 +171,10 @@ for (int r = 0; r < mat.length; r++)        // 遍历行
 
   For which of the following two-dimensional array input values does sumRows not work as intended?
 
-  (A) {{10, -18}, {48, 17}}  
-  (B) {{-5, 2, 0}, {4, 11, 0}}  
-  (C) {{4, 1, 7}, {-10, -11, -12}}  
-  (D) {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}
+  (A) {% raw %}{{10, -18}, {48, 17}}{% endraw %}  
+  (B) {% raw %}{{-5, 2, 0}, {4, 11, 0}}{% endraw %}  
+  (C) {% raw %}{{4, 1, 7}, {-10, -11, -12}}{% endraw %}  
+  (D) {% raw %}{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}{% endraw %}
 
   <details markdown="block">
     <summary><b>点击查看解答</b></summary>

@@ -71,6 +71,7 @@ nav_order: 13
 
   Consider the following code segment.
 
+  {% raw %}
   ```java
   int[][] mat = {{1, 2, 3, 4},
                  {1, 2, 3, 4},
@@ -89,6 +90,7 @@ nav_order: 13
       }
   }
   ```
+  {% endraw %}
 
   Which of the following represents the contents of changedMat after executing this code segment?
 

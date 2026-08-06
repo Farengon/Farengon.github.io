@@ -11,10 +11,12 @@ nav_order: 11
 
 **二维数组（2D Array）** 是"数组的数组"，用两个方括号访问元素：`table[行][列]`。
 
+{% raw %}
 ```java
 int[][] table = {{9, 8, 7}, {6, 5, 4}, {3, 2, 1}};   // 3 行 3 列
 int[][] board = new int[5][4];                        // 5 行 4 列
 ```
+{% endraw %}
 
 {: .important}
 > - `table.length` 是**行数**（第一维长度）。
@@ -28,7 +30,7 @@ int[][] board = new int[5][4];                        // 5 行 4 列
 table[2][1]   // 第 3 行第 2 列的元素
 ```
 
-初始化列表 `{{r0c0, r0c1, ...}, {r1c0, ...}, ...}` 中，外层花括号的每个元素是一个**行**。
+初始化列表 {% raw %}`{{r0c0, r0c1, ...}, {r1c0, ...}, ...}`{% endraw %} 中，外层花括号的每个元素是一个**行**。
 
 - ### 例题 1 — 行列索引
 
@@ -36,10 +38,12 @@ table[2][1]   // 第 3 行第 2 列的元素
 
   Consider the following code segment.
 
+  {% raw %}
   ```java
   int[][] table = {{9, 8, 7}, {6, 5, 4}, {3, 2, 1}};
   System.out.println(table[2][1]);
   ```
+  {% endraw %}
 
   What value is printed as a result of executing the code segment?
 
@@ -68,10 +72,10 @@ table[2][1]   // 第 3 行第 2 列的元素
 
   Which of the following initialization lists could replace `/* missing code */` so that the code segment will work as intended?
 
-  (A) {{0, 1, 2}, {4, 5, 6}, {8, 3, 6}}  
-  (B) {{1, 2, 3}, {3, 4, 5}, {5, 6, 7}}  
-  (C) {{2, 1, 4}, {5, 2, 3}, {2, 7, 1}}  
-  (D) {{2, 4, 6}, {1, 3, 5}, {6, 4, 2}}
+  (A) {% raw %}{{0, 1, 2}, {4, 5, 6}, {8, 3, 6}}{% endraw %}  
+  (B) {% raw %}{{1, 2, 3}, {3, 4, 5}, {5, 6, 7}}{% endraw %}  
+  (C) {% raw %}{{2, 1, 4}, {5, 2, 3}, {2, 7, 1}}{% endraw %}  
+  (D) {% raw %}{{2, 4, 6}, {1, 3, 5}, {6, 4, 2}}{% endraw %}
 
   <details markdown="block">
     <summary><b>点击查看解答</b></summary>

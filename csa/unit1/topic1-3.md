@@ -93,6 +93,8 @@ System.out.println("Path: C:\\Files");        // 输出: Path: C:\Files
 
   </details>
 
+- ### 例题 3
+
   > Source: AP Classroom New Unit 1 TopicQuestion MCQ, Q21
 
   Consider the following code segment.

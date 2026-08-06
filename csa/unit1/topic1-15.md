@@ -9,7 +9,22 @@ nav_order: 15
 
 ## 1.15.A String 的常用方法
 
+**String 对象**表示一个字符序列，可以通过**字符串字面量**或 **String 构造方法**创建。`String` 类属于 `java.lang` 包，**默认可用，无需 import**。
+
+```java
+String s1 = "hello";              // 用字符串字面量创建
+String s2 = new String("hello");  // 用构造方法创建
+```
+
 AP CSA 考试中 String 是**不可变（immutable）**对象——调用 String 方法不会修改原字符串，而是返回一个新字符串。
+
+**拼接（Concatenation）：** 两个 String 对象可以用 `+` 或 `+=` 连接，产生**新的 String 对象**；**原始值（int/double/boolean）**与 String 拼接时会被自动转换为字符串：
+
+```java
+String name = "Java";
+name += "!";              // name 变为 "Java!"（新对象）
+String msg = "总数：" + 42; // "总数：42"（int 42 自动转字符串）
+```
 
 | 方法                              | 作用                                                       | 示例                                      |
 | --------------------------------- | ---------------------------------------------------------- | ----------------------------------------- |
@@ -205,9 +220,11 @@ AP CSA 考试中 String 是**不可变（immutable）**对象——调用 String
 
 | 考点                     | 关键内容                                          | 考试提示                                           |
 | ------------------------ | ------------------------------------------------- | -------------------------------------------------- |
+| String 创建              | 字面量或构造方法；java.lang 包默认可用            | `new String("hi")` 与 `"hi"` 均可                  |
 | 索引从 0 开始            | 最后一个字符索引 = `length() - 1`                 | substring(len) 越界                               |
 | substring(a, b)          | 返回 [a, b)，含 a 不含 b                          | `"computer".substring(3, 5)` → "pu"                |
 | 字符串不可变             | 方法调用不改变原字符串                            | substring 后 length() 不变                         |
+| 拼接                     | `+` / `+=` 产生新字符串；原始值自动转字符串       | `"总数：" + 42` → "总数：42"                       |
 | indexOf 返回 -1          | 找不到目标返回 -1，用作 substring 参数会抛异常    | 先判断 indexOf >= 0 再使用                        |
 | 单参数 substring         | 从指定索引到末尾                                  | `"comp".substring(1)` → "omp"                      |
 | equals vs ==             | `equals` 比较内容，`==` 比较引用                  | 比较字符串内容必须用 equals                        |

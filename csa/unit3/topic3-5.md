@@ -27,7 +27,24 @@ public double getPrice()     // 访问修饰符 + 返回类型 + 方法名 + 参
 > - 返回类型非 void 的方法**必须**在所有路径上都有 `return` 语句。
 > - 方法内可以访问**实例变量**，也可以声明**局部变量**。
 
-## 3.5.B 编写方法时常见错误
+## 3.5.B 访问器与修改器方法
+
+- **访问器方法（Accessor Method）**：让外部类**获取**实例变量/类变量的**值副本**，是**非 void** 方法（有返回值）。如 `getPrice()`。
+- **修改器方法（Mutator Method）**：**改变**实例变量/类变量的值，通常（但不一定）是 **void** 方法。如 `setPrice(double p)`、`updateX(int amount)`。
+
+```java
+public double getPrice()              // 访问器：返回值副本
+{
+    return price;
+}
+
+public void setPrice(double newPrice) // 修改器：改变实例变量
+{
+    price = newPrice;
+}
+```
+
+## 3.5.C 编写方法时常见错误
 
 - 方法返回类型的错误（该 void 却 return 值）。
 - 引用了未定义的变量（如把构造方法的参数当作方法内变量）。

@@ -27,6 +27,11 @@ for (Integer num : list) { ... }
 {: .note}
 > 增强 for 循环中的变量是元素的**副本**，修改它不会改变 ArrayList。
 
+{: .important}
+> **遍历时的异常（EK 4.9.A.3/A.4）：**
+> - 访问**超出范围**的索引会抛 **IndexOutOfBoundsException**（如 `get(size())`、`remove(size())`）。
+> - 在**增强 for 循环**遍历 ArrayList 时**添加或删除元素**会抛 **ConcurrentModificationException**——因此增强 for 中不能增删元素，删除应用标准 for 循环并小心处理索引。
+
 ## 4.9.B 遍历时删除元素的陷阱
 
 {: .important}

@@ -19,6 +19,11 @@ nav_order: 10
 {: .important}
 > 增强 for 循环**不能**在遍历时用 `remove`（会抛 ConcurrentModificationException），删除操作应使用标准 for 循环。
 
+{: .note}
+> **大纲要求的标准 ArrayList 算法（EK 4.10.A.1）：** 与数组算法类似，利用 ArrayList 遍历可以求**最小/最大值**、**和/平均值**、判断**至少一个/所有**元素是否满足属性、统计元素个数、访问连续元素对、判断重复、**平移/旋转**、**反转**、**插入**、**删除**。
+>
+> **同时遍历多个集合（EK 4.10.A.2）：** 有些算法需要**同时**遍历多个 String、数组或 ArrayList 对象（例如计算两个列表对应位置元素的和）。
+
 - ### 例题 1 — 旋转复制
 
   > **Source:** AP Classroom Unit 4 Progress Check: MCQ Part B, Q14

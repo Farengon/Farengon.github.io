@@ -9,12 +9,16 @@ nav_order: 9
 
 ## 1.9.A 方法签名（Method Signature）
 
+**方法（Method）** 是一段有名字的代码块，只在被调用时执行。**过程抽象（Procedural Abstraction）** 让程序员只需要知道方法"做什么"（通过方法名和签名），而不必关心方法"如何实现"。
+
 **方法签名（Method Signature）** 由**方法名**、**参数的数量、类型和顺序**组成（返回值类型不属于方法签名的一部分，但通常与方法签名一起出现在方法的完整声明中）。
 
 ```java
 public void printSum(int x, double y)   // 签名：printSum(int, double)
 public void printProduct(double x, int y) // 签名：printProduct(double, int)
 ```
+
+**参数（Parameter）** 是在方法头中声明的变量，可以在方法体内使用，用来接收调用时传入的值（实参）。
 
 {: .important}
 > 调用方法时，实参（actual argument）必须与形参（formal parameter）在**数量、类型、顺序**上匹配，否则代码无法编译。
@@ -158,6 +162,7 @@ public void printProduct(double x, int y) // 签名：printProduct(double, int)
 | 考点               | 关键内容                                     | 考试提示                                         |
 | ------------------ | -------------------------------------------- | ------------------------------------------------ |
 | 方法签名           | 方法名 + 参数的数量、类型、顺序              | 返回值类型不属于签名                             |
+| 过程抽象           | 只知道方法做什么，无需关心如何实现           | procedural abstraction                           |
 | 实参 vs 形参       | 实参的值复制给形参（值传递）                 | 实参必须与形参在数量、类型、顺序上匹配           |
 | void 方法          | 不返回值，只执行操作                         | 调用后不能用在赋值语句右侧                       |
 | 类型匹配           | `int` 实参可传给 `double` 形参，反之不行     | double 实参传给 int 形参 → 编译错误              |

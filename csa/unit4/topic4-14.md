@@ -34,6 +34,42 @@ public static int linearSearch(int[] arr, int value)
 
 有时只查找数组的**一部分**（如后半部分）。追踪时注意循环的起止索引和返回时机。
 
+## 4.14.C 在 2D 数组上应用线性查找
+
+对**二维数组**应用线性查找时，需要**先访问每一行**，再对每一行应用线性查找（逐行搜索）：
+
+```java
+// 在 2D 数组中线性查找目标值（返回是否找到）
+public static boolean search2D(int[][] arr, int target)
+{
+    for (int r = 0; r < arr.length; r++)        // 逐行访问
+    {
+        for (int c = 0; c < arr[r].length; c++) // 对该行应用线性查找
+        {
+            if (arr[r][c] == target)
+            {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+```
+
+{: .note}
+> 2D 数组的线性查找 = **外层循环逐行 + 内层循环逐元素**（每行都做一次线性查找）。
+
+- ### 例题 4 — 2D 数组中的线性查找
+
+  > **Source:** 大纲 EK 4.14.A.2 改编
+
+  在二维数组 {% raw %}`{{3, 1, 4}, {1, 5, 9}}`{% endraw %} 中查找值 5。追踪逐行线性查找：
+
+  - 第 1 行（r=0）：检查 3、1、4——都不是 5。
+  - 第 2 行（r=1）：检查 1（不是）、5（**找到**）→ 返回 true。
+
+  若查找值 7：第 1 行检查完没有，第 2 行检查 1、5、9 都没有 → 返回 false。
+
 - ### 例题 1 — 后半部分查找
 
   > **Source:** AP Classroom Unit 4 Progress Check: MCQ Part C, Q10
@@ -164,3 +200,4 @@ public static int linearSearch(int[] arr, int value)
 | 遍历方向         | 正序→第一个；倒序→最后一个                   | 只影响返回哪个匹配，不影响是否找到             |
 | 部分范围查找     | 循环起止索引限定查找范围                     | 追踪后半部分时注意起始索引                     |
 | 立即返回         | 找到即 return，不继续遍历                    | 多个匹配时返回最先遇到的                       |
+| 2D 数组查找      | 先逐行访问，再对每行线性查找                 | 外层行循环 + 内层元素循环                      |

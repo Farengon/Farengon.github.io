@@ -19,6 +19,9 @@ ArrayList<Integer> ages = new ArrayList<Integer>();
 {: .note}
 > - ArrayList 只能存储**对象**，不能存储基本类型——存整数要用包装类 `Integer`。
 > - `new ArrayList<Integer>()` 是标准创建语法。
+> - **ArrayList 的大小可变（mutable in size）**，且存储的是**对象引用**。
+> - **`ArrayList` 类属于 `java.util` 包**，使用前需要 **import 语句**（`import java.util.ArrayList;` 或 `import java.util.*;`）。
+> - **泛型 `ArrayList<E>`**：类型参数 E 指定元素类型，例如 `ArrayList<String>` 只能存 String。
 
 ## 4.8.B ArrayList 的常用方法
 

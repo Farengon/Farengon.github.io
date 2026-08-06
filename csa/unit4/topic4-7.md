@@ -16,6 +16,9 @@ nav_order: 7
 | int      | Integer   | 包装 int 值              |
 | double   | Double    | 包装 double 值           |
 
+{: .note}
+> `Integer` 和 `Double` 类属于 `java.lang` 包，**默认可用，无需 import**。包装对象是**不可变（immutable）**的——创建后其值不能再改变。
+
 **自动装箱（Autoboxing）与自动拆箱（Unboxing）：**
 
 - **装箱**：`Double d1 = new Double(7.5);` 或 `Integer i = 5;`（自动装箱：int → Integer）。

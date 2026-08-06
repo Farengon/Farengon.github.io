@@ -23,6 +23,11 @@ int[][] board = new int[5][4];                        // 5 行 4 列
 > - `table[0].length` 是**列数**（第二维长度）。
 > - 行索引和列索引都从 **0** 开始。
 > - 总元素数 = `arr.length * arr[0].length`（行数 × 列数）。
+> - 用 `new` 创建二维数组时，所有元素初始化为**默认值**：int → 0，double → 0.0，boolean → false，引用类型 → null。
+> - 二维数组可以存储**基本类型**或**对象引用**。
+
+{: .note}
+> **Exclusion Statement：** **非矩形（Nonrectangular）二维数组**（每行列数不同的 2D 数组）不在 AP CSA 考试范围内。
 
 ## 4.11.B 二维数组的访问
 

@@ -9,11 +9,11 @@ nav_order: 6
 
 ## 4.6.A 用 Scanner 读取文本文件
 
-用 **Scanner** 读取文本文件：
+**文件（File）** 是程序不运行时也能持久保存数据的存储位置，程序执行时可以从中读取数据。用 **Scanner** 读取文本文件：
 
 ```java
-File file = new File("input.txt");
-Scanner scan = new Scanner(file);
+File file = new File("input.txt");   // 创建 File 对象（参数为文件名）
+Scanner scan = new Scanner(file);    // 把 Scanner 连接到文件
 ```
 
 **Scanner 的常用方法：**
@@ -27,7 +27,9 @@ Scanner scan = new Scanner(file);
 | `hasNext()`         | 是否还有下一个输入项         |
 
 {: .note}
-> `nextInt()` 会跳过空白（包括换行），按"下一个 token"读取。文件中的 `1`、`2`、`3` 无论在一行还是多行，都能被三个 `nextInt()` 依次读到。
+> - `nextInt()` 会跳过空白（包括换行），按"下一个 token"读取。文件中的 `1`、`2`、`3` 无论在一行还是多行，都能被三个 `nextInt()` 依次读到。
+> - **`File` 和 `IOException` 类属于 `java.io` 包**，使用前需要 **import 语句**（`import java.io.*;`）。
+> - 使用 `File` 类时必须声明：如果提供的文件名无法打开该如何处理——常用方法是在方法头加上 **`throws IOException`**（EK 4.6.A.4/A.5）。
 
 ## 4.6.B 文件读取的循环模式
 

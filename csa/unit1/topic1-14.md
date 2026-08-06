@@ -21,6 +21,7 @@ myPrinter.printCat();
 > - 实例方法通过 `对象名.方法名(实参)` 调用。
 > - 不能用**类名**调用实例方法（`AnimalPrinter.printDog()` 是错的）——只有 static 方法才能用类名调用。
 > - 在**同一个类内部**可以直接用方法名调用，无需对象前缀。
+> - 在 **null 引用**上调用实例方法会抛出 **NullPointerException**。例如：`String s = null; s.length();` 会崩溃，因为 null 不指向任何对象。
 
 ## 1.14.B 实例方法与类方法（static）的区别
 
@@ -206,3 +207,4 @@ myPrinter.printCat();
 | 类名调用限制     | 实例方法不能用类名调用（static 才可以）      | `Dog.calculateWalkLength()` → 编译错误         |
 | 实参写法         | 实参只写值/变量，不写类型                    | `book1.getNumPages(c)` 而非 `(int c)`          |
 | 同类内部调用     | 同类中可直接调用方法名（无前缀）             | 跨类必须用对象                                 |
+| NullPointerException | null 引用上调用方法会抛异常              | `String s = null; s.length();` → 崩溃          |

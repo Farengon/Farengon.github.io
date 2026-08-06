@@ -41,6 +41,9 @@ public void checkID(Checker c)
 }
 ```
 
+{: .note}
+> **类方法（static 方法）没有 `this` 引用**（EK 3.9.A.3）：static 方法不属于任何特定对象，因此内部**不能使用 `this`**。`this` 只能在**实例方法**和**构造方法**中使用。
+
 - ### 例题 1 — 用 this 比较两个对象
 
   > **Source:** AP Classroom Unit 3 Progress Check: MCQ Part B, Q13
